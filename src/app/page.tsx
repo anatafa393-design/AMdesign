@@ -558,15 +558,15 @@ export default function Home() {
                       <ImageWithFallback
                         src={project.heroImage}
                         alt={project.title}
-                        className="w-full h-auto block opacity-50 group-hover:opacity-90 group-hover:scale-[1.02] transition-all duration-700 ease-out"
+                        className="w-full h-auto block opacity-85 md:opacity-50 group-hover:opacity-95 group-hover:scale-[1.02] transition-all duration-700 ease-out"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-10 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                        <div className="text-orange-400 font-medium text-sm mb-2">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6 md:p-10 translate-y-0 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <div className="text-orange-400 font-medium text-xs md:text-sm mb-2">
                           {project.category}
                         </div>
-                        <h3 className="text-2xl md:text-3xl font-bold flex items-center justify-between text-white">
+                        <h3 className="text-xl md:text-3xl font-bold flex items-center justify-between text-white">
                           {project.title}
-                          <ArrowUpRight className="w-6 h-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-100" />
+                          <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6 opacity-100 md:opacity-0 -translate-x-0 md:-translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-100" />
                         </h3>
                       </div>
                     </Link>
