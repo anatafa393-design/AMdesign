@@ -1,6 +1,11 @@
 "use client";
 
 export function renderCanvas() {
+  // Disable canvas animation on mobile to improve performance
+  if (typeof window !== "undefined" && window.innerWidth < 768) {
+    return () => {};
+  }
+
   const canvas = document.getElementById("canvas") as HTMLCanvasElement;
   if (!canvas) return;
   const ctx: any = canvas.getContext("2d");
