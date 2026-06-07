@@ -259,6 +259,140 @@
     ]
   },
   {
+    "id": "sm-design-1",
+    "title": "E-Commerce Social Campaign",
+    "category": "Social Media Design",
+    "heroImage": "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png",
+    "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
+    "deliverables": [
+      "Social Media Graphics",
+      "Campaign Art Direction",
+      "Visual Storytelling",
+      "Ad Design"
+    ],
+    "gallery": [
+      {
+        "id": "sm-design-1-1",
+        "type": "image",
+        "content": "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png"
+      },
+      {
+        "id": "sm-design-1-2",
+        "type": "image",
+        "content": "/social-media/1/chatgpt-image-may-22-2026-05-29-19-pm.png"
+      },
+      {
+        "id": "sm-design-1-3",
+        "type": "image",
+        "content": "/social-media/1/chatgpt-image-may-22-2026-05-29-24-pm.png"
+      },
+      {
+        "id": "sm-design-1-4",
+        "type": "image",
+        "content": "/social-media/1/chatgpt-image-may-22-2026-05-29-28-pm.png"
+      },
+      {
+        "id": "sm-design-1-5",
+        "type": "image",
+        "content": "/social-media/1/chatgpt-image-may-22-2026-05-29-32-pm.png"
+      },
+      {
+        "id": "sm-design-1-6",
+        "type": "image",
+        "content": "/social-media/1/chatgpt-image-may-22-2026-05-31-20-pm.png"
+      }
+    ]
+  },
+  {
+    "id": "photoshoot-1",
+    "title": "Fashion & Lifestyle Photoshoot",
+    "category": "Photoshoots",
+    "heroImage": "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png",
+    "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
+    "deliverables": [
+      "Product Photography",
+      "Art Direction",
+      "Lighting Design",
+      "Retouching"
+    ],
+    "gallery": [
+      {
+        "id": "photoshoot-1-1",
+        "type": "image",
+        "content": "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png"
+      },
+      {
+        "id": "photoshoot-1-2",
+        "type": "image",
+        "content": "/photoshoots/1/chatgpt-image-may-24-2026-02-45-45-pm.png"
+      },
+      {
+        "id": "photoshoot-1-3",
+        "type": "image",
+        "content": "/photoshoots/1/chatgpt-image-may-24-2026-02-45-48-pm.png"
+      },
+      {
+        "id": "photoshoot-1-4",
+        "type": "image",
+        "content": "/photoshoots/1/gemini-3-1-flash-image-preview-nano-banana-2-web-search-a.png"
+      },
+      {
+        "id": "photoshoot-1-5",
+        "type": "image",
+        "content": "/photoshoots/1/gpt-image-1-5-high-fidelity-b.png"
+      },
+      {
+        "id": "photoshoot-1-6",
+        "type": "image",
+        "content": "/photoshoots/1/pomelli-photoshoot-image-9-16-0429-1.png"
+      }
+    ]
+  },
+  {
+    "id": "photo-shoot-6",
+    "title": "Luxury Interior Showcase",
+    "category": "Creative Photoshoot",
+    "heroImage": "/photoshoots/6/interior-shoot-1.png",
+    "overview": "Professional interior photography showcasing the layout, lighting, and aesthetic details of a bedroom and surrounding spaces.",
+    "deliverables": [
+      "Interior Photography",
+      "Lighting & Composition",
+      "Retouching & Color Grading"
+    ],
+    "gallery": [
+      {
+        "id": "photo-shoot-6-1",
+        "type": "image",
+        "content": "/photoshoots/6/interior-shoot-1.png"
+      },
+      {
+        "id": "photo-shoot-6-2",
+        "type": "image",
+        "content": "/photoshoots/6/interior-shoot-2.png"
+      },
+      {
+        "id": "photo-shoot-6-3",
+        "type": "image",
+        "content": "/photoshoots/6/interior-shoot-3.png"
+      },
+      {
+        "id": "photo-shoot-6-4",
+        "type": "image",
+        "content": "/photoshoots/6/interior-shoot-4.png"
+      },
+      {
+        "id": "photo-shoot-6-5",
+        "type": "image",
+        "content": "/photoshoots/6/interior-shoot-5.png"
+      },
+      {
+        "id": "photo-shoot-6-6",
+        "type": "image",
+        "content": "/photoshoots/6/interior-shoot-6.png"
+      }
+    ]
+  },
+  {
     "id": "pkg-design-2",
     "title": "Global Rice Brands Packaging",
     "category": "Packaging Design",
@@ -435,6 +569,101 @@
         "id": "pkg-design-2-33",
         "type": "image",
         "content": "/packaging/2/indian-rice-purple-bag-5_page_1.png"
+      }
+    ]
+  },
+  {
+    "id": "sm-design-2",
+    "title": "Restaurant Instagram Growth",
+    "category": "Social Media Design",
+    "heroImage": "/social-media/2/chatgpt-image-may-22-2026-06-06-24-pm.png",
+    "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
+    "deliverables": [
+      "Social Media Graphics",
+      "Campaign Art Direction",
+      "Visual Storytelling",
+      "Ad Design"
+    ],
+    "gallery": [
+      {
+        "id": "sm-design-2-1",
+        "type": "image",
+        "content": "/social-media/2/chatgpt-image-may-22-2026-06-06-24-pm.png"
+      },
+      {
+        "id": "sm-design-2-2",
+        "type": "image",
+        "content": "/social-media/2/chatgpt-image-may-22-2026-06-06-29-pm.png"
+      },
+      {
+        "id": "sm-design-2-3",
+        "type": "image",
+        "content": "/social-media/2/chatgpt-image-may-22-2026-06-06-31-pm.png"
+      },
+      {
+        "id": "sm-design-2-4",
+        "type": "image",
+        "content": "/social-media/2/chatgpt-image-may-22-2026-06-06-33-pm.png"
+      },
+      {
+        "id": "sm-design-2-5",
+        "type": "image",
+        "content": "/social-media/2/chatgpt-image-may-22-2026-06-06-38-pm.png"
+      },
+      {
+        "id": "sm-design-2-6",
+        "type": "image",
+        "content": "/social-media/2/chatgpt-image-may-22-2026-06-07-11-pm.png"
+      }
+    ]
+  },
+  {
+    "id": "photoshoot-2",
+    "title": "Food & Beverage Photography",
+    "category": "Photoshoots",
+    "heroImage": "/photoshoots/2/chatgpt-image-may-17-2026-02-06-43-pm.png",
+    "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
+    "deliverables": [
+      "Product Photography",
+      "Art Direction",
+      "Lighting Design",
+      "Retouching"
+    ],
+    "gallery": [
+      {
+        "id": "photoshoot-2-1",
+        "type": "image",
+        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-06-43-pm.png"
+      },
+      {
+        "id": "photoshoot-2-2",
+        "type": "image",
+        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-00-pm.png"
+      },
+      {
+        "id": "photoshoot-2-3",
+        "type": "image",
+        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-17-pm.png"
+      },
+      {
+        "id": "photoshoot-2-4",
+        "type": "image",
+        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-22-pm.png"
+      },
+      {
+        "id": "photoshoot-2-5",
+        "type": "image",
+        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-32-pm.png"
+      },
+      {
+        "id": "photoshoot-2-6",
+        "type": "image",
+        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-38-pm.png"
+      },
+      {
+        "id": "photoshoot-2-7",
+        "type": "image",
+        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-43-pm.png"
       }
     ]
   },
@@ -954,96 +1183,6 @@
     ]
   },
   {
-    "id": "sm-design-1",
-    "title": "E-Commerce Social Campaign",
-    "category": "Social Media Design",
-    "heroImage": "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png",
-    "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
-    "deliverables": [
-      "Social Media Graphics",
-      "Campaign Art Direction",
-      "Visual Storytelling",
-      "Ad Design"
-    ],
-    "gallery": [
-      {
-        "id": "sm-design-1-1",
-        "type": "image",
-        "content": "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png"
-      },
-      {
-        "id": "sm-design-1-2",
-        "type": "image",
-        "content": "/social-media/1/chatgpt-image-may-22-2026-05-29-19-pm.png"
-      },
-      {
-        "id": "sm-design-1-3",
-        "type": "image",
-        "content": "/social-media/1/chatgpt-image-may-22-2026-05-29-24-pm.png"
-      },
-      {
-        "id": "sm-design-1-4",
-        "type": "image",
-        "content": "/social-media/1/chatgpt-image-may-22-2026-05-29-28-pm.png"
-      },
-      {
-        "id": "sm-design-1-5",
-        "type": "image",
-        "content": "/social-media/1/chatgpt-image-may-22-2026-05-29-32-pm.png"
-      },
-      {
-        "id": "sm-design-1-6",
-        "type": "image",
-        "content": "/social-media/1/chatgpt-image-may-22-2026-05-31-20-pm.png"
-      }
-    ]
-  },
-  {
-    "id": "sm-design-2",
-    "title": "Restaurant Instagram Growth",
-    "category": "Social Media Design",
-    "heroImage": "/social-media/2/chatgpt-image-may-22-2026-06-06-24-pm.png",
-    "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
-    "deliverables": [
-      "Social Media Graphics",
-      "Campaign Art Direction",
-      "Visual Storytelling",
-      "Ad Design"
-    ],
-    "gallery": [
-      {
-        "id": "sm-design-2-1",
-        "type": "image",
-        "content": "/social-media/2/chatgpt-image-may-22-2026-06-06-24-pm.png"
-      },
-      {
-        "id": "sm-design-2-2",
-        "type": "image",
-        "content": "/social-media/2/chatgpt-image-may-22-2026-06-06-29-pm.png"
-      },
-      {
-        "id": "sm-design-2-3",
-        "type": "image",
-        "content": "/social-media/2/chatgpt-image-may-22-2026-06-06-31-pm.png"
-      },
-      {
-        "id": "sm-design-2-4",
-        "type": "image",
-        "content": "/social-media/2/chatgpt-image-may-22-2026-06-06-33-pm.png"
-      },
-      {
-        "id": "sm-design-2-5",
-        "type": "image",
-        "content": "/social-media/2/chatgpt-image-may-22-2026-06-06-38-pm.png"
-      },
-      {
-        "id": "sm-design-2-6",
-        "type": "image",
-        "content": "/social-media/2/chatgpt-image-may-22-2026-06-07-11-pm.png"
-      }
-    ]
-  },
-  {
     "id": "sm-design-3",
     "title": "Fitness Brand Social Strategy",
     "category": "Social Media Design",
@@ -1094,6 +1233,56 @@
     ]
   },
   {
+    "id": "photoshoot-3",
+    "title": "Product Studio Shoot",
+    "category": "Photoshoots",
+    "heroImage": "/photoshoots/3/chatgpt-image-may-24-2026-02-37-03-pm.png",
+    "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
+    "deliverables": [
+      "Product Photography",
+      "Art Direction",
+      "Lighting Design",
+      "Retouching"
+    ],
+    "gallery": [
+      {
+        "id": "photoshoot-3-1",
+        "type": "image",
+        "content": "/photoshoots/3/chatgpt-image-may-24-2026-02-37-03-pm.png"
+      },
+      {
+        "id": "photoshoot-3-2",
+        "type": "image",
+        "content": "/photoshoots/3/chatgpt-image-may-3-2026-01-55-11-pm.png"
+      },
+      {
+        "id": "photoshoot-3-3",
+        "type": "image",
+        "content": "/photoshoots/3/chatgpt-image-may-3-2026-01-56-05-pm.png"
+      },
+      {
+        "id": "photoshoot-3-4",
+        "type": "image",
+        "content": "/photoshoots/3/chatgpt-image-may-3-2026-12-30-16-pm.png"
+      },
+      {
+        "id": "photoshoot-3-5",
+        "type": "image",
+        "content": "/photoshoots/3/chatgpt-image-may-3-2026-12-32-38-pm.png"
+      },
+      {
+        "id": "photoshoot-3-6",
+        "type": "image",
+        "content": "/photoshoots/3/chatgpt-image-may-3-2026-12-46-29-pm.png"
+      },
+      {
+        "id": "photoshoot-3-7",
+        "type": "image",
+        "content": "/photoshoots/3/chatgpt-image-may-3-2026-12-56-57-pm.png"
+      }
+    ]
+  },
+  {
     "id": "sm-design-4",
     "title": "Real Estate Digital Marketing",
     "category": "Social Media Design",
@@ -1135,6 +1324,51 @@
         "id": "sm-design-4-6",
         "type": "image",
         "content": "/social-media/4/chatgpt-image-may-24-2026-01-36-27-pm.png"
+      }
+    ]
+  },
+  {
+    "id": "photoshoot-4",
+    "title": "Corporate Team Portraits",
+    "category": "Photoshoots",
+    "heroImage": "/photoshoots/4/chatgpt-image-may-24-2026-02-30-54-pm.png",
+    "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
+    "deliverables": [
+      "Product Photography",
+      "Art Direction",
+      "Lighting Design",
+      "Retouching"
+    ],
+    "gallery": [
+      {
+        "id": "photoshoot-4-1",
+        "type": "image",
+        "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-30-54-pm.png"
+      },
+      {
+        "id": "photoshoot-4-2",
+        "type": "image",
+        "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-30-58-pm.png"
+      },
+      {
+        "id": "photoshoot-4-3",
+        "type": "image",
+        "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-31-07-pm.png"
+      },
+      {
+        "id": "photoshoot-4-4",
+        "type": "image",
+        "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-31-11-pm.png"
+      },
+      {
+        "id": "photoshoot-4-5",
+        "type": "image",
+        "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-31-15-pm.png"
+      },
+      {
+        "id": "photoshoot-4-6",
+        "type": "image",
+        "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-31-18-pm.png"
       }
     ]
   },
@@ -1194,196 +1428,6 @@
     ]
   },
   {
-    "id": "photoshoot-1",
-    "title": "Fashion & Lifestyle Photoshoot",
-    "category": "Photoshoots",
-    "heroImage": "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png",
-    "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
-    "deliverables": [
-      "Product Photography",
-      "Art Direction",
-      "Lighting Design",
-      "Retouching"
-    ],
-    "gallery": [
-      {
-        "id": "photoshoot-1-1",
-        "type": "image",
-        "content": "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png"
-      },
-      {
-        "id": "photoshoot-1-2",
-        "type": "image",
-        "content": "/photoshoots/1/chatgpt-image-may-24-2026-02-45-45-pm.png"
-      },
-      {
-        "id": "photoshoot-1-3",
-        "type": "image",
-        "content": "/photoshoots/1/chatgpt-image-may-24-2026-02-45-48-pm.png"
-      },
-      {
-        "id": "photoshoot-1-4",
-        "type": "image",
-        "content": "/photoshoots/1/gemini-3-1-flash-image-preview-nano-banana-2-web-search-a.png"
-      },
-      {
-        "id": "photoshoot-1-5",
-        "type": "image",
-        "content": "/photoshoots/1/gpt-image-1-5-high-fidelity-b.png"
-      },
-      {
-        "id": "photoshoot-1-6",
-        "type": "image",
-        "content": "/photoshoots/1/pomelli-photoshoot-image-9-16-0429-1.png"
-      }
-    ]
-  },
-  {
-    "id": "photoshoot-2",
-    "title": "Food & Beverage Photography",
-    "category": "Photoshoots",
-    "heroImage": "/photoshoots/2/chatgpt-image-may-17-2026-02-06-43-pm.png",
-    "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
-    "deliverables": [
-      "Product Photography",
-      "Art Direction",
-      "Lighting Design",
-      "Retouching"
-    ],
-    "gallery": [
-      {
-        "id": "photoshoot-2-1",
-        "type": "image",
-        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-06-43-pm.png"
-      },
-      {
-        "id": "photoshoot-2-2",
-        "type": "image",
-        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-00-pm.png"
-      },
-      {
-        "id": "photoshoot-2-3",
-        "type": "image",
-        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-17-pm.png"
-      },
-      {
-        "id": "photoshoot-2-4",
-        "type": "image",
-        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-22-pm.png"
-      },
-      {
-        "id": "photoshoot-2-5",
-        "type": "image",
-        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-32-pm.png"
-      },
-      {
-        "id": "photoshoot-2-6",
-        "type": "image",
-        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-38-pm.png"
-      },
-      {
-        "id": "photoshoot-2-7",
-        "type": "image",
-        "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-43-pm.png"
-      }
-    ]
-  },
-  {
-    "id": "photoshoot-3",
-    "title": "Product Studio Shoot",
-    "category": "Photoshoots",
-    "heroImage": "/photoshoots/3/chatgpt-image-may-24-2026-02-37-03-pm.png",
-    "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
-    "deliverables": [
-      "Product Photography",
-      "Art Direction",
-      "Lighting Design",
-      "Retouching"
-    ],
-    "gallery": [
-      {
-        "id": "photoshoot-3-1",
-        "type": "image",
-        "content": "/photoshoots/3/chatgpt-image-may-24-2026-02-37-03-pm.png"
-      },
-      {
-        "id": "photoshoot-3-2",
-        "type": "image",
-        "content": "/photoshoots/3/chatgpt-image-may-3-2026-01-55-11-pm.png"
-      },
-      {
-        "id": "photoshoot-3-3",
-        "type": "image",
-        "content": "/photoshoots/3/chatgpt-image-may-3-2026-01-56-05-pm.png"
-      },
-      {
-        "id": "photoshoot-3-4",
-        "type": "image",
-        "content": "/photoshoots/3/chatgpt-image-may-3-2026-12-30-16-pm.png"
-      },
-      {
-        "id": "photoshoot-3-5",
-        "type": "image",
-        "content": "/photoshoots/3/chatgpt-image-may-3-2026-12-32-38-pm.png"
-      },
-      {
-        "id": "photoshoot-3-6",
-        "type": "image",
-        "content": "/photoshoots/3/chatgpt-image-may-3-2026-12-46-29-pm.png"
-      },
-      {
-        "id": "photoshoot-3-7",
-        "type": "image",
-        "content": "/photoshoots/3/chatgpt-image-may-3-2026-12-56-57-pm.png"
-      }
-    ]
-  },
-  {
-    "id": "photoshoot-4",
-    "title": "Corporate Team Portraits",
-    "category": "Photoshoots",
-    "heroImage": "/photoshoots/4/chatgpt-image-may-24-2026-02-30-54-pm.png",
-    "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
-    "deliverables": [
-      "Product Photography",
-      "Art Direction",
-      "Lighting Design",
-      "Retouching"
-    ],
-    "gallery": [
-      {
-        "id": "photoshoot-4-1",
-        "type": "image",
-        "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-30-54-pm.png"
-      },
-      {
-        "id": "photoshoot-4-2",
-        "type": "image",
-        "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-30-58-pm.png"
-      },
-      {
-        "id": "photoshoot-4-3",
-        "type": "image",
-        "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-31-07-pm.png"
-      },
-      {
-        "id": "photoshoot-4-4",
-        "type": "image",
-        "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-31-11-pm.png"
-      },
-      {
-        "id": "photoshoot-4-5",
-        "type": "image",
-        "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-31-15-pm.png"
-      },
-      {
-        "id": "photoshoot-4-6",
-        "type": "image",
-        "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-31-18-pm.png"
-      }
-    ]
-  },
-  {
     "id": "photoshoot-5",
     "title": "Automotive Photography Session",
     "category": "Photoshoots",
@@ -1430,50 +1474,6 @@
         "id": "photoshoot-5-7",
         "type": "image",
         "content": "/photoshoots/5/chatgpt-image-may-4-2026-12-13-20-pm.png"
-      }
-    ]
-  },
-  {
-    "id": "photo-shoot-6",
-    "title": "Luxury Interior Showcase",
-    "category": "Creative Photoshoot",
-    "heroImage": "/photoshoots/6/interior-shoot-1.png",
-    "overview": "Professional interior photography showcasing the layout, lighting, and aesthetic details of a bedroom and surrounding spaces.",
-    "deliverables": [
-      "Interior Photography",
-      "Lighting & Composition",
-      "Retouching & Color Grading"
-    ],
-    "gallery": [
-      {
-        "id": "photo-shoot-6-1",
-        "type": "image",
-        "content": "/photoshoots/6/interior-shoot-1.png"
-      },
-      {
-        "id": "photo-shoot-6-2",
-        "type": "image",
-        "content": "/photoshoots/6/interior-shoot-2.png"
-      },
-      {
-        "id": "photo-shoot-6-3",
-        "type": "image",
-        "content": "/photoshoots/6/interior-shoot-3.png"
-      },
-      {
-        "id": "photo-shoot-6-4",
-        "type": "image",
-        "content": "/photoshoots/6/interior-shoot-4.png"
-      },
-      {
-        "id": "photo-shoot-6-5",
-        "type": "image",
-        "content": "/photoshoots/6/interior-shoot-5.png"
-      },
-      {
-        "id": "photo-shoot-6-6",
-        "type": "image",
-        "content": "/photoshoots/6/interior-shoot-6.png"
       }
     ]
   }
