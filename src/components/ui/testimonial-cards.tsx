@@ -19,29 +19,37 @@ const testimonials: Testimonial[] = [
     id: 1,
     testimonial:
       "Ahmed completely transformed our brand from the ground up. Every single detail was crafted with clear intention and the final result exceeded all our expectations.",
-    author: "Sarah K.",
-    role: "CEO @ Lumina Ventures",
-    avatar: "https://i.pravatar.cc/128?img=47",
+    author: "Naji Qasim",
+    role: "Manager @ Sarh Al-Masia Al-Raeda Holding Co.",
+    avatar: "https://i.pravatar.cc/128?img=11",
   },
   {
     id: 2,
     testimonial:
       "The level of quality and professionalism was outstanding. Our new brand identity attracted new clients within the very first month of launch.",
-    author: "Mohammed A.",
-    role: "Founder @ NovaBuild",
+    author: "Mohamed Roshdy",
+    role: "CEO @ Core Business Ltd.",
     avatar: "https://i.pravatar.cc/128?img=12",
   },
   {
     id: 3,
     testimonial:
       "A true visionary. Ahmed doesn't just design logos — he builds entire brand worlds. We couldn't be happier with our new identity.",
-    author: "Layla R.",
-    role: "Marketing Director @ Vertex Co.",
-    avatar: "https://i.pravatar.cc/128?img=20",
+    author: "Abu Mohamed",
+    role: "Founder @ Wajhat Al-Nujoom Est.",
+    avatar: "https://i.pravatar.cc/128?img=13",
+  },
+  {
+    id: 4,
+    testimonial:
+      "Exceptional creativity and a deep understanding of our business needs. The design process was smooth and the outcome was spectacular.",
+    author: "Ahmed Ali",
+    role: "CEO @ Roqay Store",
+    avatar: "https://i.pravatar.cc/128?img=14",
   },
 ];
 
-type Position = "front" | "middle" | "back";
+type Position = "front" | "middle" | "back" | "hidden";
 
 function TestimonialCard({
   handleShuffle,
@@ -57,7 +65,7 @@ function TestimonialCard({
   return (
     <motion.div
       style={{
-        zIndex: position === "front" ? 2 : position === "middle" ? 1 : 0,
+        zIndex: position === "front" ? 3 : position === "middle" ? 2 : position === "back" ? 1 : 0,
       }}
       animate={{
         rotate:
@@ -65,13 +73,18 @@ function TestimonialCard({
             ? "-5deg"
             : position === "middle"
             ? "0deg"
-            : "5deg",
+            : position === "back"
+            ? "5deg"
+            : "0deg",
         x:
           position === "front"
             ? "0%"
             : position === "middle"
             ? "30%"
+            : position === "back"
+            ? "60%"
             : "60%",
+        opacity: position === "hidden" ? 0 : 1,
       }}
       drag={isFront}
       dragElastic={0.3}
@@ -139,6 +152,7 @@ export function TestimonialsSection() {
     "front",
     "middle",
     "back",
+    "hidden",
   ]);
 
   const handleShuffle = () => {
