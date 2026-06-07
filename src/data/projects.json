@@ -1432,5 +1432,49 @@
         "content": "/photoshoots/5/chatgpt-image-may-4-2026-12-13-20-pm.png"
       }
     ]
+  },
+  {
+    "id": "photo-shoot-6",
+    "title": "Luxury Interior Showcase",
+    "category": "Creative Photoshoot",
+    "heroImage": "/photoshoots/6/interior-shoot-1.png",
+    "overview": "Professional interior photography showcasing the layout, lighting, and aesthetic details of a bedroom and surrounding spaces.",
+    "deliverables": [
+      "Interior Photography",
+      "Lighting & Composition",
+      "Retouching & Color Grading"
+    ],
+    "gallery": [
+      {
+        "id": "photo-shoot-6-1",
+        "type": "image",
+        "content": "/photoshoots/6/interior-shoot-1.png"
+      },
+      {
+        "id": "photo-shoot-6-2",
+        "type": "image",
+        "content": "/photoshoots/6/interior-shoot-2.png"
+      },
+      {
+        "id": "photo-shoot-6-3",
+        "type": "image",
+        "content": "/photoshoots/6/interior-shoot-3.png"
+      },
+      {
+        "id": "photo-shoot-6-4",
+        "type": "image",
+        "content": "/photoshoots/6/interior-shoot-4.png"
+      },
+      {
+        "id": "photo-shoot-6-5",
+        "type": "image",
+        "content": "/photoshoots/6/interior-shoot-5.png"
+      },
+      {
+        "id": "photo-shoot-6-6",
+        "type": "image",
+        "content": "/photoshoots/6/interior-shoot-6.png"
+      }
+    ]
   }
 ]
