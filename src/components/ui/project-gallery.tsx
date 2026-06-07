@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface GalleryItem {
   id: string;
@@ -53,12 +54,15 @@ export default function ProjectGallery({ gallery }: ProjectGalleryProps) {
           >
             {item.type === "image" && (
               <div className="relative overflow-hidden">
-                <img
+                <Image
                   src={item.content}
                   alt={`Showcase artboard ${i + 1}`}
                   className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.01]"
-                  loading="lazy"
+                  width={1200}
+                  height={1200}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   onError={(e) => {
+                    e.currentTarget.srcset = "";
                     e.currentTarget.src = "/placeholder.png";
                   }}
                 />
@@ -130,11 +134,15 @@ export default function ProjectGallery({ gallery }: ProjectGalleryProps) {
               className="max-w-[90vw] max-h-[85vh] flex items-center justify-center p-4"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <Image
                 src={gallery[activeIdx].content}
                 alt={`Showcase full artboard ${activeIdx + 1}`}
-                className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/5 cursor-default select-none"
+                className="max-w-full max-h-[85vh] w-auto h-auto object-contain rounded-lg shadow-2xl border border-white/5 cursor-default select-none"
+                width={1920}
+                height={1080}
+                sizes="100vw"
                 onError={(e) => {
+                  e.currentTarget.srcset = "";
                   e.currentTarget.src = "/placeholder.png";
                 }}
               />
