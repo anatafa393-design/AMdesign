@@ -76,7 +76,7 @@
   },
   {
     "id": "vi-project-1",
-    "title": "Visual Identity - Project 1",
+    "title": "Corporate Visual Identity",
     "category": "Brand Identity Design",
     "heroImage": "/project-1-cover.jpg",
     "overview": "A full-scale visual identity rebuild. We established core visual markers to set the stage for a highly dynamic and modern brand.",
@@ -215,7 +215,7 @@
   },
   {
     "id": "pkg-design-1",
-    "title": "Premium Packaging - Project 1",
+    "title": "Luxury Cosmetics Packaging",
     "category": "Packaging Design",
     "heroImage": "/packaging/1/2.jpg",
     "overview": "A high-end product packaging showcase designed to elevate the brand's physical presence and captivate shelf attention.",
@@ -260,7 +260,7 @@
   },
   {
     "id": "pkg-design-2",
-    "title": "Premium Packaging - Project 2",
+    "title": "Global Rice Brands Packaging",
     "category": "Packaging Design",
     "heroImage": "/packaging/2/1-1-page-1.png",
     "overview": "A high-end product packaging showcase designed to elevate the brand's physical presence and captivate shelf attention.",
@@ -440,7 +440,7 @@
   },
   {
     "id": "pkg-design-3",
-    "title": "Premium Packaging - Project 3",
+    "title": "Artisan Bakery & Menu Design",
     "category": "Packaging Design",
     "heroImage": "/packaging/3/mockup-01.png",
     "overview": "A high-end product packaging showcase designed to elevate the brand's physical presence and captivate shelf attention.",
@@ -955,7 +955,7 @@
   },
   {
     "id": "sm-design-1",
-    "title": "Social Media Campaign - Project 1",
+    "title": "E-Commerce Social Campaign",
     "category": "Social Media Design",
     "heroImage": "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png",
     "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
@@ -1000,7 +1000,7 @@
   },
   {
     "id": "sm-design-2",
-    "title": "Social Media Campaign - Project 2",
+    "title": "Restaurant Instagram Growth",
     "category": "Social Media Design",
     "heroImage": "/social-media/2/chatgpt-image-may-22-2026-06-06-24-pm.png",
     "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
@@ -1045,7 +1045,7 @@
   },
   {
     "id": "sm-design-3",
-    "title": "Social Media Campaign - Project 3",
+    "title": "Fitness Brand Social Strategy",
     "category": "Social Media Design",
     "heroImage": "/social-media/3/chatgpt-image-may-22-2026-06-26-58-pm.png",
     "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
@@ -1095,7 +1095,7 @@
   },
   {
     "id": "sm-design-4",
-    "title": "Social Media Campaign - Project 4",
+    "title": "Real Estate Digital Marketing",
     "category": "Social Media Design",
     "heroImage": "/social-media/4/chatgpt-image-may-24-2026-01-31-35-pm.png",
     "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
@@ -1140,7 +1140,7 @@
   },
   {
     "id": "sm-design-5",
-    "title": "Social Media Campaign - Project 5",
+    "title": "Tech Startup Social Assets",
     "category": "Social Media Design",
     "heroImage": "/social-media/5/chatgpt-image-may-6-2026-06-28-02-pm.png",
     "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
@@ -1195,7 +1195,7 @@
   },
   {
     "id": "photoshoot-1",
-    "title": "Creative Photoshoot - Project 1",
+    "title": "Fashion & Lifestyle Photoshoot",
     "category": "Photoshoots",
     "heroImage": "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png",
     "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
@@ -1240,7 +1240,7 @@
   },
   {
     "id": "photoshoot-2",
-    "title": "Creative Photoshoot - Project 2",
+    "title": "Food & Beverage Photography",
     "category": "Photoshoots",
     "heroImage": "/photoshoots/2/chatgpt-image-may-17-2026-02-06-43-pm.png",
     "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
@@ -1290,7 +1290,7 @@
   },
   {
     "id": "photoshoot-3",
-    "title": "Creative Photoshoot - Project 3",
+    "title": "Product Studio Shoot",
     "category": "Photoshoots",
     "heroImage": "/photoshoots/3/chatgpt-image-may-24-2026-02-37-03-pm.png",
     "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
@@ -1340,7 +1340,7 @@
   },
   {
     "id": "photoshoot-4",
-    "title": "Creative Photoshoot - Project 4",
+    "title": "Corporate Team Portraits",
     "category": "Photoshoots",
     "heroImage": "/photoshoots/4/chatgpt-image-may-24-2026-02-30-54-pm.png",
     "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
@@ -1385,7 +1385,7 @@
   },
   {
     "id": "photoshoot-5",
-    "title": "Creative Photoshoot - Project 5",
+    "title": "Automotive Photography Session",
     "category": "Photoshoots",
     "heroImage": "/photoshoots/5/chatgpt-image-may-4-2026-11-35-41-am.png",
     "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
