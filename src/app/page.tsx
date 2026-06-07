@@ -84,7 +84,7 @@ export default function Home() {
         );
 
   useEffect(() => {
-    fetch("/api/projects")
+    fetch(`/api/projects?t=${Date.now()}`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
