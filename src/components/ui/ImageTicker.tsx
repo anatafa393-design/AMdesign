@@ -31,26 +31,42 @@ function TickerRow({ images, reverse = false }: { images: string[], reverse?: bo
   useEffect(() => {
     let animationFrameId: number;
     let lastTime = performance.now();
-    const speed = 0.03; // pixels per ms
+    const speed = 0.05; // pixels per ms
+
+    // Initialize exact scroll tracker
+    let exactScrollLeft = 0;
+    
+    // For reverse ticker, start midway so it has room to scroll left
+    if (scrollRef.current && reverse) {
+      scrollRef.current.scrollLeft = scrollRef.current.scrollWidth / 2;
+      exactScrollLeft = scrollRef.current.scrollLeft;
+    } else if (scrollRef.current) {
+      exactScrollLeft = scrollRef.current.scrollLeft;
+    }
 
     const scroll = (currentTime: number) => {
       const delta = currentTime - lastTime;
       lastTime = currentTime;
 
       if (scrollRef.current && !isDragging.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+        const { scrollWidth } = scrollRef.current;
         
-        let newScrollLeft = scrollLeft + (reverse ? -speed * delta : speed * delta);
+        // Add delta to our floating point tracker
+        exactScrollLeft += reverse ? -speed * delta : speed * delta;
         
         // Loop logic
-        if (!reverse && newScrollLeft >= scrollWidth / 2) {
-          newScrollLeft -= scrollWidth / 2;
-        } else if (reverse && newScrollLeft <= 0) {
-          newScrollLeft += scrollWidth / 2;
+        if (!reverse && exactScrollLeft >= scrollWidth / 2) {
+          exactScrollLeft -= scrollWidth / 2;
+        } else if (reverse && exactScrollLeft <= 0) {
+          exactScrollLeft += scrollWidth / 2;
         }
         
-        scrollRef.current.scrollLeft = newScrollLeft;
+        scrollRef.current.scrollLeft = exactScrollLeft;
+      } else if (scrollRef.current && isDragging.current) {
+        // Sync our tracker with user's manual scroll position
+        exactScrollLeft = scrollRef.current.scrollLeft;
       }
+      
       animationFrameId = requestAnimationFrame(scroll);
     };
 
@@ -68,7 +84,7 @@ function TickerRow({ images, reverse = false }: { images: string[], reverse?: bo
       style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       onTouchStart={() => (isDragging.current = true)}
       onTouchEnd={() => {
-        setTimeout(() => { isDragging.current = false }, 1000);
+        setTimeout(() => { isDragging.current = false }, 500);
       }}
       onMouseEnter={() => (isDragging.current = true)}
       onMouseLeave={() => (isDragging.current = false)}
