@@ -424,6 +424,7 @@ export default function Home() {
                 desc: "Logos, colors, and typography that make you stand out.",
                 image: "/project-1-cover.jpg",
                 overlayImage: "/project-1-cover.jpg",
+                targetCategory: "Visual Identity",
               },
               {
                 icon: Globe,
@@ -431,6 +432,7 @@ export default function Home() {
                 desc: "Immersive, high-performance websites that convert visitors.",
                 image: "/website-building-service.png",
                 overlayImage: "/website-building-service.png",
+                targetCategory: "Visual Identity",
               },
               {
                 icon: Package,
@@ -438,6 +440,7 @@ export default function Home() {
                 desc: "Packaging that reflects premium quality and attracts consumers.",
                 image: "/packaging/1/2.jpg",
                 overlayImage: "/packaging/1/2.jpg",
+                targetCategory: "Packaging Design",
               },
               {
                 icon: Camera,
@@ -445,6 +448,7 @@ export default function Home() {
                 desc: "Professional photography showcasing your products and services.",
                 image: "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png",
                 overlayImage: "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png",
+                targetCategory: "Photoshoots",
               },
               {
                 icon: Palette,
@@ -452,6 +456,7 @@ export default function Home() {
                 desc: "Engaging visual content for social platforms.",
                 image: "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png",
                 overlayImage: "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png",
+                targetCategory: "Social Media Design",
               },
               {
                 icon: BookOpen,
@@ -459,10 +464,19 @@ export default function Home() {
                 desc: "Comprehensive and professional company profiles that tell your brand's story.",
                 image: "/company-profile-design.png",
                 overlayImage: "/company-profile-design.png",
+                targetCategory: "Visual Identity",
               },
             ].map((service, i) => (
               <Reveal key={i} delay={i * 0.1}>
-                <div className="group relative bg-white/[0.03] border border-white/[0.06] rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:bg-white/[0.06] hover:border-white/10 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(255,60,0,0.15)] overflow-hidden h-full">
+                <div 
+                  onClick={() => {
+                    setSelectedCategory(service.targetCategory);
+                    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  className="group relative bg-white/[0.03] border border-white/[0.06] rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:bg-white/[0.06] hover:border-white/10 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(255,60,0,0.15)] overflow-hidden h-full cursor-pointer text-left"
+                >
                   {/* Gradient overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
