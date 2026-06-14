@@ -157,6 +157,11 @@
     animation: marquee 45s linear infinite;
   }
 
+  /* ── Image Ticker ── */
+  .animate-ticker {
+    animation: ticker 35s linear infinite;
+  }
+
   /* ── Ruqa-style calligraphic brand font (non-italic) ── */
   .font-brand {
     font-family: var(--font-brand), "Georgia", serif;
@@ -377,6 +382,12 @@
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-100%); }
+}
+
+/* Ticker — moves by exactly half the width (since images are duplicated) */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* Float — gentle vertical levitation */

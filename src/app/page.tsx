@@ -5,6 +5,7 @@ import Link from "next/link";
 import { renderCanvas } from "@/components/ui/canvas";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
 import dynamic from "next/dynamic";
+import ImageTicker from "@/components/ui/ImageTicker";
 import MagneticButton from "@/components/ui/magnetic-button";
 import Reveal from "@/components/ui/reveal-on-scroll";
 import TextReveal from "@/components/ui/text-reveal";
@@ -500,6 +501,11 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ═══ IMAGE TICKER ═══ */}
+      <section className="relative z-10 py-4 overflow-hidden">
+        <ImageTicker />
       </section>
 
       {/* ═══ PROJECTS SECTION ═══ */}
