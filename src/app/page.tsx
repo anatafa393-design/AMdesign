@@ -101,7 +101,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative bg-[#050505] text-white selection:bg-orange-500/30 selection:text-white font-sans min-h-screen">
+    <div className="relative bg-[#050505] text-white selection:bg-orange-500/30 selection:text-white font-sans min-h-screen overflow-x-hidden">
       {/* Background Canvas */}
       <canvas
         className="pointer-events-none fixed inset-0 z-0 w-full h-full opacity-30"

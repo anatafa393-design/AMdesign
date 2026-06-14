@@ -42,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${syne.variable}`}>
-      <body className="bg-[#050505] text-white selection:bg-purple-500/30 font-sans">
+      <body className="bg-[#050505] text-white selection:bg-purple-500/30 font-sans overflow-x-hidden">
         <header role="banner">
           <Navbar aria-label="Primary navigation" />
         </header>
