@@ -161,6 +161,16 @@
   .animate-ticker {
     animation: ticker 35s linear infinite;
   }
+  .animate-ticker-reverse {
+    animation: ticker-reverse 35s linear infinite;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 
   /* ── Ruqa-style calligraphic brand font (non-italic) ── */
   .font-brand {
@@ -388,6 +398,12 @@
 @keyframes ticker {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
+}
+
+/* Ticker Reverse — right to left animation */
+@keyframes ticker-reverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
 }
 
 /* Float — gentle vertical levitation */

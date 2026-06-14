@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 const ROW_1 = [
   "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png",
@@ -24,104 +23,76 @@ const ROW_2 = [
   "/photoshoots/6/interior-shoot-1.png",
 ];
 
-function TickerRow({ images, reverse = false }: { images: string[], reverse?: boolean }) {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const isDragging = useRef(false);
-
-  useEffect(() => {
-    let animationFrameId: number;
-    let lastTime = performance.now();
-    const speed = 0.05; // pixels per ms
-
-    // Initialize exact scroll tracker
-    let exactScrollLeft = 0;
-    
-    // For reverse ticker, start midway so it has room to scroll left
-    if (scrollRef.current && reverse) {
-      scrollRef.current.scrollLeft = scrollRef.current.scrollWidth / 2;
-      exactScrollLeft = scrollRef.current.scrollLeft;
-    } else if (scrollRef.current) {
-      exactScrollLeft = scrollRef.current.scrollLeft;
-    }
-
-    const scroll = (currentTime: number) => {
-      const delta = currentTime - lastTime;
-      lastTime = currentTime;
-
-      if (scrollRef.current && !isDragging.current) {
-        const { scrollWidth } = scrollRef.current;
-        
-        // Add delta to our floating point tracker
-        exactScrollLeft += reverse ? -speed * delta : speed * delta;
-        
-        // Loop logic
-        if (!reverse && exactScrollLeft >= scrollWidth / 2) {
-          exactScrollLeft -= scrollWidth / 2;
-        } else if (reverse && exactScrollLeft <= 0) {
-          exactScrollLeft += scrollWidth / 2;
-        }
-        
-        scrollRef.current.scrollLeft = exactScrollLeft;
-      } else if (scrollRef.current && isDragging.current) {
-        // Sync our tracker with user's manual scroll position
-        exactScrollLeft = scrollRef.current.scrollLeft;
-      }
-      
-      animationFrameId = requestAnimationFrame(scroll);
-    };
-
-    animationFrameId = requestAnimationFrame(scroll);
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [reverse]);
-
-  // Duplicate the array for seamless infinite scroll
-  const displayImages = [...images, ...images];
+function TickerRow({
+  images,
+  reverse = false,
+}: {
+  images: string[];
+  reverse?: boolean;
+}) {
+  const trackRef = useRef<HTMLDivElement>(null);
+  // Duplicate for seamless loop
+  const items = [...images, ...images];
 
   return (
-    <div
-      ref={scrollRef}
-      className="flex gap-3 md:gap-4 overflow-x-auto no-scrollbar touch-pan-x select-none snap-x snap-mandatory"
-      style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-      onTouchStart={() => (isDragging.current = true)}
-      onTouchEnd={() => {
-        setTimeout(() => { isDragging.current = false }, 500);
-      }}
-      onMouseEnter={() => (isDragging.current = true)}
-      onMouseLeave={() => (isDragging.current = false)}
-    >
-      {displayImages.map((src, i) => (
+    <div className="w-full overflow-hidden">
+      {/* Outer wrapper — pauses on hover */}
+      <div
+        className="flex"
+        style={{ willChange: "transform" }}
+        onMouseEnter={() => {
+          if (trackRef.current)
+            trackRef.current.style.animationPlayState = "paused";
+        }}
+        onMouseLeave={() => {
+          if (trackRef.current)
+            trackRef.current.style.animationPlayState = "running";
+        }}
+      >
+        {/* Animated track */}
         <div
-          key={i}
-          className="relative flex-shrink-0 snap-center rounded-xl md:rounded-2xl overflow-hidden border border-white/10 shadow-xl shadow-black/50 w-44 h-64 md:w-64 md:h-80"
+          ref={trackRef}
+          className={`flex gap-4 flex-shrink-0 ${
+            reverse ? "animate-ticker-reverse" : "animate-ticker"
+          }`}
+          style={{ minWidth: "max-content" }}
         >
-          <Image
-            src={src}
-            alt={`Portfolio showcase ${i + 1}`}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 176px, 256px"
-            loading="lazy"
-            draggable={false}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+          {items.map((src, i) => (
+            <div
+              key={i}
+              className="relative flex-shrink-0 rounded-2xl overflow-hidden border border-white/10 shadow-xl shadow-black/50"
+              style={{ width: "clamp(140px, 38vw, 240px)", aspectRatio: "3/4" }}
+            >
+              <Image
+                src={src}
+                alt={`Portfolio showcase ${i + 1}`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 38vw, 240px"
+                loading="lazy"
+                draggable={false}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 }
 
 export default function ImageTicker() {
   return (
-    <div className="relative w-full overflow-hidden py-8 group flex flex-col gap-4 md:gap-6">
+    <div className="relative w-full py-8 flex flex-col gap-4 md:gap-6 overflow-hidden">
       {/* Fade edges */}
-      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 md:w-40 z-10 bg-gradient-to-r from-[#080808] to-transparent" />
-      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 md:w-40 z-10 bg-gradient-to-l from-[#080808] to-transparent" />
+      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-gradient-to-r from-[#050505] to-transparent" />
+      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-gradient-to-l from-[#050505] to-transparent" />
 
-      {/* Row 1: Left to Right */}
+      {/* Row 1: Left → Right */}
       <TickerRow images={ROW_1} />
-      
-      {/* Row 2: Right to Left */}
-      <TickerRow images={ROW_2} reverse={true} />
+
+      {/* Row 2: Right → Left */}
+      <TickerRow images={ROW_2} reverse />
     </div>
   );
 }
