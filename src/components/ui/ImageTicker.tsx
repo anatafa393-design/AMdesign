@@ -3,7 +3,6 @@
 import Image from "next/image";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 
 const ROW_1 = [
   "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png",
