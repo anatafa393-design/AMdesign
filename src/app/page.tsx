@@ -546,7 +546,7 @@ export default function Home() {
           </div>
 
           {/* Projects masonry grid */}
-          <div className="columns-1 md:columns-2 gap-8">
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 md:gap-8">
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((project) => {
                 return (
