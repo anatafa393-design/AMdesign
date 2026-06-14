@@ -428,8 +428,8 @@ export default function Home() {
                 icon: Globe,
                 title: "Website Building",
                 desc: "Immersive, high-performance websites that convert visitors.",
-                image: "/asala-website.jpg",
-                overlayImage: "/asala-website.jpg",
+                image: "/Capture.JPG",
+                overlayImage: "/Capture.JPG",
               },
               {
                 icon: Package,
