@@ -428,8 +428,8 @@ export default function Home() {
                 icon: Globe,
                 title: "Website Building",
                 desc: "Immersive, high-performance websites that convert visitors.",
-                image: "/project-2-cover.jpg",
-                overlayImage: "/project-2-cover.jpg",
+                image: "/asala-website.jpg",
+                overlayImage: "/asala-website.jpg",
               },
               {
                 icon: Package,
@@ -456,8 +456,8 @@ export default function Home() {
                 icon: BookOpen,
                 title: "Company Profile Design",
                 desc: "Comprehensive and professional company profiles that tell your brand's story.",
-                image: "/project-2-cover.jpg",
-                overlayImage: "/project-2-cover.jpg",
+                image: "/company-profile-design.png",
+                overlayImage: "/company-profile-design.png",
               },
             ].map((service, i) => (
               <Reveal key={i} delay={i * 0.1}>
