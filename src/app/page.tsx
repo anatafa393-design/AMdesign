@@ -462,34 +462,34 @@ export default function Home() {
               },
             ].map((service, i) => (
               <Reveal key={i} delay={i * 0.1}>
-                <div className="group relative bg-white/[0.03] border border-white/[0.06] rounded-3xl p-8 flex flex-col transition-all duration-500 hover:bg-white/[0.06] hover:border-white/10 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(255,60,0,0.15)] overflow-hidden h-full">
+                <div className="group relative bg-white/[0.03] border border-white/[0.06] rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:bg-white/[0.06] hover:border-white/10 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(255,60,0,0.15)] overflow-hidden h-full">
                   {/* Gradient overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Icon */}
-                  <div className="relative z-10 w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-7 h-7 text-orange-400" />
+                  <div className="relative z-10 w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-500/10 flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-6 h-6 md:w-7 md:h-7 text-orange-400" />
                   </div>
 
                   {/* Image preview */}
-                  <div className="relative flex items-center justify-center mb-6 h-40">
+                  <div className="relative flex items-center justify-center mb-4 md:mb-6 h-32 md:h-40">
                     <ImageWithFallback
                       src={service.image}
                       alt={`${service.title} showcase`}
-                      className="absolute w-36 h-auto rounded-xl shadow-md transform -rotate-6 transition-transform duration-500 group-hover:rotate-[-10deg] group-hover:scale-110 object-cover"
+                      className="absolute w-28 md:w-36 h-auto rounded-xl shadow-md transform -rotate-6 transition-transform duration-500 group-hover:rotate-[-10deg] group-hover:scale-110 object-cover"
                       style={{ aspectRatio: "4/3" }}
                     />
                     <ImageWithFallback
                       src={service.overlayImage}
                       alt={`${service.title} example`}
-                      className="absolute w-36 h-auto rounded-xl shadow-2xl transform rotate-3 transition-transform duration-500 group-hover:rotate-[8deg] group-hover:scale-110 object-cover"
+                      className="absolute w-28 md:w-36 h-auto rounded-xl shadow-2xl transform rotate-3 transition-transform duration-500 group-hover:rotate-[8deg] group-hover:scale-110 object-cover"
                       style={{ aspectRatio: "4/3" }}
                     />
                   </div>
 
                   {/* Text */}
                   <div className="relative z-10 mt-auto">
-                    <h3 className="text-xl font-bold text-white mb-3">
+                    <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">
                       {service.title}
                     </h3>
                     <p className="text-white/40 text-sm leading-relaxed">
