@@ -18,6 +18,7 @@ import {
   Package,
   Camera,
   PenTool,
+  BookOpen,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -451,6 +452,13 @@ export default function Home() {
                 image: "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png",
                 overlayImage: "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png",
               },
+              {
+                icon: BookOpen,
+                title: "Company Profile Design",
+                desc: "Comprehensive and professional company profiles that tell your brand's story.",
+                image: "/project-2-cover.jpg",
+                overlayImage: "/project-2-cover.jpg",
+              },
             ].map((service, i) => (
               <Reveal key={i} delay={i * 0.1}>
                 <div className="group relative bg-white/[0.03] border border-white/[0.06] rounded-3xl p-8 flex flex-col transition-all duration-500 hover:bg-white/[0.06] hover:border-white/10 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(255,60,0,0.15)] overflow-hidden h-full">
@@ -558,6 +566,8 @@ export default function Home() {
                       <ImageWithFallback
                         src={project.heroImage}
                         alt={project.title}
+                        width={(project as any).orientation === 'portrait' ? 800 : (project as any).orientation === 'square' ? 1000 : 1200}
+                        height={(project as any).orientation === 'portrait' ? 1200 : (project as any).orientation === 'square' ? 1000 : 800}
                         className="w-full h-auto block opacity-85 md:opacity-50 group-hover:opacity-95 group-hover:scale-[1.02] transition-all duration-700 ease-out"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6 md:p-10 translate-y-0 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-500">

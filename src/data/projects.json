@@ -1,7 +1,7 @@
 [
   {
     "id": "synthex-branding",
-    "title": "synthex",
+    "title": "Synthex Tech Identity",
     "category": "Full Branding A to Z",
     "heroImage": "/project-2-cover.jpg",
     "overview": "A majestic execution of visual identity, translating business goals into a striking, unforgettable brand presence that commands attention.",
@@ -72,11 +72,12 @@
         "type": "image",
         "content": "/projects/project-2/Artboard 1 copy@4x-100.jpg"
       }
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "id": "vi-project-1",
-    "title": "Corporate Visual Identity",
+    "title": "Flour & Flame Bakery Identity",
     "category": "Brand Identity Design",
     "heroImage": "/project-1-cover.jpg",
     "overview": "A full-scale visual identity rebuild. We established core visual markers to set the stage for a highly dynamic and modern brand.",
@@ -147,11 +148,12 @@
         "type": "image",
         "content": "/projects/project-1/Artboard 2 copy 11@4x-100.jpg"
       }
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "id": "velocity-sports",
-    "title": "Velocity Sports",
+    "title": "Ascend Fitness Brand",
     "category": "Logo & Apparel",
     "heroImage": "/projects/project-3/Artboard 1@4x-100.jpg",
     "overview": "A dynamic sports apparel brand needing an aggressive and recognizable logo.",
@@ -211,11 +213,12 @@
         "type": "image",
         "content": "/projects/project-3/Artboard 1 copy 9@4x-100.jpg"
       }
-    ]
+    ],
+    "orientation": "square"
   },
   {
     "id": "pkg-design-1",
-    "title": "Luxury Cosmetics Packaging",
+    "title": "Luxury Perfume Packaging",
     "category": "Packaging Design",
     "heroImage": "/packaging/1/2.jpg",
     "overview": "A high-end product packaging showcase designed to elevate the brand's physical presence and captivate shelf attention.",
@@ -256,11 +259,12 @@
         "type": "image",
         "content": "/packaging/1/chatgpt-image-may-24-2026-03-01-26-pm.png"
       }
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "id": "sm-design-1",
-    "title": "E-Commerce Social Campaign",
+    "title": "E-Commerce Fashion Campaign",
     "category": "Social Media Design",
     "heroImage": "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png",
     "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
@@ -301,11 +305,12 @@
         "type": "image",
         "content": "/social-media/1/chatgpt-image-may-22-2026-05-31-20-pm.png"
       }
-    ]
+    ],
+    "orientation": "square"
   },
   {
     "id": "photoshoot-1",
-    "title": "Fashion & Lifestyle Photoshoot",
+    "title": "High-End Fashion Photoshoot",
     "category": "Photoshoots",
     "heroImage": "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png",
     "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
@@ -346,11 +351,12 @@
         "type": "image",
         "content": "/photoshoots/1/pomelli-photoshoot-image-9-16-0429-1.png"
       }
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "id": "photo-shoot-6",
-    "title": "Luxury Interior Showcase",
+    "title": "Modern Bedroom Interior Showcase",
     "category": "Creative Photoshoot",
     "heroImage": "/photoshoots/6/interior-shoot-1.png",
     "overview": "Professional interior photography showcasing the layout, lighting, and aesthetic details of a bedroom and surrounding spaces.",
@@ -390,11 +396,12 @@
         "type": "image",
         "content": "/photoshoots/6/interior-shoot-6.png"
       }
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "id": "pkg-design-2",
-    "title": "Global Rice Brands Packaging",
+    "title": "Asala Premium Basmati Rice",
     "category": "Packaging Design",
     "heroImage": "/packaging/2/1-2.png",
     "overview": "A high-end product packaging showcase designed to elevate the brand's physical presence and captivate shelf attention.",
@@ -570,11 +577,12 @@
         "type": "image",
         "content": "/packaging/2/indian-rice-purple-bag-5_page_1.png"
       }
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "id": "sm-design-2",
-    "title": "Restaurant Instagram Growth",
+    "title": "Gourmet Burger Instagram Growth",
     "category": "Social Media Design",
     "heroImage": "/social-media/2/chatgpt-image-may-22-2026-06-06-24-pm.png",
     "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
@@ -615,11 +623,12 @@
         "type": "image",
         "content": "/social-media/2/chatgpt-image-may-22-2026-06-07-11-pm.png"
       }
-    ]
+    ],
+    "orientation": "square"
   },
   {
     "id": "photoshoot-2",
-    "title": "Food & Beverage Photography",
+    "title": "Elegant Abaya Photography",
     "category": "Photoshoots",
     "heroImage": "/photoshoots/2/chatgpt-image-may-17-2026-02-06-43-pm.png",
     "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
@@ -665,11 +674,12 @@
         "type": "image",
         "content": "/photoshoots/2/chatgpt-image-may-17-2026-02-07-43-pm.png"
       }
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "id": "pkg-design-3",
-    "title": "Artisan Bakery & Menu Design",
+    "title": "Revo Bakery Menu & Packaging",
     "category": "Packaging Design",
     "heroImage": "/packaging/3/revo-menu-final-page-1.png",
     "overview": "A high-end product packaging showcase designed to elevate the brand's physical presence and captivate shelf attention.",
@@ -1180,11 +1190,12 @@
         "type": "image",
         "content": "/packaging/3/revo-menu-final_page_9.png"
       }
-    ]
+    ],
+    "orientation": "square"
   },
   {
     "id": "sm-design-3",
-    "title": "Fitness Brand Social Strategy",
+    "title": "Fitness Apparel Social Strategy",
     "category": "Social Media Design",
     "heroImage": "/social-media/3/chatgpt-image-may-22-2026-06-26-58-pm.png",
     "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
@@ -1230,11 +1241,12 @@
         "type": "image",
         "content": "/social-media/3/chatgpt-image-may-22-2026-06-33-36-pm.png"
       }
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "id": "photoshoot-3",
-    "title": "Product Studio Shoot",
+    "title": "Premium Perfume Studio Shoot",
     "category": "Photoshoots",
     "heroImage": "/photoshoots/3/chatgpt-image-may-24-2026-02-37-03-pm.png",
     "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
@@ -1280,11 +1292,12 @@
         "type": "image",
         "content": "/photoshoots/3/chatgpt-image-may-3-2026-12-56-57-pm.png"
       }
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "id": "sm-design-4",
-    "title": "Real Estate Digital Marketing",
+    "title": "Modern Real Estate Digital Ads",
     "category": "Social Media Design",
     "heroImage": "/social-media/4/chatgpt-image-may-24-2026-01-31-35-pm.png",
     "overview": "Modern and highly engaging digital marketing creatives engineered to build brand equity and drive online conversion.",
@@ -1325,11 +1338,12 @@
         "type": "image",
         "content": "/social-media/4/chatgpt-image-may-24-2026-01-36-27-pm.png"
       }
-    ]
+    ],
+    "orientation": "landscape"
   },
   {
     "id": "photoshoot-4",
-    "title": "Corporate Team Portraits",
+    "title": "Corporate Team & Office Portraits",
     "category": "Photoshoots",
     "heroImage": "/photoshoots/4/chatgpt-image-may-24-2026-02-30-54-pm.png",
     "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
@@ -1370,7 +1384,8 @@
         "type": "image",
         "content": "/photoshoots/4/chatgpt-image-may-24-2026-02-31-18-pm.png"
       }
-    ]
+    ],
+    "orientation": "square"
   },
   {
     "id": "sm-design-5",
@@ -1425,11 +1440,12 @@
         "type": "image",
         "content": "/social-media/5/chatgpt-image-may-7-2026-12-40-15-pm.png"
       }
-    ]
+    ],
+    "orientation": "portrait"
   },
   {
     "id": "photoshoot-5",
-    "title": "Automotive Photography Session",
+    "title": "Luxury Automotive Photography",
     "category": "Photoshoots",
     "heroImage": "/photoshoots/5/chatgpt-image-may-4-2026-11-35-41-am.png",
     "overview": "A curated photography series highlighting product aesthetics with professional studio lighting and precise creative direction.",
@@ -1475,6 +1491,7 @@
         "type": "image",
         "content": "/photoshoots/5/chatgpt-image-may-4-2026-12-13-20-pm.png"
       }
-    ]
+    ],
+    "orientation": "square"
   }
 ]
