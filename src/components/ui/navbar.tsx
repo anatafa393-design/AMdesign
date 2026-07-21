@@ -205,7 +205,7 @@ export default function Navbar() {
                   >
                     {link.label}
                     {activeSection === link.sectionId && (
-                      <span className="ml-3 inline-block w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-red-600 align-middle" />
+                      <span className="ms-3 inline-block w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-red-600 align-middle" />
                     )}
                   </Link>
                 </motion.div>

@@ -72,13 +72,13 @@ const testimonialsData: Testimonial[] = [
 type Position = "front" | "middle" | "back" | "hidden";
 
 function TestimonialCard({
-  id,
   handleShuffle,
   position,
   testimonial,
   author,
   role,
   avatar,
+  isRtl,
 }: {
   id?: number;
   handleShuffle: () => void;
@@ -87,9 +87,22 @@ function TestimonialCard({
   author: string;
   role: string;
   avatar: string;
+  isRtl: boolean;
 }) {
   const dragRef = React.useRef(0);
   const isFront = position === "front";
+
+  const xOffset = isRtl
+    ? position === "front"
+      ? "0%"
+      : position === "middle"
+      ? "-25%"
+      : "-50%"
+    : position === "front"
+    ? "0%"
+    : position === "middle"
+    ? "25%"
+    : "50%";
 
   return (
     <motion.div
@@ -99,20 +112,11 @@ function TestimonialCard({
       animate={{
         rotate:
           position === "front"
-            ? "-5deg"
+            ? (isRtl ? "5deg" : "-5deg")
             : position === "middle"
             ? "0deg"
-            : position === "back"
-            ? "5deg"
-            : "0deg",
-        x:
-          position === "front"
-            ? "0%"
-            : position === "middle"
-            ? "30%"
-            : position === "back"
-            ? "60%"
-            : "60%",
+            : (isRtl ? "-5deg" : "5deg"),
+        x: xOffset,
         opacity: position === "hidden" ? 0 : 1,
       }}
       drag={isFront}
@@ -123,20 +127,20 @@ function TestimonialCard({
         dragRef.current = (e as PointerEvent).clientX;
       }}
       onDragEnd={(e: MouseEvent | TouchEvent | PointerEvent) => {
-        if (dragRef.current - (e as PointerEvent).clientX > 120) {
+        if (Math.abs(dragRef.current - (e as PointerEvent).clientX) > 100) {
           handleShuffle();
         }
         dragRef.current = 0;
       }}
       transition={{ duration: 0.35, ease: "easeOut" }}
-      className={`absolute left-0 top-0 w-full max-w-[520px] rounded-3xl p-8 cursor-grab active:cursor-grabbing select-none border border-white/10 backdrop-blur-xl ${
+      className={`absolute left-0 rtl:left-auto rtl:right-0 top-0 w-full max-w-[500px] rounded-3xl p-8 cursor-grab active:cursor-grabbing select-none border border-white/10 backdrop-blur-xl ${
         isFront
           ? "bg-gradient-to-br from-white/15 via-white/10 to-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
           : "bg-white/5 opacity-60 pointer-events-none"
       }`}
     >
       <div className="flex items-center justify-between mb-6">
-        <Quote className="w-10 h-10 text-orange-400 opacity-60" />
+        <Quote className={`w-10 h-10 text-orange-400 opacity-60 ${isRtl ? "scale-x-[-1]" : ""}`} />
         <div className="flex items-center gap-1">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star key={i} className="w-4 h-4 fill-orange-400 text-orange-400" />
@@ -149,7 +153,7 @@ function TestimonialCard({
       </p>
 
       <div className="flex items-center gap-4 border-t border-white/10 pt-6">
-        <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20">
+        <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20 shrink-0">
           <ImageWithFallback
             src={avatar}
             alt={author}
@@ -168,8 +172,9 @@ function TestimonialCard({
 }
 
 export function TestimonialsSection() {
-  const { language, t } = useLanguage();
+  const { language, dir, t } = useLanguage();
   const [order, setOrder] = React.useState([1, 2, 3, 4]);
+  const isRtl = dir === "rtl";
 
   const handleShuffle = () => {
     setOrder((prev) => {
@@ -205,24 +210,27 @@ export function TestimonialsSection() {
             </p>
             <button
               onClick={handleShuffle}
-              className="mt-4 px-6 py-3 rounded-full border border-white/20 text-white font-bold text-sm hover:bg-white/10 transition-all duration-300 active:scale-95"
+              className="mt-4 px-6 py-3 rounded-full border border-white/20 text-white font-bold text-sm hover:bg-white/10 transition-all duration-300 active:scale-95 flex items-center gap-2"
             >
-              {language === "ar" ? "المراجعة التالية ←" : "Next Testimonial →"}
+              <span>{isRtl ? "المراجعة التالية" : "Next Testimonial"}</span>
+              <span className={isRtl ? "rotate-180" : ""}>→</span>
             </button>
           </div>
         </Reveal>
 
         {/* Right: Stacked Cards */}
-        <div className="relative h-[360px] w-full flex items-center justify-center lg:justify-start">
+        <div className="relative h-[380px] w-full flex items-center justify-center lg:justify-start">
           {testimonialsData.map((item) => (
             <TestimonialCard
               key={item.id}
+              id={item.id}
               position={getPosition(item.id)}
               handleShuffle={handleShuffle}
-              testimonial={language === "ar" ? item.testimonialAr : item.testimonialEn}
-              author={language === "ar" ? item.authorAr : item.authorEn}
-              role={language === "ar" ? item.roleAr : item.roleEn}
+              testimonial={isRtl ? item.testimonialAr : item.testimonialEn}
+              author={isRtl ? item.authorAr : item.authorEn}
+              role={isRtl ? item.roleAr : item.roleEn}
               avatar={item.avatar}
+              isRtl={isRtl}
             />
           ))}
         </div>

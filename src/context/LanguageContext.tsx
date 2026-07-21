@@ -14,22 +14,18 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("en");
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-    // Check saved preference or browser language
-    const saved = localStorage.getItem("am_design_lang") as Language | null;
-    if (saved === "en" || saved === "ar") {
-      setLanguageState(saved);
-    } else {
-      const browserLang = navigator.language.toLowerCase();
-      if (browserLang.startsWith("ar")) {
-        setLanguageState("ar");
+  const [language, setLanguageState] = useState<Language>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("am_design_lang") as Language | null;
+      if (saved === "en" || saved === "ar") {
+        return saved;
+      }
+      if (navigator.language.toLowerCase().startsWith("ar")) {
+        return "ar";
       }
     }
-  }, []);
+    return "en";
+  });
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);

@@ -201,7 +201,7 @@ export default function Home() {
 
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-4 sm:flex sm:items-center sm:gap-6 mt-4 w-full">
-              <div className="text-center sm:text-left">
+              <div className="text-center sm:text-start">
                 <span className="block text-2xl sm:text-3xl font-black font-brand text-white">
                   10+
                 </span>
@@ -210,7 +210,7 @@ export default function Home() {
                 </span>
               </div>
               <div className="hidden sm:block w-px h-12 bg-white/20" />
-              <div className="text-center sm:text-left">
+              <div className="text-center sm:text-start">
                 <span className="block text-2xl sm:text-3xl font-black font-brand text-white">
                   100%
                 </span>
@@ -219,7 +219,7 @@ export default function Home() {
                 </span>
               </div>
               <div className="hidden sm:block w-px h-12 bg-white/20" />
-              <div className="text-center sm:text-left">
+              <div className="text-center sm:text-start">
                 <span className="block text-2xl sm:text-3xl font-black font-brand text-white">
                   52+
                 </span>
