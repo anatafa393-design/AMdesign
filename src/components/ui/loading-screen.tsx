@@ -18,11 +18,17 @@ export default function LoadingScreen() {
       {visible && (
         <motion.div
           key="loader"
+          dir="ltr"
+          style={{ direction: "ltr" }}
           className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#050505] overflow-hidden"
           exit={{ y: "-100%", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } }}
         >
           {/* Animated brand name */}
-          <div className="font-brand text-4xl md:text-6xl text-white italic overflow-hidden flex">
+          <div 
+            className="font-brand-en text-4xl md:text-6xl text-white italic overflow-hidden flex flex-row justify-center items-center" 
+            dir="ltr" 
+            style={{ direction: "ltr" }}
+          >
             {name.split("").map((char, i) => (
               <motion.span
                 key={i}
