@@ -78,9 +78,9 @@ export default function Navbar() {
 
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="hover:opacity-90 transition-opacity">
+        <Link href="/" className="hover:opacity-90 transition-opacity" dir="ltr">
           <motion.span
-            className="font-brand text-2xl text-white inline-block"
+            className="font-brand-en text-2xl text-white inline-block"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 15 }}
           >

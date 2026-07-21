@@ -115,12 +115,12 @@ export default function Home() {
       {/* ═══ HERO SECTION ═══ */}
       <section className="relative w-full min-h-screen flex flex-col justify-center bg-gradient-to-b from-[#ff3c00] via-[#c41400] to-[#050505] pt-28 pb-16 px-6 md:px-10 overflow-hidden z-10">
         {/* Giant background text */}
-        <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none">
+        <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none" dir="ltr">
           <motion.span
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 0.08, scale: 1 }}
             transition={{ duration: 2, ease: "easeOut" }}
-            className="text-[18vw] font-black uppercase text-transparent tracking-tighter"
+            className="text-[18vw] font-black uppercase text-transparent tracking-tighter font-brand-en"
             style={{ WebkitTextStroke: "1px rgba(255,255,255,0.5)" }}
           >
             DESIGN
@@ -271,7 +271,7 @@ export default function Home() {
       </section>
 
       {/* ═══ CLIENT LOGOS MARQUEE ═══ */}
-      <section className="relative z-10 bg-[#050505] py-12 border-y border-white/5 overflow-hidden">
+      <section className="relative z-10 bg-[#050505] py-12 border-y border-white/5 overflow-hidden" dir="ltr">
         <div className="flex">
           <div className="flex shrink-0 items-center animate-marquee">
             {clientLogos.map((src, i) => (
@@ -512,7 +512,7 @@ export default function Home() {
       </section>
 
       {/* ═══ IMAGE TICKER ═══ */}
-      <section className="relative z-10 py-4 overflow-hidden">
+      <section className="relative z-10 py-4 overflow-hidden" dir="ltr">
         <ImageTicker />
       </section>
 
