@@ -113,7 +113,6 @@ function TickerRow({
     track.addEventListener("mouseleave", onMouseLeave);
 
     // Initial setup for reverse
-    // We delay the half-width calculation to ensure DOM is fully rendered
     setTimeout(() => {
       if (reverse && track) exactX = track.scrollWidth / 2;
     }, 100);
@@ -147,7 +146,6 @@ function TickerRow({
       }
 
       // Loop teleportation
-      // Make sure we have a valid width before wrapping
       if (currentHalfWidth > 0) {
         if (exactX >= currentHalfWidth) {
           exactX -= currentHalfWidth;
@@ -179,13 +177,18 @@ function TickerRow({
   const items = [...images, ...images];
 
   return (
-    <div className="w-full overflow-hidden touch-pan-y" ref={containerRef}>
+    <div 
+      className="w-full overflow-hidden touch-pan-y" 
+      ref={containerRef} 
+      dir="ltr" 
+      style={{ direction: "ltr" }}
+    >
       <div
         ref={trackRef}
         className="flex gap-4 w-max cursor-grab active:cursor-grabbing"
         onMouseEnter={() => (isHovered.current = true)}
         onMouseLeave={() => (isHovered.current = false)}
-        style={{ willChange: "transform" }}
+        style={{ willChange: "transform", direction: "ltr" }}
       >
         {items.map((src, i) => (
           <div
@@ -213,7 +216,11 @@ function TickerRow({
 
 export default function ImageTicker() {
   return (
-    <div className="relative w-full py-8 flex flex-col gap-4 md:gap-6 overflow-hidden">
+    <div 
+      className="relative w-full py-8 flex flex-col gap-4 md:gap-6 overflow-hidden" 
+      dir="ltr" 
+      style={{ direction: "ltr" }}
+    >
       {/* Fade edges */}
       <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-gradient-to-r from-[#050505] to-transparent" />
       <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-gradient-to-l from-[#050505] to-transparent" />

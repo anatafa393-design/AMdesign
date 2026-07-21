@@ -271,7 +271,7 @@ export default function Home() {
       </section>
 
       {/* ═══ CLIENT LOGOS MARQUEE ═══ */}
-      <section className="relative z-10 bg-[#050505] py-12 border-y border-white/5 overflow-hidden" dir="ltr">
+      <section className="relative z-10 bg-[#050505] py-12 border-y border-white/5 overflow-hidden" dir="ltr" style={{ direction: "ltr" }}>
         <div className="flex">
           <div className="flex shrink-0 items-center animate-marquee">
             {clientLogos.map((src, i) => (
