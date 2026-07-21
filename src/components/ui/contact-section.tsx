@@ -4,6 +4,7 @@ import { ArrowRight, Mail, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 import Reveal from "@/components/ui/reveal-on-scroll";
 import MagneticButton from "@/components/ui/magnetic-button";
+import { useLanguage } from "@/context/LanguageContext";
 
 // Custom SVG icons for social platforms not in lucide v1
 function InstagramIcon({ className }: { className?: string }) {
@@ -33,7 +34,8 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 interface ContactItem {
-  label: string;
+  labelEn: string;
+  labelAr: string;
   value: string;
   href: string;
   Icon: React.ComponentType<{ className?: string }>;
@@ -44,7 +46,8 @@ interface ContactItem {
 
 const contacts: ContactItem[] = [
   {
-    label: "Email",
+    labelEn: "Email Direct",
+    labelAr: "البريد الإلكتروني",
     value: "anatafa393@gmail.com",
     href: "mailto:anatafa393@gmail.com",
     Icon: Mail,
@@ -53,7 +56,8 @@ const contacts: ContactItem[] = [
     iconTo: "to-orange-500/10",
   },
   {
-    label: "WhatsApp / Call",
+    labelEn: "WhatsApp / Call",
+    labelAr: "واتساب / اتصال مباشر",
     value: "01145137067",
     href: "https://wa.me/201145137067",
     Icon: WhatsAppIcon,
@@ -62,7 +66,8 @@ const contacts: ContactItem[] = [
     iconTo: "to-green-500/10",
   },
   {
-    label: "LinkedIn",
+    labelEn: "LinkedIn",
+    labelAr: "لينكد إن",
     value: "Ahmed Mostafa",
     href: "https://www.linkedin.com/in/ahmed-mostafa-6a5855233/",
     Icon: Globe,
@@ -71,7 +76,8 @@ const contacts: ContactItem[] = [
     iconTo: "to-blue-500/10",
   },
   {
-    label: "Instagram",
+    labelEn: "Instagram",
+    labelAr: "إنستغرام",
     value: "@am_designart",
     href: "https://www.instagram.com/am_designart/",
     Icon: InstagramIcon,
@@ -80,7 +86,8 @@ const contacts: ContactItem[] = [
     iconTo: "to-pink-500/10",
   },
   {
-    label: "Behance",
+    labelEn: "Behance",
+    labelAr: "بيهانس",
     value: "amdesignart",
     href: "https://www.behance.net/amdesignart/projects",
     Icon: BehanceIcon,
@@ -98,130 +105,93 @@ const colorMap: Record<string, { text: string; border: string; bg: string }> = {
   green:  { text: "text-green-400",  border: "border-green-500/30",  bg: "bg-green-500/30" },
 };
 
-function ContactCard({ item, index }: { item: ContactItem; index: number }) {
-  const colors = colorMap[item.color];
-  const { Icon } = item;
-
-  return (
-    <motion.a
-      href={item.href}
-      target={item.href.startsWith("mailto") ? undefined : "_blank"}
-      rel="noopener noreferrer"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-      whileHover={{ y: -2 }}
-      className="group relative p-8 rounded-3xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.06] hover:border-white/[0.12] transition-all duration-300 flex flex-col gap-5"
-    >
-      <div
-        className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${item.iconFrom} ${item.iconTo} flex items-center justify-center transition-colors duration-300 group-hover:${colors.bg}`}
-      >
-        <Icon className={`w-6 h-6 ${colors.text}`} />
-      </div>
-      <div className="flex-1">
-        <p className="text-white/40 text-xs uppercase tracking-widest mb-1.5">
-          {item.label}
-        </p>
-        <p className="text-white font-semibold text-base">{item.value}</p>
-      </div>
-      <motion.div
-        className="inline-flex"
-        initial={{ x: 0 }}
-        whileHover={{ x: 4 }}
-      >
-        <ArrowRight
-          className={`w-4 h-4 text-white/20 ${colors.text.replace("text-", "group-hover:text-")} group-hover:translate-x-1 transition-all duration-300`}
-        />
-      </motion.div>
-    </motion.a>
-  );
-}
-
 export function ContactSection() {
-  const emailItem = contacts[0];
-  const otherItems = contacts.slice(1);
+  const { language, t } = useLanguage();
 
   return (
-    <section id="contact" className="relative pt-24 pb-16 border-t border-white/10 overflow-hidden">
-      {/* Decorative gradient circle */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gradient-to-br from-orange-500 via-pink-500 to-orange-400 opacity-20 blur-[120px] pointer-events-none" />
+    <section id="contact" className="relative py-28 px-6 md:px-10 bg-[#050505] overflow-hidden">
+      {/* Glow gradient in background */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-orange-600/10 via-red-600/10 to-transparent rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
-        {/* Big CTA Heading */}
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Section Header */}
         <Reveal>
-          <div className="text-center mb-20">
-            <p className="text-orange-400 font-medium mb-5 tracking-widest text-sm uppercase">
-              Ready to Start?
-            </p>
-            <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] font-brand">
-              Let&apos;s Build Your
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-pink-500 to-orange-400">
-                Dream Brand.
-              </span>
+          <div className="flex flex-col items-center text-center gap-4 mb-20">
+            <span className="text-xs font-bold tracking-widest uppercase text-orange-400 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20">
+              {t.contact.badge}
+            </span>
+            <h2 className="text-4xl md:text-6xl font-black text-white font-brand">
+              {t.contact.title}
             </h2>
-            <p className="mt-8 text-white/40 text-lg max-w-xl mx-auto leading-relaxed">
-              Whether you need a full identity from scratch or just want to
-              elevate what you already have — I&apos;m here for it.
+            <p className="text-white/60 text-base md:text-lg max-w-xl">
+              {t.contact.subtitle}
             </p>
           </div>
         </Reveal>
 
-        {/* Contact Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 mb-20">
-          {/* Email card wrapped in MagneticButton */}
-          <MagneticButton strength={0.15}>
-            <ContactCard item={emailItem} index={0} />
-          </MagneticButton>
+        {/* Contact Links Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {contacts.map((item, i) => {
+            const colors = colorMap[item.color] || colorMap.orange;
+            const Icon = item.Icon;
 
-          {otherItems.map((item, idx) => (
-            <ContactCard key={item.label} item={item} index={idx + 1} />
-          ))}
+            return (
+              <Reveal key={item.value} delay={0.08 * i}>
+                <motion.a
+                  href={item.href}
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 350, damping: 20 }}
+                  className="group relative flex flex-col justify-between p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden h-full"
+                >
+                  {/* Subtle hover gradient background */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${item.iconFrom} ${item.iconTo} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
+
+                  {/* Top row: Icon + Arrow */}
+                  <div className="flex items-center justify-between mb-8 relative z-10">
+                    <div className={`w-12 h-12 rounded-2xl bg-white/5 border ${colors.border} flex items-center justify-center ${colors.text} group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <div className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 group-hover:text-white group-hover:border-white/30 group-hover:bg-white/10 transition-all duration-300">
+                      <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${language === "ar" ? "group-hover:-translate-x-1 rotate-180" : "group-hover:translate-x-1"}`} />
+                    </div>
+                  </div>
+
+                  {/* Bottom info */}
+                  <div className="relative z-10">
+                    <span className="block text-xs font-bold tracking-wider uppercase text-white/40 mb-1">
+                      {language === "ar" ? item.labelAr : item.labelEn}
+                    </span>
+                    <span className="block text-lg font-bold text-white font-brand group-hover:text-orange-300 transition-colors">
+                      {item.value}
+                    </span>
+                  </div>
+                </motion.a>
+              </Reveal>
+            );
+          })}
         </div>
 
-        {/* Footer Bar */}
-        <div className="border-t border-white/[0.06]" />
-        <div className="flex flex-col md:flex-row items-center justify-between pt-8 gap-6">
-          <p className="text-2xl font-brand text-white">
-            Ahmed Aljamal
-          </p>
-
-          {/* Social icon links */}
-          <div className="flex items-center gap-4">
-            <a
-              href="https://www.instagram.com/am_designart/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-white/[0.08] bg-white/[0.03] flex items-center justify-center text-white/40 hover:text-orange-400 hover:border-orange-400/30 transition-all duration-300"
-              aria-label="Instagram"
-            >
-              <InstagramIcon className="w-4 h-4" />
-            </a>
-            <a
-              href="https://www.behance.net/amdesignart/projects"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-white/[0.08] bg-white/[0.03] flex items-center justify-center text-white/40 hover:text-orange-400 hover:border-orange-400/30 transition-all duration-300"
-              aria-label="Behance"
-            >
-              <BehanceIcon className="w-4 h-4" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ahmed-mostafa-6a5855233/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full border border-white/[0.08] bg-white/[0.03] flex items-center justify-center text-white/40 hover:text-orange-400 hover:border-orange-400/30 transition-all duration-300"
-              aria-label="LinkedIn"
-            >
-              <Globe className="w-4 h-4" />
-            </a>
+        {/* Direct Footer CTA */}
+        <Reveal delay={0.4}>
+          <div className="mt-20 p-10 rounded-3xl bg-gradient-to-r from-orange-500/10 via-red-500/10 to-orange-500/5 border border-white/10 text-center flex flex-col items-center gap-6">
+            <h3 className="text-2xl md:text-3xl font-extrabold text-white font-brand">
+              {language === "ar" ? "جاهز لبداية مشروعك القادم؟" : "Ready to Start Your Next Project?"}
+            </h3>
+            <MagneticButton>
+              <a
+                href="https://wa.me/201145137067"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-sm hover:shadow-lg hover:shadow-orange-500/30 hover:scale-105 active:scale-95 transition-all duration-300 uppercase tracking-wider"
+              >
+                {language === "ar" ? "تحدث معي على الواتساب مباشرة" : "Chat Directly on WhatsApp"}
+                <ArrowRight className={`w-4 h-4 ${language === "ar" ? "rotate-180" : ""}`} />
+              </a>
+            </MagneticButton>
           </div>
-
-          <p className="text-white/25 text-sm">
-            © 2026 Ahmed Aljamal Graphic Design. All rights reserved.
-          </p>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

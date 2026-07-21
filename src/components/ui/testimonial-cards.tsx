@@ -5,46 +5,66 @@ import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
 import Reveal from "@/components/ui/reveal-on-scroll";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface Testimonial {
   id: number;
-  testimonial: string;
-  author: string;
-  role: string;
+  testimonialEn: string;
+  testimonialAr: string;
+  authorEn: string;
+  authorAr: string;
+  roleEn: string;
+  roleAr: string;
   avatar: string;
 }
 
-const testimonials: Testimonial[] = [
+const testimonialsData: Testimonial[] = [
   {
     id: 1,
-    testimonial:
+    testimonialEn:
       "Ahmed completely transformed our brand from the ground up. Every single detail was crafted with clear intention and the final result exceeded all our expectations.",
-    author: "Naji Qasim",
-    role: "Manager @ Sarh Al-Masia Al-Raeda Holding Co.",
+    testimonialAr:
+      "أحمد قام بتحويل علامتنا التجارية بالكامل من الصفر. كل تفصيلة تم صياغتها بعناية فائقة ونتيجة التصميم فاقت كل توقعاتنا.",
+    authorEn: "Naji Qasim",
+    authorAr: "ناجي قاسم",
+    roleEn: "Manager @ Sarh Al-Masia Al-Raeda Holding Co.",
+    roleAr: "مدير شركة صرح الماسية الرائدة القابضة",
     avatar: "https://i.pravatar.cc/128?img=11",
   },
   {
     id: 2,
-    testimonial:
+    testimonialEn:
       "The level of quality and professionalism was outstanding. Our new brand identity attracted new clients within the very first month of launch.",
-    author: "Mohamed Roshdy",
-    role: "CEO @ Core Business Ltd.",
+    testimonialAr:
+      "مستوى الجودة والاحترافية كان استثنائياً. الهوية البصرية الجديدة جذبت لنا عملاء جدد خلال الشهر الأول فقط من إطلاقها.",
+    authorEn: "Mohamed Roshdy",
+    authorAr: "محمد رشدي",
+    roleEn: "CEO @ Core Business Ltd.",
+    roleAr: "الرئيس التنفيذي لشركة كور بيزنس",
     avatar: "https://i.pravatar.cc/128?img=12",
   },
   {
     id: 3,
-    testimonial:
+    testimonialEn:
       "A true visionary. Ahmed doesn't just design logos — he builds entire brand worlds. We couldn't be happier with our new identity.",
-    author: "Abu Mohamed",
-    role: "Founder @ Wajhat Al-Nujoom Est.",
+    testimonialAr:
+      "مصمم مبدع ورؤيوي حقيقي. أحمد لا يصمم مجرد شعارات، بل يبني عوالم كاملة للعلامة التجارية. نحن سعداء جداً بالنتيجة.",
+    authorEn: "Abu Mohamed",
+    authorAr: "أبو محمد",
+    roleEn: "Founder @ Wajhat Al-Nujoom Est.",
+    roleAr: "مؤسس مؤسسة واجهة النجوم",
     avatar: "https://i.pravatar.cc/128?img=13",
   },
   {
     id: 4,
-    testimonial:
+    testimonialEn:
       "Exceptional creativity and a deep understanding of our business needs. The design process was smooth and the outcome was spectacular.",
-    author: "Ahmed Ali",
-    role: "CEO @ Roqay Store",
+    testimonialAr:
+      "إبداع استثنائي وفهم عميق لاحتياجات عملنا. رحلة العمل والتصميم كانت سلسة وممتعة والنتيجة النهائية كانت مبهرة.",
+    authorEn: "Ahmed Ali",
+    authorAr: "أحمد علي",
+    roleEn: "CEO @ Roqay Store",
+    roleAr: "الرئيس التنفيذي لمتجر رقي",
     avatar: "https://i.pravatar.cc/128?img=14",
   },
 ];
@@ -52,13 +72,22 @@ const testimonials: Testimonial[] = [
 type Position = "front" | "middle" | "back" | "hidden";
 
 function TestimonialCard({
+  id,
   handleShuffle,
-  testimonial,
   position,
+  testimonial,
   author,
   role,
   avatar,
-}: Testimonial & { handleShuffle: () => void; position: Position }) {
+}: {
+  id?: number;
+  handleShuffle: () => void;
+  position: Position;
+  testimonial: string;
+  author: string;
+  role: string;
+  avatar: string;
+}) {
   const dragRef = React.useRef(0);
   const isFront = position === "front";
 
@@ -99,48 +128,39 @@ function TestimonialCard({
         }
         dragRef.current = 0;
       }}
-      transition={{ duration: 0.35 }}
-      className={`absolute left-0 top-0 flex flex-col h-[400px] w-[300px] sm:w-[320px] select-none rounded-3xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-xl p-8 shadow-2xl shadow-black/40 ${
-        isFront ? "cursor-grab active:cursor-grabbing" : ""
+      transition={{ duration: 0.35, ease: "easeOut" }}
+      className={`absolute left-0 top-0 w-full max-w-[520px] rounded-3xl p-8 cursor-grab active:cursor-grabbing select-none border border-white/10 backdrop-blur-xl ${
+        isFront
+          ? "bg-gradient-to-br from-white/15 via-white/10 to-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
+          : "bg-white/5 opacity-60 pointer-events-none"
       }`}
     >
-      {/* Stars with shimmer on front card */}
-      <div className="flex gap-1 mb-5 relative">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-        ))}
-        {isFront && (
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none"
-            initial={{ x: "-100%" }}
-            animate={{ x: "200%" }}
-            transition={{
-              duration: 1.8,
-              delay: 0.5,
-              repeat: Infinity,
-              repeatDelay: 4,
-              ease: "easeInOut",
-            }}
-            style={{ WebkitMaskImage: "linear-gradient(black, black)" }}
-          />
-        )}
+      <div className="flex items-center justify-between mb-6">
+        <Quote className="w-10 h-10 text-orange-400 opacity-60" />
+        <div className="flex items-center gap-1">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star key={i} className="w-4 h-4 fill-orange-400 text-orange-400" />
+          ))}
+        </div>
       </div>
 
-      <Quote className="w-7 h-7 text-orange-400 mb-4 opacity-60" />
-
-      <p className="text-white/75 text-base italic leading-relaxed flex-1">
+      <p className="text-white/90 text-lg leading-relaxed mb-8 font-medium">
         &ldquo;{testimonial}&rdquo;
       </p>
 
-      <div className="flex items-center gap-4 mt-6 pt-6 border-t border-white/[0.08]">
-        <ImageWithFallback
-          src={avatar}
-          alt={`Avatar of ${author}`}
-          className="w-11 h-11 rounded-full object-cover border border-orange-500/30"
-        />
+      <div className="flex items-center gap-4 border-t border-white/10 pt-6">
+        <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20">
+          <ImageWithFallback
+            src={avatar}
+            alt={author}
+            width={48}
+            height={48}
+            className="object-cover w-full h-full"
+          />
+        </div>
         <div>
-          <p className="text-white font-semibold text-sm">{author}</p>
-          <p className="text-orange-400 text-xs mt-0.5">{role}</p>
+          <h4 className="text-white font-bold text-base font-brand">{author}</h4>
+          <p className="text-white/50 text-xs">{role}</p>
         </div>
       </div>
     </motion.div>
@@ -148,72 +168,65 @@ function TestimonialCard({
 }
 
 export function TestimonialsSection() {
-  const [positions, setPositions] = React.useState<Position[]>([
-    "front",
-    "middle",
-    "back",
-    "hidden",
-  ]);
+  const { language, t } = useLanguage();
+  const [order, setOrder] = React.useState([1, 2, 3, 4]);
 
   const handleShuffle = () => {
-    setPositions((prev) => {
-      const next = [...prev];
-      next.unshift(next.pop()!);
-      return next;
+    setOrder((prev) => {
+      const copy = [...prev];
+      const first = copy.shift()!;
+      copy.push(first);
+      return copy;
     });
   };
 
+  const getPosition = (id: number): Position => {
+    const idx = order.indexOf(id);
+    if (idx === 0) return "front";
+    if (idx === 1) return "middle";
+    if (idx === 2) return "back";
+    return "hidden";
+  };
+
   return (
-    <Reveal>
-      <section id="about" className="py-32 max-w-7xl px-6 mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-          {/* Left: Text */}
-          <div>
-            <p className="text-orange-400 font-medium mb-4 tracking-widest text-xs uppercase">
-              What Clients Say
-            </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-8 text-sm border rounded-full border-white/10 bg-white/5 backdrop-blur-md">
-              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-              <span className="text-white/70">Client Reviews</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-              Trusted by{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-500">
-                Ambitious
-              </span>{" "}
-              Brands
+    <section id="about" className="relative bg-[#050505] py-28 px-6 md:px-10 border-t border-white/5 overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        {/* Left: Section Header */}
+        <Reveal>
+          <div className="flex flex-col items-start gap-6">
+            <span className="text-xs font-bold tracking-widest uppercase text-orange-400 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20">
+              {t.testimonials.badge}
+            </span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-white font-brand leading-tight">
+              {t.testimonials.title}
             </h2>
-            <p className="text-white/50 text-lg leading-relaxed mb-10">
-              Don&apos;t take my word for it. Hear from the founders and leaders
-              who&apos;ve elevated their brands to the next level.
+            <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-md">
+              {t.testimonials.subtitle}
             </p>
-
-            {/* Gradient-border Next Review button */}
-            <div className="relative inline-block rounded-full p-[1px] bg-gradient-to-r from-orange-500 via-pink-500 to-orange-400">
-              <button
-                onClick={handleShuffle}
-                className="relative px-8 py-4 rounded-full bg-neutral-950 text-white/80 hover:text-white transition-all duration-300 text-sm font-semibold tracking-wide hover:bg-neutral-900"
-              >
-                Next Review →
-              </button>
-            </div>
+            <button
+              onClick={handleShuffle}
+              className="mt-4 px-6 py-3 rounded-full border border-white/20 text-white font-bold text-sm hover:bg-white/10 transition-all duration-300 active:scale-95"
+            >
+              {language === "ar" ? "المراجعة التالية ←" : "Next Testimonial →"}
+            </button>
           </div>
+        </Reveal>
 
-          {/* Right: Draggable Cards */}
-          <div className="flex justify-start lg:justify-center">
-            <div className="relative h-[400px] w-[300px] sm:w-[320px] ml-[80px] sm:ml-[120px]">
-              {testimonials.map((testimonial, index) => (
-                <TestimonialCard
-                  key={testimonial.id}
-                  {...testimonial}
-                  handleShuffle={handleShuffle}
-                  position={positions[index]}
-                />
-              ))}
-            </div>
-          </div>
+        {/* Right: Stacked Cards */}
+        <div className="relative h-[360px] w-full flex items-center justify-center lg:justify-start">
+          {testimonialsData.map((item) => (
+            <TestimonialCard
+              key={item.id}
+              position={getPosition(item.id)}
+              handleShuffle={handleShuffle}
+              testimonial={language === "ar" ? item.testimonialAr : item.testimonialEn}
+              author={language === "ar" ? item.authorAr : item.authorEn}
+              role={language === "ar" ? item.roleAr : item.roleEn}
+              avatar={item.avatar}
+            />
+          ))}
         </div>
-      </section>
-    </Reveal>
+      </div>
+    </section>
   );
 }

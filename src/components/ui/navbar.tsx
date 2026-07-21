@@ -3,15 +3,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import MagneticButton from "@/components/ui/magnetic-button";
-
-const navLinks = [
-  { label: "Work",     href: "/#projects", sectionId: "projects"  },
-  { label: "Services", href: "/#services", sectionId: "services"  },
-  { label: "About",    href: "/#about",    sectionId: "about"     },
-  { label: "Contact",  href: "/#contact",  sectionId: "contact"   },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 const socialLinks = [
   { label: "Wa", href: "https://wa.me/201145137067" },
@@ -24,6 +18,14 @@ export default function Navbar() {
   const [scrolled, setScrolled]       = useState(false);
   const [menuOpen, setMenuOpen]       = useState(false);
   const [activeSection, setActive]    = useState<string>("");
+  const { language, toggleLanguage, t } = useLanguage();
+
+  const navLinks = [
+    { label: t.nav.work,     href: "/#projects", sectionId: "projects"  },
+    { label: t.nav.services, href: "/#services", sectionId: "services"  },
+    { label: t.nav.about,    href: "/#about",    sectionId: "about"     },
+    { label: t.nav.contact,  href: "/#contact",  sectionId: "contact"   },
+  ];
 
   /* Scroll state */
   useEffect(() => {
@@ -34,7 +36,7 @@ export default function Navbar() {
 
   /* Active section via IntersectionObserver */
   useEffect(() => {
-    const ids = navLinks.map((l) => l.sectionId);
+    const ids = ["projects", "services", "about", "contact"];
     const observers: IntersectionObserver[] = [];
 
     ids.forEach((id) => {
@@ -92,7 +94,7 @@ export default function Navbar() {
             const isActive = activeSection === link.sectionId;
             return (
               <Link
-                key={link.label}
+                key={link.sectionId}
                 href={link.href}
                 className={`text-sm font-semibold transition-colors duration-200 relative group flex flex-col items-center ${
                   isActive ? "text-white" : "text-white/70 hover:text-white"
@@ -116,26 +118,49 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
+        {/* Desktop Right Side: Language Switcher & CTA */}
+        <div className="hidden md:flex items-center gap-4">
+          {/* Language Switcher Toggle */}
+          <button
+            onClick={toggleLanguage}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/5 text-xs font-bold text-white hover:bg-white/15 hover:border-orange-500/50 transition-all duration-300"
+            title="Switch Language"
+          >
+            <Globe className="w-3.5 h-3.5 text-orange-400" />
+            <span>{language === "en" ? "العربية" : "English"}</span>
+          </button>
+
+          {/* CTA Button */}
           <MagneticButton>
             <Link
               href="/#contact"
               className="inline-flex items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white text-sm font-bold hover:shadow-lg hover:shadow-orange-500/30 hover:scale-105 active:scale-95 transition-all duration-300"
             >
-              Let&apos;s Talk
+              {t.nav.letsTalk}
             </Link>
           </MagneticButton>
         </div>
 
-        {/* Mobile Hamburger */}
-        <button
-          onClick={() => setMenuOpen((prev) => !prev)}
-          className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors relative z-[110]"
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Mobile Right Controls */}
+        <div className="flex md:hidden items-center gap-3">
+          {/* Mobile Language Switcher */}
+          <button
+            onClick={toggleLanguage}
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-bold text-white"
+          >
+            <Globe className="w-3 h-3 text-orange-400" />
+            <span>{language === "en" ? "عربي" : "EN"}</span>
+          </button>
+
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setMenuOpen((prev) => !prev)}
+            className="text-white p-2 rounded-lg hover:bg-white/10 transition-colors relative z-[110]"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Full-Screen Menu */}
@@ -163,7 +188,7 @@ export default function Navbar() {
             <div className="flex-1 flex flex-col items-center justify-center gap-6 px-6">
               {navLinks.map((link, i) => (
                 <motion.div
-                  key={link.label}
+                  key={link.sectionId}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
@@ -192,14 +217,14 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ delay: 0.08 * navLinks.length, duration: 0.35, ease: "easeOut" }}
-                className="mt-4"
+                className="mt-4 flex flex-col items-center gap-4"
               >
                 <Link
                   href="/#contact"
                   onClick={() => setMenuOpen(false)}
                   className="inline-flex items-center px-8 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white text-lg font-bold hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
                 >
-                  Let&apos;s Talk
+                  {t.nav.letsTalk}
                 </Link>
               </motion.div>
             </div>

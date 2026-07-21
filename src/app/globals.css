@@ -590,3 +590,12 @@
     linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
 }
+
+/* Arabic Typography Overrides */
+html[lang="ar"], .lang-ar {
+  font-family: var(--font-arabic), var(--font-sans), system-ui, sans-serif !important;
+}
+
+html[lang="ar"] .font-brand, .lang-ar .font-brand {
+  font-family: var(--font-arabic), var(--font-brand), system-ui, sans-serif !important;
+}

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Syne } from "next/font/google";
+import { Inter, Syne, Tajawal } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/navbar";
 import CustomCursor from "@/components/ui/custom-cursor";
 import LoadingScreen from "@/components/ui/loading-screen";
 import SmoothScroll from "@/components/ui/smooth-scroll";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -16,6 +17,13 @@ const syne = Syne({
   variable: "--font-brand",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+});
+
+// Modern & Elegant Arabic Font
+const tajawal = Tajawal({
+  variable: "--font-arabic",
+  subsets: ["arabic"],
+  weight: ["400", "500", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -34,28 +42,29 @@ export const viewport = {
   initialScale: 1,
 };
 
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${syne.variable}`}>
+    <html lang="en" className={`${inter.variable} ${syne.variable} ${tajawal.variable}`}>
       <body className="bg-[#050505] text-white selection:bg-purple-500/30 font-sans overflow-x-hidden">
-        <header role="banner">
-          <Navbar aria-label="Primary navigation" />
-        </header>
-        <main role="main" className="flex-grow">
-          {children}
-        </main>
-        {/* Global overlays */}
-        <LoadingScreen />
-        <CustomCursor />
-        <SmoothScroll />
-        {/* Grid lines & grain / noise texture overlay */}
-        <div aria-hidden="true" className="grid-lines pointer-events-none fixed inset-0 z-[1] opacity-70" />
-        <div aria-hidden="true" className="grain-overlay pointer-events-none fixed inset-0 z-[9990] opacity-[0.035]" />
+        <LanguageProvider>
+          <header role="banner">
+            <Navbar aria-label="Primary navigation" />
+          </header>
+          <main role="main" className="flex-grow">
+            {children}
+          </main>
+          {/* Global overlays */}
+          <LoadingScreen />
+          <CustomCursor />
+          <SmoothScroll />
+          {/* Grid lines & grain / noise texture overlay */}
+          <div aria-hidden="true" className="grid-lines pointer-events-none fixed inset-0 z-[1] opacity-70" />
+          <div aria-hidden="true" className="grain-overlay pointer-events-none fixed inset-0 z-[9990] opacity-[0.035]" />
+        </LanguageProvider>
       </body>
     </html>
   );

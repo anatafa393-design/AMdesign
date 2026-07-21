@@ -9,6 +9,7 @@ import ImageTicker from "@/components/ui/ImageTicker";
 import MagneticButton from "@/components/ui/magnetic-button";
 import Reveal from "@/components/ui/reveal-on-scroll";
 import TextReveal from "@/components/ui/text-reveal";
+import { useLanguage } from "@/context/LanguageContext";
 import {
   ArrowRight,
   Sparkles,
@@ -44,17 +45,20 @@ const clientLogos = Array.from(
 );
 
 export default function Home() {
+  const { language, t } = useLanguage();
   const containerRef = useRef<HTMLElement>(null);
   const [projects, setProjects] = useState<any[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
-  const categories = [
-    "All",
-    "Visual Identity",
-    "Packaging Design",
-    "Social Media Design",
-    "Photoshoots",
-  ];
+  const categoriesMap: Record<string, { en: string; ar: string }> = {
+    All: { en: t.portfolio.categories.all, ar: t.portfolio.categories.all },
+    "Visual Identity": { en: t.portfolio.categories.visualIdentity, ar: t.portfolio.categories.visualIdentity },
+    "Packaging Design": { en: t.portfolio.categories.packagingDesign, ar: t.portfolio.categories.packagingDesign },
+    "Social Media Design": { en: t.portfolio.categories.socialMedia, ar: t.portfolio.categories.socialMedia },
+    Photoshoots: { en: t.portfolio.categories.photoshoots, ar: t.portfolio.categories.photoshoots },
+  };
+
+  const categories = Object.keys(categoriesMap);
 
   const getNormalizedCategory = (category: string) => {
     const cat = category.toLowerCase();
@@ -159,24 +163,22 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 text-orange-300" />
               <span className="text-xs font-semibold tracking-widest uppercase text-white/80">
-                Premium Brand Design
+                {t.hero.badge}
               </span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-white font-brand">
-              Crafting Visual
+              {t.hero.titleLine1}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-orange-100 to-white/80">
-                Excellence
+                {t.hero.titleHighlight}
               </span>
               <br />
-              That Speaks.
+              {t.hero.titleLine2}
             </h1>
 
             <p className="text-base md:text-lg text-white/70 max-w-lg leading-relaxed">
-              Professional brand strategy, modern interfaces, premium packaging,
-              and digital designs that captivate audiences and elevate
-              businesses.
+              {t.hero.description}
             </p>
 
             <div className="flex items-center gap-4 flex-wrap">
@@ -185,15 +187,15 @@ export default function Home() {
                   href="#projects"
                   className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-bold tracking-wider text-sm transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] uppercase"
                 >
-                  View My Work
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  {t.hero.viewWork}
+                  <ArrowRight className={`w-4 h-4 transition-transform ${language === "ar" ? "group-hover:-translate-x-1 rotate-180" : "group-hover:translate-x-1"}`} />
                 </Link>
               </MagneticButton>
               <Link
                 href="#contact"
                 className="inline-flex items-center gap-2 px-6 py-4 rounded-full border border-white/20 text-white font-bold text-sm uppercase tracking-wider hover:bg-white/10 transition-all duration-300"
               >
-                Get in Touch
+                {t.hero.getInTouch}
               </Link>
             </div>
 
@@ -204,7 +206,7 @@ export default function Home() {
                   10+
                 </span>
                 <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-white/50">
-                  Premium Brands
+                  {t.hero.stats.brands}
                 </span>
               </div>
               <div className="hidden sm:block w-px h-12 bg-white/20" />
@@ -213,7 +215,7 @@ export default function Home() {
                   100%
                 </span>
                 <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-white/50">
-                  Satisfaction
+                  {t.hero.stats.satisfaction}
                 </span>
               </div>
               <div className="hidden sm:block w-px h-12 bg-white/20" />
@@ -222,7 +224,7 @@ export default function Home() {
                   52+
                 </span>
                 <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-white/50">
-                  Projects Done
+                  {t.hero.stats.projects}
                 </span>
               </div>
             </div>
@@ -256,7 +258,7 @@ export default function Home() {
           transition={{ duration: 2, repeat: Infinity }}
         >
           <span className="text-[10px] uppercase tracking-widest text-white/40">
-            Scroll
+            {t.hero.scroll}
           </span>
           <div className="w-5 h-8 rounded-full border border-white/20 flex justify-center pt-2">
             <motion.div
@@ -311,10 +313,10 @@ export default function Home() {
           {/* Section Header */}
           <Reveal className="text-center mb-20">
             <p className="text-orange-400 font-semibold mb-4 tracking-widest text-sm uppercase">
-              Why Choose Me
+              {t.whyMe.subtitle}
             </p>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight font-brand text-white">
-              <TextReveal text="Helping Businesses Reach New Heights" />
+              <TextReveal text={t.whyMe.title} />
             </h2>
           </Reveal>
 
@@ -323,18 +325,18 @@ export default function Home() {
             {[
               {
                 icon: Layers,
-                title: "End-to-End",
-                desc: "Complete brand lifecycle management from concept to final deliverables.",
+                title: t.whyMe.cards.endToEnd.title,
+                desc: t.whyMe.cards.endToEnd.description,
               },
               {
                 icon: Palette,
-                title: "Pixel Perfect",
-                desc: "Every design is crafted with meticulous attention to detail and consistency.",
+                title: t.whyMe.cards.pixelPerfect.title,
+                desc: t.whyMe.cards.pixelPerfect.description,
               },
               {
                 icon: Globe,
-                title: "Global Standards",
-                desc: "Designs that meet international quality standards and best practices.",
+                title: t.whyMe.cards.globalStandards.title,
+                desc: t.whyMe.cards.globalStandards.description,
               },
             ].map((feat, i) => (
               <Reveal key={i} delay={i * 0.15}>
@@ -342,7 +344,7 @@ export default function Home() {
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feat.icon className="w-7 h-7 text-orange-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold text-white mb-3 font-brand">
                     {feat.title}
                   </h3>
                   <p className="text-white/50 text-sm leading-relaxed">
@@ -364,10 +366,10 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8">
                   <span className="text-[10px] uppercase font-bold tracking-widest text-orange-400 mb-2">
-                    Visual Strategy
+                    {language === "ar" ? "استراتيجية بصرية" : "Visual Strategy"}
                   </span>
-                  <h4 className="text-xl font-bold text-white">
-                    Product Identity Rebuild
+                  <h4 className="text-xl font-bold text-white font-brand">
+                    {t.whyMe.productRebuild.title}
                   </h4>
                 </div>
               </div>
@@ -381,10 +383,10 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8">
                   <span className="text-[10px] uppercase font-bold tracking-widest text-orange-400 mb-2">
-                    Interactive Design
+                    {language === "ar" ? "تصميم تفاعلي" : "Interactive Design"}
                   </span>
-                  <h4 className="text-xl font-bold text-white">
-                    Digital Presence Strategy
+                  <h4 className="text-xl font-bold text-white font-brand">
+                    {t.whyMe.digitalStrategy.title}
                   </h4>
                 </div>
               </div>
@@ -398,21 +400,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <Reveal className="text-center mb-20">
             <p className="text-orange-400 font-semibold mb-4 tracking-widest text-sm uppercase">
-              What I Offer
+              {t.services.badge}
             </p>
             <h2 className="text-4xl md:text-6xl font-bold font-brand">
-              From{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
-                A
-              </span>{" "}
-              to{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-600">
-                Z
-              </span>
+              {t.services.title}
             </h2>
             <p className="text-white/50 text-lg max-w-2xl mx-auto mt-6">
-              You don&apos;t need multiple agencies. I handle your entire brand
-              lifecycle.
+              {t.services.subtitle}
             </p>
           </Reveal>
 
@@ -420,48 +414,48 @@ export default function Home() {
             {[
               {
                 icon: PenTool,
-                title: "Visual Identity",
-                desc: "Logos, colors, and typography that make you stand out.",
+                title: t.services.items.visualIdentity.title,
+                desc: t.services.items.visualIdentity.description,
                 image: "/project-1-cover.jpg",
                 overlayImage: "/project-1-cover.jpg",
                 targetCategory: "Visual Identity",
               },
               {
                 icon: Globe,
-                title: "Website Building",
-                desc: "Immersive, high-performance websites that convert visitors.",
+                title: t.services.items.websiteBuilding.title,
+                desc: t.services.items.websiteBuilding.description,
                 image: "/website-building-service.png",
                 overlayImage: "/website-building-service.png",
                 targetCategory: "Visual Identity",
               },
               {
                 icon: Package,
-                title: "Product Packaging",
-                desc: "Packaging that reflects premium quality and attracts consumers.",
+                title: t.services.items.productPackaging.title,
+                desc: t.services.items.productPackaging.description,
                 image: "/packaging/1/2.jpg",
                 overlayImage: "/packaging/1/2.jpg",
                 targetCategory: "Packaging Design",
               },
               {
                 icon: Camera,
-                title: "Photoshoots",
-                desc: "Professional photography showcasing your products and services.",
+                title: t.services.items.photoshoots.title,
+                desc: t.services.items.photoshoots.description,
                 image: "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png",
                 overlayImage: "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png",
                 targetCategory: "Photoshoots",
               },
               {
                 icon: Palette,
-                title: "Social Media Designs",
-                desc: "Engaging visual content for social platforms.",
+                title: t.services.items.socialMedia.title,
+                desc: t.services.items.socialMedia.description,
                 image: "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png",
                 overlayImage: "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png",
                 targetCategory: "Social Media Design",
               },
               {
                 icon: BookOpen,
-                title: "Company Profile Design",
-                desc: "Comprehensive and professional company profiles that tell your brand's story.",
+                title: t.services.items.companyProfile.title,
+                desc: t.services.items.companyProfile.description,
                 image: "/company-profile-design.png",
                 overlayImage: "/company-profile-design.png",
                 targetCategory: "Visual Identity",
@@ -475,7 +469,7 @@ export default function Home() {
                   }}
                   role="button"
                   tabIndex={0}
-                  className="group relative bg-white/[0.03] border border-white/[0.06] rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:bg-white/[0.06] hover:border-white/10 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(255,60,0,0.15)] overflow-hidden h-full cursor-pointer text-left"
+                  className="group relative bg-white/[0.03] border border-white/[0.06] rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:bg-white/[0.06] hover:border-white/10 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(255,60,0,0.15)] overflow-hidden h-full cursor-pointer text-start"
                 >
                   {/* Gradient overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -503,7 +497,7 @@ export default function Home() {
 
                   {/* Text */}
                   <div className="relative z-10 mt-auto">
-                    <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3">
+                    <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 font-brand">
                       {service.title}
                     </h3>
                     <p className="text-white/40 text-sm leading-relaxed">
@@ -527,21 +521,22 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <Reveal className="text-center mb-16">
             <p className="text-orange-400 font-semibold mb-4 tracking-widest text-sm uppercase">
-              Portfolio
+              {t.portfolio.badge}
             </p>
             <h2 className="text-4xl md:text-6xl font-bold font-brand">
-              <TextReveal text="Selected Work" />
+              <TextReveal text={t.portfolio.title} />
             </h2>
           </Reveal>
 
           {/* Category filter tabs */}
           <div className="flex flex-wrap justify-center items-center gap-2 mb-16">
-            {categories.map((cat) => {
-              const isActive = selectedCategory === cat;
+            {categories.map((catKey) => {
+              const label = categoriesMap[catKey]?.[language] || catKey;
+              const isActive = selectedCategory === catKey;
               return (
                 <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
+                  key={catKey}
+                  onClick={() => setSelectedCategory(catKey)}
                   className={`relative px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
                     isActive
                       ? "text-white"
@@ -559,7 +554,7 @@ export default function Home() {
                       }}
                     />
                   )}
-                  {cat}
+                  {label}
                 </button>
               );
             })}
@@ -594,9 +589,9 @@ export default function Home() {
                         <div className="text-orange-400 font-medium text-xs md:text-sm mb-2">
                           {project.category}
                         </div>
-                        <h3 className="text-xl md:text-3xl font-bold flex items-center justify-between text-white">
+                        <h3 className="text-xl md:text-3xl font-bold flex items-center justify-between text-white font-brand">
                           {project.title}
-                          <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6 opacity-100 md:opacity-0 -translate-x-0 md:-translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 delay-100" />
+                          <ArrowUpRight className={`w-5 h-5 md:w-6 md:h-6 opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 ${language === "ar" ? "group-hover:-translate-x-0 rotate-180" : "group-hover:translate-x-0"}`} />
                         </h3>
                       </div>
                     </Link>
@@ -608,10 +603,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ TESTIMONIALS ═══ */}
+      {/* ═══ TESTIMONIALS SECTION ═══ */}
       <TestimonialsSection />
 
-      {/* ═══ CONTACT ═══ */}
+      {/* ═══ CONTACT SECTION ═══ */}
       <ContactSection />
     </div>
   );
