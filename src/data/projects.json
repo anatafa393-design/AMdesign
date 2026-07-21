@@ -1,5 +1,81 @@
 [
   {
+    "id": "project-8",
+    "title": "Brand & Visual Identity Project",
+    "category": "Visual Identity",
+    "heroImage": "/projects/project-8/Artboard 1@2x-100.jpg",
+    "overview": "A majestic execution of visual identity, translating business goals into a striking, unforgettable brand presence that commands attention.",
+    "deliverables": [
+      "Brand Identity Design",
+      "Visual Strategy",
+      "Artboard Collateral",
+      "Packaging & Print"
+    ],
+    "gallery": [
+      {
+        "id": "p8-1",
+        "type": "image",
+        "content": "/projects/project-8/Artboard 1@2x-100.jpg"
+      },
+      {
+        "id": "p8-2",
+        "type": "image",
+        "content": "/projects/project-8/Artboard 1 copy@2x-100.jpg"
+      },
+      {
+        "id": "p8-3",
+        "type": "image",
+        "content": "/projects/project-8/Artboard 2 copy@2x-100.jpg"
+      },
+      {
+        "id": "p8-4",
+        "type": "image",
+        "content": "/projects/project-8/Artboard 2 copy 2@2x-100.jpg"
+      },
+      {
+        "id": "p8-5",
+        "type": "image",
+        "content": "/projects/project-8/Artboard 3 copy@2x-100.jpg"
+      },
+      {
+        "id": "p8-6",
+        "type": "image",
+        "content": "/projects/project-8/Artboard 4@2x-100.jpg"
+      },
+      {
+        "id": "p8-7",
+        "type": "image",
+        "content": "/projects/project-8/Artboard 4 copy@2x-100.jpg"
+      },
+      {
+        "id": "p8-8",
+        "type": "image",
+        "content": "/projects/project-8/2 (1).jpg"
+      },
+      {
+        "id": "p8-9",
+        "type": "image",
+        "content": "/projects/project-8/2 (2).jpg"
+      },
+      {
+        "id": "p8-10",
+        "type": "image",
+        "content": "/projects/project-8/2 (6).jpg"
+      },
+      {
+        "id": "p8-11",
+        "type": "image",
+        "content": "/projects/project-8/2 (8).jpg"
+      },
+      {
+        "id": "p8-12",
+        "type": "image",
+        "content": "/projects/project-8/2 (9).jpg"
+      }
+    ],
+    "orientation": "portrait"
+  },
+  {
     "id": "synthex-branding",
     "title": "Synthex Tech Identity",
     "category": "Full Branding A to Z",
