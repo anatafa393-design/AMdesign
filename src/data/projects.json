@@ -1,5 +1,102 @@
 [
   {
+    "id": "rawasi-guidelines",
+    "title": "Rawasi Brand Book & Guidelines",
+    "category": "Visual Identity",
+    "heroImage": "/projects/rawasi/page-1.webp",
+    "overview": "Rawasi is a luxury contracting and engineering consultancy specializing in high-end villas, palaces, and sustainable developments. Inspired by the strength of mountains, this comprehensive Brand Book defines their timeless visual identity, geometric monogram combining Arabic and Latin lettering, desert color palette, and premium mockups designed to reflect architectural and structural excellence.",
+    "deliverables": [
+      "Brand Strategy & Overview",
+      "Logo Concept & Monogram",
+      "Color & Typography Specimen",
+      "Pattern & Stationery Mockups"
+    ],
+    "pdfUrl": "/projects/rawasi/Rawasi-Brand-Guidelines-Optimized.pdf",
+    "gallery": [
+      {
+        "id": "rawasi-1",
+        "type": "image",
+        "content": "/projects/rawasi/page-1.webp"
+      },
+      {
+        "id": "rawasi-2",
+        "type": "image",
+        "content": "/projects/rawasi/page-2.webp"
+      },
+      {
+        "id": "rawasi-3",
+        "type": "image",
+        "content": "/projects/rawasi/page-3.webp"
+      },
+      {
+        "id": "rawasi-4",
+        "type": "image",
+        "content": "/projects/rawasi/page-4.webp"
+      },
+      {
+        "id": "rawasi-5",
+        "type": "image",
+        "content": "/projects/rawasi/page-5.webp"
+      },
+      {
+        "id": "rawasi-6",
+        "type": "image",
+        "content": "/projects/rawasi/page-6.webp"
+      },
+      {
+        "id": "rawasi-7",
+        "type": "image",
+        "content": "/projects/rawasi/page-7.webp"
+      },
+      {
+        "id": "rawasi-8",
+        "type": "image",
+        "content": "/projects/rawasi/page-8.webp"
+      },
+      {
+        "id": "rawasi-9",
+        "type": "image",
+        "content": "/projects/rawasi/page-9.webp"
+      },
+      {
+        "id": "rawasi-10",
+        "type": "image",
+        "content": "/projects/rawasi/page-10.webp"
+      },
+      {
+        "id": "rawasi-11",
+        "type": "image",
+        "content": "/projects/rawasi/page-11.webp"
+      },
+      {
+        "id": "rawasi-12",
+        "type": "image",
+        "content": "/projects/rawasi/page-12.webp"
+      },
+      {
+        "id": "rawasi-13",
+        "type": "image",
+        "content": "/projects/rawasi/page-13.webp"
+      },
+      {
+        "id": "rawasi-14",
+        "type": "image",
+        "content": "/projects/rawasi/page-14.webp"
+      },
+      {
+        "id": "rawasi-15",
+        "type": "image",
+        "content": "/projects/rawasi/page-15.webp"
+      },
+      {
+        "id": "rawasi-16",
+        "type": "image",
+        "content": "/projects/rawasi/page-16.webp"
+      }
+    ],
+    "orientation": "landscape"
+  },
+  {
     "id": "project-8",
     "title": "Social Media Content & Ad Campaign",
     "category": "Social Media Design",

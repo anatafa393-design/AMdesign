@@ -46,4 +46,5 @@ next-env.d.ts
 /logo tikr/
 /profile-pics/
 *.pdf
+!public/projects/rawasi/Rawasi-Brand-Guidelines-Optimized.pdf
 
