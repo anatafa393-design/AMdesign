@@ -94,7 +94,8 @@
         "content": "/projects/rawasi/page-16.webp"
       }
     ],
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "layout": "grid"
   },
   {
     "id": "project-8",

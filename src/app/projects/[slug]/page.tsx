@@ -86,7 +86,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                <p className="text-white/50">Click on any image to view it in full screen.</p>
             </div>
             
-            <ProjectGallery gallery={project.gallery} />
+            <ProjectGallery gallery={project.gallery} layout={project.layout} />
           </div>
         </section>
       )}

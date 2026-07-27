@@ -13,9 +13,10 @@ interface GalleryItem {
 
 interface ProjectGalleryProps {
   gallery: GalleryItem[];
+  layout?: "masonry" | "grid";
 }
 
-export default function ProjectGallery({ gallery }: ProjectGalleryProps) {
+export default function ProjectGallery({ gallery, layout = "masonry" }: ProjectGalleryProps) {
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
 
   const openLightbox = (idx: number) => {
@@ -40,52 +41,101 @@ export default function ProjectGallery({ gallery }: ProjectGalleryProps) {
     }
   };
 
+  const isGrid = layout === "grid";
+
   return (
-    <div className="w-full">
-      {/* Masonry Grid Layout */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
-        {gallery.map((item, i) => (
-          <div
-            key={item.id || i}
-            onClick={() => item.type === "image" && openLightbox(i)}
-            className={`break-inside-avoid inline-block w-full mb-6 rounded-2xl overflow-hidden shadow-xl shadow-black/40 border border-white/10 bg-white/5 transition-all duration-300 group ${
-              item.type === "image" ? "cursor-zoom-in hover:border-orange-500/40 hover:scale-[1.02]" : ""
-            }`}
-          >
-            {item.type === "image" && (
-              <div className="relative overflow-hidden">
-                <Image
-                  src={item.content}
-                  alt={`Showcase artboard ${i + 1}`}
-                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.01]"
-                  width={1200}
-                  height={1200}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  onError={(e) => {
-                    e.currentTarget.srcset = "";
-                    e.currentTarget.src = "/placeholder.png";
-                  }}
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Maximize2 className="w-8 h-8 text-white drop-shadow-md scale-75 group-hover:scale-100 transition-transform duration-300" />
+    <div className="w-full" dir="ltr" style={{ direction: "ltr" }}>
+      {isGrid ? (
+        /* Uniform Grid Layout (Keeps page order sequential left-to-right) */
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {gallery.map((item, i) => (
+            <div
+              key={item.id || i}
+              onClick={() => item.type === "image" && openLightbox(i)}
+              className={`w-full rounded-2xl overflow-hidden shadow-xl shadow-black/40 border border-white/10 bg-white/5 transition-all duration-300 group flex flex-col justify-between ${
+                item.type === "image" ? "cursor-zoom-in hover:border-orange-500/40 hover:scale-[1.02]" : ""
+              }`}
+            >
+              {item.type === "image" && (
+                <div className="relative w-full overflow-hidden flex-grow flex items-center justify-center bg-black/20" style={{ aspectRatio: "1.414/1" }}>
+                  <Image
+                    src={item.content}
+                    alt={`Showcase artboard ${i + 1}`}
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.01]"
+                    width={800}
+                    height={600}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    onError={(e) => {
+                      e.currentTarget.srcset = "";
+                      e.currentTarget.src = "/placeholder.png";
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <Maximize2 className="w-8 h-8 text-white drop-shadow-md scale-75 group-hover:scale-100 transition-transform duration-300" />
+                  </div>
                 </div>
-              </div>
-            )}
-            {item.type === "video" && (
-              <video
-                src={item.content}
-                controls
-                className="w-full h-auto object-contain"
-              />
-            )}
-            {item.type === "text" && (
-              <div className="p-8 bg-[#0d0d0d] text-center">
-                <p className="text-lg text-white/90 leading-relaxed font-light">{item.content}</p>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+              )}
+              {item.type === "video" && (
+                <video
+                  src={item.content}
+                  controls
+                  className="w-full h-auto object-contain"
+                />
+              )}
+              {item.type === "text" && (
+                <div className="p-8 bg-[#0d0d0d] text-center w-full flex-grow flex items-center justify-center">
+                  <p className="text-lg text-white/90 leading-relaxed font-light">{item.content}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      ) : (
+        /* Masonry Grid Layout (Best for mixed dimensions) */
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
+          {gallery.map((item, i) => (
+            <div
+              key={item.id || i}
+              onClick={() => item.type === "image" && openLightbox(i)}
+              className={`break-inside-avoid inline-block w-full mb-6 rounded-2xl overflow-hidden shadow-xl shadow-black/40 border border-white/10 bg-white/5 transition-all duration-300 group ${
+                item.type === "image" ? "cursor-zoom-in hover:border-orange-500/40 hover:scale-[1.02]" : ""
+              }`}
+            >
+              {item.type === "image" && (
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={item.content}
+                    alt={`Showcase artboard ${i + 1}`}
+                    className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.01]"
+                    width={1200}
+                    height={1200}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    onError={(e) => {
+                      e.currentTarget.srcset = "";
+                      e.currentTarget.src = "/placeholder.png";
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <Maximize2 className="w-8 h-8 text-white drop-shadow-md scale-75 group-hover:scale-100 transition-transform duration-300" />
+                  </div>
+                </div>
+              )}
+              {item.type === "video" && (
+                <video
+                  src={item.content}
+                  controls
+                  className="w-full h-auto object-contain"
+                />
+              )}
+              {item.type === "text" && (
+                <div className="p-8 bg-[#0d0d0d] text-center">
+                  <p className="text-lg text-white/90 leading-relaxed font-light">{item.content}</p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Premium Lightbox Modal */}
       <AnimatePresence>
