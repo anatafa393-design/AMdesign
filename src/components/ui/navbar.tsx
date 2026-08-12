@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe } from "lucide-react";
 import MagneticButton from "@/components/ui/magnetic-button";
 import { useLanguage } from "@/context/LanguageContext";
+import { trackPixelEvent } from "@/components/MetaPixel";
 
 const socialLinks = [
   { label: "Wa", href: "https://wa.me/201145137067" },
@@ -134,6 +135,7 @@ export default function Navbar() {
           <MagneticButton>
             <Link
               href="/#contact"
+              onClick={() => trackPixelEvent('Contact', { method: 'navbar_desktop_cta' })}
               className="inline-flex items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white text-sm font-bold hover:shadow-lg hover:shadow-orange-500/30 hover:scale-105 active:scale-95 transition-all duration-300"
             >
               {t.nav.letsTalk}
@@ -221,7 +223,10 @@ export default function Navbar() {
               >
                 <Link
                   href="/#contact"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => {
+                    setMenuOpen(false);
+                    trackPixelEvent('Contact', { method: 'navbar_mobile_cta' });
+                  }}
                   className="inline-flex items-center px-8 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white text-lg font-bold hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
                 >
                   {t.nav.letsTalk}

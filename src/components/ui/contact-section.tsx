@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Reveal from "@/components/ui/reveal-on-scroll";
 import MagneticButton from "@/components/ui/magnetic-button";
 import { useLanguage } from "@/context/LanguageContext";
+import { trackPixelEvent } from "@/components/MetaPixel";
 
 // Custom SVG icons for social platforms not in lucide v1
 function InstagramIcon({ className }: { className?: string }) {
@@ -135,6 +136,19 @@ export function ContactSection() {
             const colors = colorMap[item.color] || colorMap.orange;
             const Icon = item.Icon;
 
+            const handleLinkClick = () => {
+              const platform = item.color;
+              const methodMap: Record<string, string> = {
+                orange: 'email',
+                green: 'whatsapp',
+                blue: 'linkedin',
+                pink: 'instagram',
+                purple: 'behance'
+              };
+              const method = methodMap[platform] || platform;
+              trackPixelEvent('Contact', { method, value: item.value });
+            };
+
             return (
               <Reveal key={item.value} delay={0.08 * i}>
                 <motion.a
@@ -143,6 +157,7 @@ export function ContactSection() {
                   rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   whileHover={{ y: -6, scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 350, damping: 20 }}
+                  onClick={handleLinkClick}
                   className="group relative flex flex-col justify-between p-8 rounded-3xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden h-full"
                 >
                   {/* Subtle hover gradient background */}
@@ -184,6 +199,7 @@ export function ContactSection() {
                 href="https://wa.me/201145137067"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackPixelEvent('Contact', { method: 'whatsapp_footer_cta' })}
                 className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-sm hover:shadow-lg hover:shadow-orange-500/30 hover:scale-105 active:scale-95 transition-all duration-300 uppercase tracking-wider"
               >
                 {language === "ar" ? "تحدث معي على الواتساب مباشرة" : "Chat Directly on WhatsApp"}

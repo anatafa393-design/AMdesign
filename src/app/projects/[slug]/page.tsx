@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2, Download } from "lucide-react";
+import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { getProjects } from "@/lib/getProjects";
 import ProjectGallery from "@/components/ui/project-gallery";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
 import TextReveal from "@/components/ui/text-reveal";
+import DownloadButton from "@/components/ui/download-button";
 
 export async function generateStaticParams() {
   const projects = getProjects();
@@ -63,14 +64,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             {project.pdfUrl && (
               <div className="mt-8 pt-6 border-t border-white/10 flex flex-col gap-3">
                 <p className="text-xs text-white/40 font-bold uppercase tracking-widest">Document download</p>
-                <a
-                  href={project.pdfUrl}
-                  download
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-sm hover:shadow-lg hover:shadow-orange-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group"
-                >
-                  <Download className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
-                  Download PDF Brand Book
-                </a>
+                <DownloadButton href={project.pdfUrl} projectTitle={project.title} />
               </div>
             )}
           </div>

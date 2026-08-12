@@ -10,6 +10,7 @@ import MagneticButton from "@/components/ui/magnetic-button";
 import Reveal from "@/components/ui/reveal-on-scroll";
 import TextReveal from "@/components/ui/text-reveal";
 import { useLanguage } from "@/context/LanguageContext";
+import { trackPixelEvent } from "@/components/MetaPixel";
 import {
   ArrowRight,
   Sparkles,
@@ -185,6 +186,7 @@ export default function Home() {
               <MagneticButton>
                 <Link
                   href="#projects"
+                  onClick={() => trackPixelEvent('ViewContent', { content_name: 'Hero View Work' })}
                   className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-bold tracking-wider text-sm transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] uppercase"
                 >
                   {t.hero.viewWork}
@@ -193,6 +195,7 @@ export default function Home() {
               </MagneticButton>
               <Link
                 href="#contact"
+                onClick={() => trackPixelEvent('Contact', { method: 'hero_get_in_touch' })}
                 className="inline-flex items-center gap-2 px-6 py-4 rounded-full border border-white/20 text-white font-bold text-sm uppercase tracking-wider hover:bg-white/10 transition-all duration-300"
               >
                 {t.hero.getInTouch}

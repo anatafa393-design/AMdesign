@@ -6,6 +6,7 @@ import CustomCursor from "@/components/ui/custom-cursor";
 import LoadingScreen from "@/components/ui/loading-screen";
 import SmoothScroll from "@/components/ui/smooth-scroll";
 import { LanguageProvider } from "@/context/LanguageContext";
+import MetaPixel from "@/components/MetaPixel";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -51,6 +52,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${syne.variable} ${tajawal.variable}`}>
       <body className="bg-[#050505] text-white selection:bg-purple-500/30 font-sans overflow-x-hidden">
         <LanguageProvider>
+          <MetaPixel />
           <header role="banner">
             <Navbar aria-label="Primary navigation" />
           </header>
