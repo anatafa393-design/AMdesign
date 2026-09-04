@@ -11,6 +11,7 @@ import Reveal from "@/components/ui/reveal-on-scroll";
 import TextReveal from "@/components/ui/text-reveal";
 import { useLanguage } from "@/context/LanguageContext";
 import { trackPixelEvent } from "@/components/MetaPixel";
+import initialProjects from "@/data/projects.json";
 import {
   ArrowRight,
   Sparkles,
@@ -48,7 +49,7 @@ const clientLogos = Array.from(
 export default function Home() {
   const { language, t } = useLanguage();
   const containerRef = useRef<HTMLElement>(null);
-  const [projects, setProjects] = useState<any[]>([]);
+  const [projects, setProjects] = useState<any[]>(initialProjects);
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
   const categoriesMap: Record<string, { en: string; ar: string }> = {

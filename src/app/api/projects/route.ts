@@ -11,7 +11,11 @@ export async function GET() {
       return NextResponse.json({ error: 'Data not found' }, { status: 404 });
     }
     const fileContent = fs.readFileSync(filePath, 'utf-8');
-    return NextResponse.json(JSON.parse(fileContent));
+    return NextResponse.json(JSON.parse(fileContent), {
+      headers: {
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+      },
+    });
   } catch (error) {
     return NextResponse.json({ error: 'Failed to read data' }, { status: 500 });
   }
