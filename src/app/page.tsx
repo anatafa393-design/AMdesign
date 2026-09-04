@@ -114,7 +114,7 @@ export default function Home() {
       />
 
       {/* ═══ HERO SECTION ═══ */}
-      <section className="relative w-full min-h-screen flex flex-col justify-center bg-gradient-to-b from-[#ff3c00] via-[#c41400] to-[#050505] pt-28 pb-16 px-6 md:px-10 overflow-hidden z-10">
+      <section className="relative w-full min-h-screen flex flex-col justify-center bg-gradient-to-b from-[#ff3c00] via-[#c41400] to-[#050505] pt-24 pb-8 md:pt-28 md:pb-16 px-6 md:px-10 overflow-hidden z-10">
         {/* Giant background text */}
         <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none" dir="ltr">
           <motion.span
@@ -152,18 +152,18 @@ export default function Home() {
         </div>
 
         {/* Hero Grid */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-16 flex-1">
+        <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-16 flex-1">
           {/* Left: Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col items-start gap-8"
+            className="flex flex-col items-start gap-6 md:gap-8"
           >
             {/* Tag badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 text-orange-300" />
-              <span className="text-xs font-semibold tracking-widest uppercase text-white/80">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 md:px-4 md:py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
+              <Sparkles className="hidden sm:inline-block w-3.5 h-3.5 md:w-4 md:h-4 text-orange-300" />
+              <span className="text-[11px] md:text-xs font-semibold tracking-widest uppercase text-white/80">
                 {t.hero.badge}
               </span>
             </div>
@@ -178,16 +178,16 @@ export default function Home() {
               {t.hero.titleLine2}
             </h1>
 
-            <p className="text-base md:text-lg text-white/70 max-w-lg leading-relaxed">
+            <p className="text-sm md:text-lg text-white/70 max-w-lg leading-relaxed">
               {t.hero.description}
             </p>
 
-            <div className="flex items-center gap-4 flex-wrap">
+            <div className="flex items-center gap-3 md:gap-4 flex-wrap">
               <MagneticButton>
                 <Link
                   href="#projects"
                   onClick={() => trackPixelEvent('ViewContent', { content_name: 'Hero View Work' })}
-                  className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-bold tracking-wider text-sm transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] uppercase"
+                  className="group inline-flex items-center gap-2.5 md:gap-3 px-6 md:px-8 py-3.5 md:py-4 rounded-full bg-white text-black font-bold tracking-wider text-xs md:text-sm transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] uppercase"
                 >
                   {t.hero.viewWork}
                   <ArrowRight className={`w-4 h-4 transition-transform ${language === "ar" ? "group-hover:-translate-x-1 rotate-180" : "group-hover:translate-x-1"}`} />
@@ -196,14 +196,14 @@ export default function Home() {
               <Link
                 href="#contact"
                 onClick={() => trackPixelEvent('Contact', { method: 'hero_get_in_touch' })}
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-full border border-white/20 text-white font-bold text-sm uppercase tracking-wider hover:bg-white/10 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-5 md:px-6 py-3.5 md:py-4 rounded-full border border-white/20 text-white font-bold text-xs md:text-sm uppercase tracking-wider hover:bg-white/10 transition-all duration-300"
               >
                 {t.hero.getInTouch}
               </Link>
             </div>
 
             {/* Stats row */}
-            <div className="grid grid-cols-3 gap-4 sm:flex sm:items-center sm:gap-6 mt-4 w-full">
+            <div className="grid grid-cols-3 gap-4 sm:flex sm:items-center sm:gap-6 mt-2 md:mt-4 w-full">
               <div className="text-center sm:text-start">
                 <span className="block text-2xl sm:text-3xl font-black font-brand text-white">
                   10+
@@ -238,13 +238,13 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="flex justify-center items-center relative"
+            className="flex justify-center items-center relative mt-4 lg:mt-0"
           >
-            {/* Decorative rings */}
-            <div className="absolute w-[80%] aspect-square rounded-full border border-white/10 animate-[spin_30s_linear_infinite]" />
-            <div className="absolute w-[60%] aspect-square rounded-full border border-white/5 animate-[spin_20s_linear_infinite_reverse]" />
+            {/* Decorative rings (desktop only) */}
+            <div className="hidden sm:block absolute w-[80%] aspect-square rounded-full border border-white/10 animate-[spin_30s_linear_infinite]" />
+            <div className="hidden sm:block absolute w-[60%] aspect-square rounded-full border border-white/5 animate-[spin_20s_linear_infinite_reverse]" />
 
-            <div className="relative h-[50vh] lg:h-[65vh] w-full flex justify-center">
+            <div className="relative h-[28vh] sm:h-[40vh] lg:h-[65vh] w-full flex justify-center">
               <ImageWithFallback
                 src="/profile.png"
                 className="h-full w-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] z-10"
@@ -254,9 +254,9 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator (hidden on touchscreens/mobile) */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2"
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
@@ -274,13 +274,13 @@ export default function Home() {
       </section>
 
       {/* ═══ CLIENT LOGOS MARQUEE ═══ */}
-      <section className="relative z-10 bg-[#050505] py-12 border-y border-white/5 overflow-hidden" dir="ltr" style={{ direction: "ltr" }}>
+      <section className="relative z-10 bg-[#050505] py-6 md:py-12 border-y border-white/5 overflow-hidden" dir="ltr" style={{ direction: "ltr" }}>
         <div className="flex">
           <div className="flex shrink-0 items-center animate-marquee">
             {clientLogos.map((src, i) => (
               <div
                 key={`a-${i}`}
-                className="flex items-center justify-center w-24 md:w-32 h-12 mx-8 md:mx-12 opacity-20 hover:opacity-80 hover:scale-110 transition-all duration-500 shrink-0"
+                className="flex items-center justify-center w-24 md:w-32 h-12 mx-6 md:mx-12 opacity-20 hover:opacity-80 hover:scale-110 transition-all duration-500 shrink-0"
               >
                 <ImageWithFallback
                   src={encodeURI(src)}
@@ -297,7 +297,7 @@ export default function Home() {
             {clientLogos.map((src, i) => (
               <div
                 key={`b-${i}`}
-                className="flex items-center justify-center w-24 md:w-32 h-12 mx-8 md:mx-12 opacity-20 hover:opacity-80 hover:scale-110 transition-all duration-500 shrink-0"
+                className="flex items-center justify-center w-24 md:w-32 h-12 mx-6 md:mx-12 opacity-20 hover:opacity-80 hover:scale-110 transition-all duration-500 shrink-0"
               >
                 <ImageWithFallback
                   src={encodeURI(src)}
@@ -311,20 +311,20 @@ export default function Home() {
       </section>
 
       {/* ═══ ABOUT / VALUE PROPOSITION ═══ */}
-      <section className="relative z-10 bg-[#050505] py-24 md:py-32 px-6">
+      <section className="relative z-10 bg-[#050505] py-14 md:py-32 px-6">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <Reveal className="text-center mb-20">
-            <p className="text-orange-400 font-semibold mb-4 tracking-widest text-sm uppercase">
+          <Reveal className="text-center mb-10 md:mb-20">
+            <p className="text-orange-400 font-semibold mb-2 md:mb-4 tracking-widest text-xs md:text-sm uppercase">
               {t.whyMe.subtitle}
             </p>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight font-brand text-white">
+            <h2 className="text-3xl md:text-6xl font-bold tracking-tight font-brand text-white">
               <TextReveal text={t.whyMe.title} />
             </h2>
           </Reveal>
 
           {/* Feature cards row */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {[
               {
                 icon: Layers,
@@ -343,77 +343,39 @@ export default function Home() {
               },
             ].map((feat, i) => (
               <Reveal key={i} delay={i * 0.15}>
-                <div className="group p-8 rounded-3xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.06] hover:border-white/10 transition-all duration-500 hover:-translate-y-1">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <feat.icon className="w-7 h-7 text-orange-400" />
+                <div className="group p-5 md:p-8 rounded-2xl md:rounded-3xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.06] hover:border-white/10 transition-all duration-500 hover:-translate-y-1">
+                  <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-500/10 flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <feat.icon className="w-5 h-5 md:w-7 md:h-7 text-orange-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 font-brand">
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 font-brand">
                     {feat.title}
                   </h3>
-                  <p className="text-white/50 text-sm leading-relaxed">
+                  <p className="text-white/60 text-xs md:text-sm leading-relaxed">
                     {feat.desc}
                   </p>
                 </div>
               </Reveal>
             ))}
           </div>
-
-          {/* Featured projects mini row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-16">
-            <Reveal>
-              <div className="relative rounded-3xl overflow-hidden aspect-[16/10] group bg-neutral-900 border border-white/5">
-                <ImageWithFallback
-                  src="/project-1-cover.jpg"
-                  alt="Branding Project"
-                  className="w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8">
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-orange-400 mb-2">
-                    {language === "ar" ? "استراتيجية بصرية" : "Visual Strategy"}
-                  </span>
-                  <h4 className="text-xl font-bold text-white font-brand">
-                    {t.whyMe.productRebuild.title}
-                  </h4>
-                </div>
-              </div>
-            </Reveal>
-            <Reveal delay={0.15}>
-              <div className="relative rounded-3xl overflow-hidden aspect-[16/10] group bg-neutral-900 border border-white/5">
-                <ImageWithFallback
-                  src="/project-2-cover.jpg"
-                  alt="Digital Design"
-                  className="w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8">
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-orange-400 mb-2">
-                    {language === "ar" ? "تصميم تفاعلي" : "Interactive Design"}
-                  </span>
-                  <h4 className="text-xl font-bold text-white font-brand">
-                    {t.whyMe.digitalStrategy.title}
-                  </h4>
-                </div>
-              </div>
-            </Reveal>
-          </div>
         </div>
       </section>
 
       {/* ═══ SERVICES SECTION ═══ */}
-      <section id="services" className="relative z-10 py-24 md:py-32 px-6">
+      <section id="services" className="relative z-10 py-14 md:py-32 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <Reveal className="text-center mb-20">
-            <p className="text-orange-400 font-semibold mb-4 tracking-widest text-sm uppercase">
+          <Reveal className="text-center mb-8 md:mb-20">
+            <p className="text-orange-400 font-semibold mb-2 md:mb-4 tracking-widest text-xs md:text-sm uppercase">
               {t.services.badge}
             </p>
-            <h2 className="text-4xl md:text-6xl font-bold font-brand">
+            <h2 className="text-3xl md:text-6xl font-bold font-brand">
               {t.services.title}
             </h2>
-            <p className="text-white/50 text-lg max-w-2xl mx-auto mt-6">
+            <p className="text-white/50 text-sm md:text-lg max-w-2xl mx-auto mt-3 md:mt-6">
               {t.services.subtitle}
             </p>
           </Reveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {[
               {
                 icon: PenTool,
@@ -472,18 +434,18 @@ export default function Home() {
                   }}
                   role="button"
                   tabIndex={0}
-                  className="group relative bg-white/[0.03] border border-white/[0.06] rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:bg-white/[0.06] hover:border-white/10 hover:-translate-y-2 hover:shadow-[0_20px_60px_-15px_rgba(255,60,0,0.15)] overflow-hidden h-full cursor-pointer text-start"
+                  className="group relative bg-white/[0.03] border border-white/[0.06] rounded-2xl md:rounded-3xl p-4 md:p-8 flex flex-col justify-between transition-all duration-500 hover:bg-white/[0.06] hover:border-white/10 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_-15px_rgba(255,60,0,0.15)] overflow-hidden h-full cursor-pointer text-start"
                 >
                   {/* Gradient overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Icon */}
-                  <div className="relative z-10 w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-500/10 flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-6 h-6 md:w-7 md:h-7 text-orange-400" />
+                  <div className="relative z-10 w-9 h-9 sm:w-11 sm:h-11 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-500/10 flex items-center justify-center mb-3 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 text-orange-400" />
                   </div>
 
-                  {/* Image preview */}
-                  <div className="relative flex items-center justify-center mb-4 md:mb-6 h-32 md:h-40">
+                  {/* Image preview (desktop only to prevent mobile scroll bloat) */}
+                  <div className="hidden md:flex relative items-center justify-center mb-4 md:mb-6 h-32 md:h-40">
                     <ImageWithFallback
                       src={service.image}
                       alt={`${service.title} showcase`}
@@ -500,10 +462,10 @@ export default function Home() {
 
                   {/* Text */}
                   <div className="relative z-10 mt-auto">
-                    <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 font-brand">
+                    <h3 className="text-sm sm:text-base md:text-xl font-bold text-white mb-1 md:mb-3 font-brand">
                       {service.title}
                     </h3>
-                    <p className="text-white/40 text-sm leading-relaxed">
+                    <p className="text-white/40 text-xs md:text-sm leading-relaxed line-clamp-2 md:line-clamp-none">
                       {service.desc}
                     </p>
                   </div>
@@ -520,19 +482,19 @@ export default function Home() {
       </section>
 
       {/* ═══ PROJECTS SECTION ═══ */}
-      <section id="projects" className="relative z-10 py-24 md:py-32 px-6">
+      <section id="projects" className="relative z-10 py-14 md:py-32 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
-          <Reveal className="text-center mb-16">
-            <p className="text-orange-400 font-semibold mb-4 tracking-widest text-sm uppercase">
+          <Reveal className="text-center mb-8 md:mb-16">
+            <p className="text-orange-400 font-semibold mb-2 md:mb-4 tracking-widest text-xs md:text-sm uppercase">
               {t.portfolio.badge}
             </p>
-            <h2 className="text-4xl md:text-6xl font-bold font-brand">
+            <h2 className="text-3xl md:text-6xl font-bold font-brand">
               <TextReveal text={t.portfolio.title} />
             </h2>
           </Reveal>
 
           {/* Category filter tabs */}
-          <div className="flex flex-wrap justify-center items-center gap-2 mb-16">
+          <div className="flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 mb-8 md:mb-16">
             {categories.map((catKey) => {
               const label = categoriesMap[catKey]?.[language] || catKey;
               const isActive = selectedCategory === catKey;
@@ -540,7 +502,7 @@ export default function Home() {
                 <button
                   key={catKey}
                   onClick={() => setSelectedCategory(catKey)}
-                  className={`relative px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
+                  className={`relative px-4 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
                     isActive
                       ? "text-white"
                       : "text-white/50 hover:text-white hover:bg-white/5"
