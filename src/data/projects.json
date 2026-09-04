@@ -1,5 +1,282 @@
 [
   {
+    "id": "instgram",
+    "title": "Instagram Social Media Designs",
+    "category": "Social Media Design",
+    "heroImage": "/projects/instgram/Artboard 1@3x-100.jpg",
+    "overview": "A collection of high-quality Instagram social media designs and creatives.",
+    "deliverables": [
+      "Social Media Design",
+      "Content Creation",
+      "Visual Strategy"
+    ],
+    "gallery": [
+      {
+        "id": "instgram-1",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 1@3x-100.jpg"
+      },
+      {
+        "id": "instgram-2",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 2@3x-100.jpg"
+      },
+      {
+        "id": "instgram-3",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 3@3x-100.jpg"
+      },
+      {
+        "id": "instgram-4",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 4@3x-100.jpg"
+      },
+      {
+        "id": "instgram-5",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 5@3x-100.jpg"
+      },
+      {
+        "id": "instgram-6",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 6@3x-100.jpg"
+      },
+      {
+        "id": "instgram-7",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 7@3x-100.jpg"
+      },
+      {
+        "id": "instgram-8",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 8@3x-100.jpg"
+      },
+      {
+        "id": "instgram-9",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 9@3x-100.jpg"
+      },
+      {
+        "id": "instgram-10",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 10@3x-100.jpg"
+      },
+      {
+        "id": "instgram-11",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 11@3x-100.jpg"
+      },
+      {
+        "id": "instgram-12",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 12@3x-100.jpg"
+      },
+      {
+        "id": "instgram-13",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 13@3x-100.jpg"
+      },
+      {
+        "id": "instgram-14",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 14@3x-100.jpg"
+      },
+      {
+        "id": "instgram-15",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 15@3x-100.jpg"
+      },
+      {
+        "id": "instgram-16",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 16@3x-100.jpg"
+      },
+      {
+        "id": "instgram-17",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 17@3x-100.jpg"
+      },
+      {
+        "id": "instgram-18",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 18@3x-100.jpg"
+      },
+      {
+        "id": "instgram-19",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 19@3x-100.jpg"
+      },
+      {
+        "id": "instgram-20",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 20@3x-100.jpg"
+      },
+      {
+        "id": "instgram-21",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 21@3x-100.jpg"
+      },
+      {
+        "id": "instgram-22",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 22@3x-100.jpg"
+      },
+      {
+        "id": "instgram-23",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 23@3x-100.jpg"
+      },
+      {
+        "id": "instgram-24",
+        "type": "image",
+        "content": "/projects/instgram/Artboard 24@3x-100.jpg"
+      }
+    ],
+    "orientation": "square",
+    "layout": "grid"
+  },
+  {
+    "id": "trendana",
+    "title": "Trendana E-Commerce Visual Identity",
+    "category": "Visual Identity",
+    "heroImage": "/projects/trendana/page-1.webp",
+    "overview": "Trendana is an ambitious multi-category e-commerce platform built for speed, operational clarity, and customer trust. We developed a comprehensive brand identity system from core strategy and brand voice to geometric logo engineering (combining the Arabic letter 'ت', the growth trend arrow, and customer smile curve), vibrant color palettes (Kinetic Orange & Trust Navy), and cohesive touchpoints across digital apps, delivery fleet, packaging, and advertising.",
+    "deliverables": [
+      "Brand Strategy & Positioning",
+      "Logo Concept & Geometric Logic",
+      "Color Hierarchy & Typography Specimen",
+      "Corporate Stationery & Invoicing",
+      "Delivery Fleet & Uniform Branding",
+      "Packaging & Unboxing Experience",
+      "Digital Experience & App Touchpoints"
+    ],
+    "pdfUrl": "/projects/trendana/trendana-case-study.pdf",
+    "gallery": [
+      {
+        "id": "trendana-1",
+        "type": "image",
+        "content": "/projects/trendana/page-1.webp"
+      },
+      {
+        "id": "trendana-2",
+        "type": "image",
+        "content": "/projects/trendana/page-2.webp"
+      },
+      {
+        "id": "trendana-3",
+        "type": "image",
+        "content": "/projects/trendana/page-3.webp"
+      },
+      {
+        "id": "trendana-4",
+        "type": "image",
+        "content": "/projects/trendana/page-4.webp"
+      },
+      {
+        "id": "trendana-5",
+        "type": "image",
+        "content": "/projects/trendana/page-5.webp"
+      },
+      {
+        "id": "trendana-6",
+        "type": "image",
+        "content": "/projects/trendana/page-6.webp"
+      },
+      {
+        "id": "trendana-7",
+        "type": "image",
+        "content": "/projects/trendana/page-7.webp"
+      },
+      {
+        "id": "trendana-8",
+        "type": "image",
+        "content": "/projects/trendana/page-8.webp"
+      },
+      {
+        "id": "trendana-9",
+        "type": "image",
+        "content": "/projects/trendana/page-9.webp"
+      },
+      {
+        "id": "trendana-10",
+        "type": "image",
+        "content": "/projects/trendana/page-10.webp"
+      },
+      {
+        "id": "trendana-11",
+        "type": "image",
+        "content": "/projects/trendana/page-11.webp"
+      },
+      {
+        "id": "trendana-12",
+        "type": "image",
+        "content": "/projects/trendana/page-12.webp"
+      },
+      {
+        "id": "trendana-13",
+        "type": "image",
+        "content": "/projects/trendana/page-13.webp"
+      },
+      {
+        "id": "trendana-14",
+        "type": "image",
+        "content": "/projects/trendana/page-14.webp"
+      },
+      {
+        "id": "trendana-15",
+        "type": "image",
+        "content": "/projects/trendana/page-15.webp"
+      },
+      {
+        "id": "trendana-16",
+        "type": "image",
+        "content": "/projects/trendana/page-16.webp"
+      },
+      {
+        "id": "trendana-17",
+        "type": "image",
+        "content": "/projects/trendana/page-17.webp"
+      },
+      {
+        "id": "trendana-18",
+        "type": "image",
+        "content": "/projects/trendana/page-18.webp"
+      },
+      {
+        "id": "trendana-19",
+        "type": "image",
+        "content": "/projects/trendana/page-19.webp"
+      },
+      {
+        "id": "trendana-20",
+        "type": "image",
+        "content": "/projects/trendana/page-20.webp"
+      },
+      {
+        "id": "trendana-21",
+        "type": "image",
+        "content": "/projects/trendana/page-21.webp"
+      },
+      {
+        "id": "trendana-22",
+        "type": "image",
+        "content": "/projects/trendana/page-22.webp"
+      },
+      {
+        "id": "trendana-23",
+        "type": "image",
+        "content": "/projects/trendana/page-23.webp"
+      },
+      {
+        "id": "trendana-24",
+        "type": "image",
+        "content": "/projects/trendana/page-24.webp"
+      }
+    ],
+    "orientation": "landscape",
+    "layout": "grid"
+  },
+  {
     "id": "rawasi-guidelines",
     "title": "Rawasi Brand Book & Guidelines",
     "category": "Visual Identity",
