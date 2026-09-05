@@ -1,5 +1,101 @@
 [
   {
+    "id": "nal-aljazeera",
+    "title": "Nal Al Jazeera Electromechanical Identity",
+    "category": "Visual Identity",
+    "heroImage": "/projects/nal-aljazeera/page-1.webp",
+    "overview": "Nal Al Jazeera is a premier electromechanical contracting and integrated engineering solutions firm. We developed a comprehensive brand presentation and visual identity system rooted in precision, kinetic power, and engineering excellence. The emblem harmoniously unites lightning energy, electromechanical gear dynamism, and geometric precision built upon an exact construction grid. Complete with corporate stationery, fleet branding, and executive collateral, the brand stands out with an electric cyan and navy blue signature.",
+    "deliverables": [
+      "Brand Vision & Core Philosophy",
+      "Logo Concept & Geometric Grid System",
+      "Color Palette (#00B8D8 & Deep Navy)",
+      "Corporate Stationery & Invoicing",
+      "Delivery Fleet & Transportation Livery",
+      "Digital Correspondence & Signatures",
+      "3D Environmental Wall Signage"
+    ],
+    "pdfUrl": "/projects/nal-aljazeera/nal-aljazeera-brand-presentation.pdf",
+    "gallery": [
+      {
+        "id": "nal-aljazeera-1",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-1.webp"
+      },
+      {
+        "id": "nal-aljazeera-2",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-2.webp"
+      },
+      {
+        "id": "nal-aljazeera-3",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-3.webp"
+      },
+      {
+        "id": "nal-aljazeera-4",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-4.webp"
+      },
+      {
+        "id": "nal-aljazeera-5",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-5.webp"
+      },
+      {
+        "id": "nal-aljazeera-6",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-6.webp"
+      },
+      {
+        "id": "nal-aljazeera-7",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-7.webp"
+      },
+      {
+        "id": "nal-aljazeera-8",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-8.webp"
+      },
+      {
+        "id": "nal-aljazeera-9",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-9.webp"
+      },
+      {
+        "id": "nal-aljazeera-10",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-10.webp"
+      },
+      {
+        "id": "nal-aljazeera-11",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-11.webp"
+      },
+      {
+        "id": "nal-aljazeera-12",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-12.webp"
+      },
+      {
+        "id": "nal-aljazeera-13",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-13.webp"
+      },
+      {
+        "id": "nal-aljazeera-14",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-14.webp"
+      },
+      {
+        "id": "nal-aljazeera-15",
+        "type": "image",
+        "content": "/projects/nal-aljazeera/page-15.webp"
+      }
+    ],
+    "orientation": "landscape",
+    "layout": "grid"
+  },
+  {
     "id": "trendana",
     "title": "Trendana E-Commerce Visual Identity",
     "category": "Visual Identity",

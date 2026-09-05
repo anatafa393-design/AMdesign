@@ -48,4 +48,5 @@ next-env.d.ts
 *.pdf
 !public/projects/rawasi/Rawasi-Brand-Guidelines-Optimized.pdf
 !public/projects/trendana/trendana-case-study.pdf
+!public/projects/nal-aljazeera/nal-aljazeera-brand-presentation.pdf
 
