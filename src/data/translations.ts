@@ -12,19 +12,41 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      badge: "Premium Brand Design",
+      badge: "Brand Strategy & Visual Architecture",
       titleLine1: "Crafting Visual",
       titleHighlight: "Excellence",
       titleLine2: "That Speaks.",
-      description: "Professional brand strategy, modern interfaces, premium packaging, and digital designs that captivate audiences and elevate businesses.",
-      viewWork: "View My Work",
-      getInTouch: "Get in Touch",
-      stats: {
-        brands: "Premium Brands",
-        satisfaction: "Satisfaction",
-        projects: "Projects Done",
+      titleLead: "We don't just design visuals,",
+      titleAction: "We architect",
+      cycleWords: [
+        "Market-Leading Brands",
+        "Unrivaled Visual Authority",
+        "High-Impact Brand Equity",
+        "Iconic Visual Legacies",
+      ],
+      description: "Transforming ambitious businesses into dominant market forces through rigorous visual architecture, iconic identity systems, and mathematical precision.",
+      viewWork: "View Selected Work",
+      getInTouch: "Start Your Project",
+      badges: {
+        grid: {
+          title: "Golden Ratio Grid",
+          desc: "Mathematical Balance φ 1.618",
+        },
+        color: {
+          title: "Color Authority",
+          desc: "Pantone & Digital Precision",
+        },
+        impact: {
+          title: "↑ 3.5x Brand Equity",
+          desc: "Enterprise Market Impact",
+        },
       },
-      scroll: "Scroll",
+      stats: {
+        brands: "Leading Brands",
+        satisfaction: "Client Satisfaction",
+        projects: "Completed Projects",
+      },
+      scroll: "Explore",
     },
     // Why Choose Me
     whyMe: {
@@ -97,6 +119,12 @@ export const translations = {
         photoshoots: "Photoshoots",
       },
       viewProject: "View Details",
+      gridView: "Grid View",
+      listView: "Editorial List",
+      quickView: "Quick View",
+      viewCaseStudy: "Full Case Study",
+      artboards: "Artboards",
+      close: "Close",
     },
     // Testimonials
     testimonials: {
@@ -136,19 +164,41 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      badge: "تصميم هويات تجارية فاخرة",
+      badge: "استراتيجية وهندسة الهويات التجارية",
       titleLine1: "نبتكر التميز",
       titleHighlight: "البصري",
       titleLine2: "الذي يتحدث عنك.",
-      description: "استراتيجيات هويات احترافية، واجهات حديثة، تغليف فاخر، وتصاميم رقمية تأثر الجمهور وترتقي بأعمالك.",
-      viewWork: "تصفح أعمالي",
-      getInTouch: "تواصل معي",
-      stats: {
-        brands: "علامة تجارية فاخرة",
-        satisfaction: "نسبة رضا العملاء",
-        projects: "مشروع منجز",
+      titleLead: "نحن لا نصمم مجرد أشكال...",
+      titleAction: "بل نبني",
+      cycleWords: [
+        "هويات قيادية تتصدر السوق",
+        "سلطة بصرية لا تُنافس",
+        "قيمة تجارية مضاعفة",
+        "أصولاً بصرية ذات أثر دائم",
+      ],
+      description: "نحوّل الشركات الطموحة إلى علامات رائدة في السوق عبر هندسة بصرية دقيقة، وأنظمة هويات فاخرة تجمع بين الدقة الرياضية الصارمة والجاذبية الاستثنائية.",
+      viewWork: "استكشف الأعمال المختارة",
+      getInTouch: "ابدأ مشروعك الآن",
+      badges: {
+        grid: {
+          title: "نظام الشبكات والنسبة الذهبية",
+          desc: "توازن هندسي دقيق φ 1.618",
+        },
+        color: {
+          title: "سلطة الألوان والمعايير",
+          desc: "معايير Pantone وهوية دقيقة",
+        },
+        impact: {
+          title: "↑ 3.5x القيمة السوقية",
+          desc: "أثر استثماري مضاعف",
+        },
       },
-      scroll: "تمرير",
+      stats: {
+        brands: "علامة تجارية رائدة",
+        satisfaction: "نسبة رضا العملاء",
+        projects: "مشروع مكتمل",
+      },
+      scroll: "اكتشف",
     },
     // Why Choose Me
     whyMe: {
@@ -221,6 +271,12 @@ export const translations = {
         photoshoots: "الجلسات التصويرية",
       },
       viewProject: "عرض التفاصيل",
+      gridView: "عرض شبكي",
+      listView: "قائمة تفاعلية",
+      quickView: "معاينة سريعة",
+      viewCaseStudy: "دراسة الحالة كاملة",
+      artboards: "لوحة فنية",
+      close: "إغلاق",
     },
     // Testimonials
     testimonials: {

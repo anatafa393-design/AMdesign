@@ -140,10 +140,10 @@ function TestimonialCard({
       }`}
     >
       <div className="flex items-center justify-between mb-6">
-        <Quote className={`w-10 h-10 text-orange-400 opacity-60 ${isRtl ? "scale-x-[-1]" : ""}`} />
+        <Quote className={`w-10 h-10 text-[#E8A5B3] opacity-60 ${isRtl ? "scale-x-[-1]" : ""}`} />
         <div className="flex items-center gap-1">
           {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} className="w-4 h-4 fill-orange-400 text-orange-400" />
+            <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
           ))}
         </div>
       </div>
@@ -199,7 +199,7 @@ export function TestimonialsSection() {
         {/* Left: Section Header */}
         <Reveal>
           <div className="flex flex-col items-start gap-6">
-            <span className="text-xs font-bold tracking-widest uppercase text-orange-400 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20">
+            <span className="text-xs font-bold tracking-widest uppercase text-[#E8A5B3] px-4 py-1.5 rounded-full bg-[#800020]/20 border border-[#8E162A]/40">
               {t.testimonials.badge}
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold text-white font-brand leading-tight">

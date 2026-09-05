@@ -27,7 +27,7 @@ export default function ImageWithFallback({ src, alt, className = '', width, hei
       style={style}
       onError={() => setError(true)}
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      unoptimized={finalSrc.startsWith('data:')}
+      unoptimized={finalSrc.startsWith('http') || finalSrc.startsWith('data:')}
     />
   );
 }

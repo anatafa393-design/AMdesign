@@ -52,9 +52,9 @@ const contacts: ContactItem[] = [
     value: "anatafa393@gmail.com",
     href: "mailto:anatafa393@gmail.com",
     Icon: Mail,
-    color: "orange",
-    iconFrom: "from-orange-500/20",
-    iconTo: "to-orange-500/10",
+    color: "burgundy",
+    iconFrom: "from-[#800020]/25",
+    iconTo: "to-[#4A0E17]/15",
   },
   {
     labelEn: "WhatsApp / Call",
@@ -99,7 +99,7 @@ const contacts: ContactItem[] = [
 ];
 
 const colorMap: Record<string, { text: string; border: string; bg: string }> = {
-  orange: { text: "text-orange-400", border: "border-orange-500/30", bg: "bg-orange-500/30" },
+  burgundy: { text: "text-[#E8A5B3]", border: "border-[#8E162A]/40", bg: "bg-[#800020]/30" },
   blue:   { text: "text-blue-400",   border: "border-blue-500/30",   bg: "bg-blue-500/30" },
   pink:   { text: "text-pink-400",   border: "border-pink-500/30",   bg: "bg-pink-500/30" },
   purple: { text: "text-purple-400", border: "border-purple-500/30", bg: "bg-purple-500/30" },
@@ -110,15 +110,15 @@ export function ContactSection() {
   const { language, t } = useLanguage();
 
   return (
-    <section id="contact" className="relative py-16 md:py-28 px-4 md:px-10 bg-[#050505] overflow-hidden">
+    <section id="contact" className="relative py-16 md:py-28 px-4 md:px-10 bg-[#080406] overflow-hidden">
       {/* Glow gradient in background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-orange-600/10 via-red-600/10 to-transparent rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#800020]/15 via-[#4A0E17]/15 to-transparent rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <Reveal>
           <div className="flex flex-col items-center text-center gap-2 md:gap-4 mb-10 md:mb-20">
-            <span className="text-xs font-bold tracking-widest uppercase text-orange-400 px-3.5 py-1 md:px-4 md:py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20">
+            <span className="text-xs font-bold tracking-widest uppercase text-[#E8A5B3] px-3.5 py-1 md:px-4 md:py-1.5 rounded-full bg-[#800020]/20 border border-[#8E162A]/35">
               {t.contact.badge}
             </span>
             <h2 className="text-3xl md:text-6xl font-black text-white font-brand">
@@ -179,7 +179,7 @@ export function ContactSection() {
                     <span className="block text-[10px] md:text-xs font-bold tracking-wider uppercase text-white/40 mb-0.5 md:mb-1">
                       {language === "ar" ? item.labelAr : item.labelEn}
                     </span>
-                    <span className="block text-sm sm:text-base md:text-lg font-bold text-white font-brand group-hover:text-orange-300 transition-colors truncate">
+                    <span className="block text-sm sm:text-base md:text-lg font-bold text-white font-brand group-hover:text-[#E8A5B3] transition-colors truncate">
                       {item.value}
                     </span>
                   </div>
@@ -191,7 +191,7 @@ export function ContactSection() {
 
         {/* Direct Footer CTA */}
         <Reveal delay={0.4}>
-          <div className="mt-10 md:mt-20 p-6 md:p-10 rounded-2xl md:rounded-3xl bg-gradient-to-r from-orange-500/10 via-red-500/10 to-orange-500/5 border border-white/10 text-center flex flex-col items-center gap-4 md:gap-6">
+          <div className="mt-10 md:mt-20 p-6 md:p-10 rounded-2xl md:rounded-3xl bg-gradient-to-r from-[#800020]/15 via-[#4A0E17]/10 to-[#800020]/5 border border-[#8E162A]/20 text-center flex flex-col items-center gap-4 md:gap-6">
             <h3 className="text-xl md:text-3xl font-extrabold text-white font-brand">
               {language === "ar" ? "جاهز لبداية مشروعك القادم؟" : "Ready to Start Your Next Project?"}
             </h3>
@@ -201,7 +201,7 @@ export function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackPixelEvent('Contact', { method: 'whatsapp_footer_cta' })}
-                className="inline-flex items-center gap-2.5 md:gap-3 px-6 md:px-8 py-3.5 md:py-4 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-xs md:text-sm hover:shadow-lg hover:shadow-orange-500/30 hover:scale-105 active:scale-95 transition-all duration-300 uppercase tracking-wider"
+                className="inline-flex items-center gap-2.5 md:gap-3 px-6 md:px-8 py-3.5 md:py-4 rounded-full bg-gradient-to-r from-[#8E162A] to-[#500A15] hover:from-[#A31D36] hover:to-[#6B0D1C] text-white font-bold text-xs md:text-sm shadow-lg shadow-[#8E162A]/25 hover:shadow-[#8E162A]/45 hover:scale-105 active:scale-95 transition-all duration-300 uppercase tracking-wider border border-[#E8A5B3]/20"
               >
                 {language === "ar" ? "تحدث معي على الواتساب مباشرة" : "Chat Directly on WhatsApp"}
                 <ArrowRight className={`w-4 h-4 ${language === "ar" ? "rotate-180" : ""}`} />

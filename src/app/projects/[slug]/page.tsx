@@ -88,7 +88,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       {/* Next Project / Footer */}
       <section className="border-t border-white/10 py-32 text-center bg-white/[0.02]">
         <h2 className="text-3xl text-white/50 mb-6">Ready to start your project?</h2>
-        <a href="mailto:anatafa393@gmail.com" className="text-5xl md:text-7xl font-bold hover:text-orange-500 transition-colors">
+        <a href="mailto:anatafa393@gmail.com" className="text-5xl md:text-7xl font-bold hover:text-[#E8A5B3] transition-colors">
           Let&apos;s Work Together
         </a>
       </section>

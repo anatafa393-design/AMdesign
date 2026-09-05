@@ -23,8 +23,16 @@ import {
   Camera,
   PenTool,
   BookOpen,
+  LayoutGrid,
+  List,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ProjectCard3D from "@/components/ui/project-card-3d";
+import ProjectListEditorial from "@/components/ui/project-list-editorial";
+import ProjectQuickModal from "@/components/ui/project-quick-modal";
+import AnimatedTextCycle from "@/components/ui/animated-text-cycle";
+import Hero3DOrbit from "@/components/ui/hero-3d-orbit";
+import WhyChooseMeCards from "@/components/ui/why-choose-me-cards";
 
 const TestimonialsSection = dynamic(
   () =>
@@ -51,6 +59,8 @@ export default function Home() {
   const containerRef = useRef<HTMLElement>(null);
   const [projects, setProjects] = useState<any[]>(initialProjects);
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [quickViewProject, setQuickViewProject] = useState<any | null>(null);
 
   const categoriesMap: Record<string, { en: string; ar: string }> = {
     All: { en: t.portfolio.categories.all, ar: t.portfolio.categories.all },
@@ -107,79 +117,56 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative bg-[#050505] text-white selection:bg-orange-500/30 selection:text-white font-sans min-h-screen overflow-x-hidden">
+    <div className="relative bg-[#080406] text-white selection:bg-[#800020]/40 selection:text-white font-sans min-h-screen overflow-x-hidden">
       {/* Background Canvas */}
       <canvas
-        className="pointer-events-none fixed inset-0 z-0 w-full h-full opacity-30"
+        className="pointer-events-none fixed inset-0 z-0 w-full h-full opacity-20"
         id="canvas"
       />
 
-      {/* ═══ HERO SECTION ═══ */}
-      <section className="relative w-full min-h-screen flex flex-col justify-center bg-gradient-to-b from-[#ff3c00] via-[#c41400] to-[#050505] pt-24 pb-8 md:pt-28 md:pb-16 px-6 md:px-10 overflow-hidden z-10">
-        {/* Giant background text */}
+      {/* ═══ HERO SECTION (LUXURY BURGUNDY PALETTE) ═══ */}
+      <section className="relative w-full min-h-screen flex flex-col justify-center bg-gradient-to-b from-[#4A0E17] via-[#24060B] to-[#080406] pt-28 pb-12 md:pt-32 md:pb-20 px-6 md:px-10 overflow-hidden z-10">
+        {/* Giant background typography watermark */}
         <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none" dir="ltr">
           <motion.span
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 0.08, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 0.05, scale: 1 }}
             transition={{ duration: 2, ease: "easeOut" }}
-            className="text-[18vw] font-black uppercase text-transparent tracking-tighter font-brand-en"
-            style={{ WebkitTextStroke: "1px rgba(255,255,255,0.5)" }}
+            className="text-[19vw] font-black uppercase text-transparent tracking-tighter font-brand-en"
+            style={{ WebkitTextStroke: "1px rgba(255,255,255,0.4)" }}
           >
             DESIGN
           </motion.span>
         </div>
 
-        {/* Floating particles (decorative) */}
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 rounded-full bg-white/20"
-              style={{
-                left: `${15 + i * 15}%`,
-                top: `${20 + (i % 3) * 25}%`,
-              }}
-              animate={{
-                y: [-20, 20, -20],
-                opacity: [0.2, 0.5, 0.2],
-              }}
-              transition={{
-                duration: 4 + i,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-          ))}
-        </div>
-
         {/* Hero Grid */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-16 flex-1">
+        <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-14 flex-1">
           {/* Left: Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-col items-start gap-6 md:gap-8"
           >
-            {/* Tag badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 md:px-4 md:py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
-              <Sparkles className="hidden sm:inline-block w-3.5 h-3.5 md:w-4 md:h-4 text-orange-300" />
-              <span className="text-[11px] md:text-xs font-semibold tracking-widest uppercase text-white/80">
-                {t.hero.badge}
-              </span>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-white font-brand">
-              {t.hero.titleLine1}
+            {/* Clean Confident Strategic Heading */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-white font-brand">
+              <span>{language === "ar" ? "نبني" : "We Architect"}</span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-orange-100 to-white/80">
-                {t.hero.titleHighlight}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FDE8EC] via-white to-[#E8A5B3] block mt-1.5">
+                <AnimatedTextCycle
+                  words={(t.hero as any).cycleWords || [
+                    "هويات قيادية تتصدر السوق",
+                    "سلطة بصرية لا تُنافس",
+                    "قيمة تجارية مضاعفة",
+                    "أصولاً بصرية ذات أثر دائم"
+                  ]}
+                  interval={3200}
+                  className="text-white"
+                />
               </span>
-              <br />
-              {t.hero.titleLine2}
             </h1>
 
-            <p className="text-sm md:text-lg text-white/70 max-w-lg leading-relaxed">
+            <p className="text-base md:text-lg text-white/70 max-w-lg leading-relaxed">
               {t.hero.description}
             </p>
 
@@ -188,7 +175,7 @@ export default function Home() {
                 <Link
                   href="#projects"
                   onClick={() => trackPixelEvent('ViewContent', { content_name: 'Hero View Work' })}
-                  className="group inline-flex items-center gap-2.5 md:gap-3 px-6 md:px-8 py-3.5 md:py-4 rounded-full bg-white text-black font-bold tracking-wider text-xs md:text-sm transition-all duration-300 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] uppercase"
+                  className="group inline-flex items-center gap-2.5 md:gap-3 px-6 md:px-8 py-3.5 md:py-4 rounded-full bg-white text-black font-bold tracking-wider text-xs md:text-sm transition-all duration-300 hover:shadow-[0_0_40px_rgba(128,0,32,0.45)] uppercase"
                 >
                   {t.hero.viewWork}
                   <ArrowRight className={`w-4 h-4 transition-transform ${language === "ar" ? "group-hover:-translate-x-1 rotate-180" : "group-hover:translate-x-1"}`} />
@@ -213,7 +200,7 @@ export default function Home() {
                   {t.hero.stats.brands}
                 </span>
               </div>
-              <div className="hidden sm:block w-px h-12 bg-white/20" />
+              <div className="hidden sm:block w-px h-12 bg-white/15" />
               <div className="text-center sm:text-start">
                 <span className="block text-2xl sm:text-3xl font-black font-brand text-white">
                   100%
@@ -222,7 +209,7 @@ export default function Home() {
                   {t.hero.stats.satisfaction}
                 </span>
               </div>
-              <div className="hidden sm:block w-px h-12 bg-white/20" />
+              <div className="hidden sm:block w-px h-12 bg-white/15" />
               <div className="text-center sm:text-start">
                 <span className="block text-2xl sm:text-3xl font-black font-brand text-white">
                   52+
@@ -234,44 +221,11 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Right: Portrait */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="flex justify-center items-center relative mt-4 lg:mt-0"
-          >
-            {/* Decorative rings (desktop only) */}
-            <div className="hidden sm:block absolute w-[80%] aspect-square rounded-full border border-white/10 animate-[spin_30s_linear_infinite]" />
-            <div className="hidden sm:block absolute w-[60%] aspect-square rounded-full border border-white/5 animate-[spin_20s_linear_infinite_reverse]" />
-
-            <div className="relative h-[28vh] sm:h-[40vh] lg:h-[65vh] w-full flex justify-center">
-              <ImageWithFallback
-                src="/profile.png"
-                className="h-full w-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] z-10"
-                alt="Ahmed Aljamal - Brand Designer"
-              />
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Scroll indicator (hidden on touchscreens/mobile) */}
-        <motion.div
-          className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <span className="text-[10px] uppercase tracking-widest text-white/40">
-            {t.hero.scroll}
-          </span>
-          <div className="w-5 h-8 rounded-full border border-white/20 flex justify-center pt-2">
-            <motion.div
-              className="w-1 h-2 rounded-full bg-white/60"
-              animate={{ y: [0, 8], opacity: [1, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
+          {/* Right: 3D Design Tools Orbit around Portrait */}
+          <div className="flex justify-center items-center relative mt-6 lg:mt-0 w-full">
+            <Hero3DOrbit />
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* ═══ CLIENT LOGOS MARQUEE ═══ */}
@@ -312,11 +266,11 @@ export default function Home() {
       </section>
 
       {/* ═══ ABOUT / VALUE PROPOSITION ═══ */}
-      <section className="relative z-10 bg-[#050505] py-14 md:py-32 px-6">
+      <section className="relative z-10 bg-[#050505] py-14 md:py-32 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
-          <Reveal className="text-center mb-10 md:mb-20">
-            <p className="text-orange-400 font-semibold mb-2 md:mb-4 tracking-widest text-xs md:text-sm uppercase">
+          <Reveal className="text-center mb-10 md:mb-16">
+            <p className="text-[#E8A5B3] font-semibold mb-2 md:mb-4 tracking-widest text-xs md:text-sm uppercase">
               {t.whyMe.subtitle}
             </p>
             <h2 className="text-3xl md:text-6xl font-bold tracking-tight font-brand text-white">
@@ -324,40 +278,10 @@ export default function Home() {
             </h2>
           </Reveal>
 
-          {/* Feature cards row */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
-            {[
-              {
-                icon: Layers,
-                title: t.whyMe.cards.endToEnd.title,
-                desc: t.whyMe.cards.endToEnd.description,
-              },
-              {
-                icon: Palette,
-                title: t.whyMe.cards.pixelPerfect.title,
-                desc: t.whyMe.cards.pixelPerfect.description,
-              },
-              {
-                icon: Globe,
-                title: t.whyMe.cards.globalStandards.title,
-                desc: t.whyMe.cards.globalStandards.description,
-              },
-            ].map((feat, i) => (
-              <Reveal key={i} delay={i * 0.15}>
-                <div className="group p-5 md:p-8 rounded-2xl md:rounded-3xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.06] hover:border-white/10 transition-all duration-500 hover:-translate-y-1">
-                  <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-500/10 flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <feat.icon className="w-5 h-5 md:w-7 md:h-7 text-orange-400" />
-                  </div>
-                  <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 font-brand">
-                    {feat.title}
-                  </h3>
-                  <p className="text-white/60 text-xs md:text-sm leading-relaxed">
-                    {feat.desc}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          {/* Interactive Micro-Craft Cards */}
+          <Reveal delay={0.2}>
+            <WhyChooseMeCards />
+          </Reveal>
         </div>
       </section>
 
@@ -365,7 +289,7 @@ export default function Home() {
       <section id="services" className="relative z-10 py-14 md:py-32 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <Reveal className="text-center mb-8 md:mb-20">
-            <p className="text-orange-400 font-semibold mb-2 md:mb-4 tracking-widest text-xs md:text-sm uppercase">
+            <p className="text-[#E8A5B3] font-semibold mb-2 md:mb-4 tracking-widest text-xs md:text-sm uppercase">
               {t.services.badge}
             </p>
             <h2 className="text-3xl md:text-6xl font-bold font-brand">
@@ -435,14 +359,14 @@ export default function Home() {
                   }}
                   role="button"
                   tabIndex={0}
-                  className="group relative bg-white/[0.03] border border-white/[0.06] rounded-2xl md:rounded-3xl p-4 md:p-8 flex flex-col justify-between transition-all duration-500 hover:bg-white/[0.06] hover:border-white/10 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_-15px_rgba(255,60,0,0.15)] overflow-hidden h-full cursor-pointer text-start"
+                  className="group relative bg-white/[0.03] border border-white/[0.06] rounded-2xl md:rounded-3xl p-4 md:p-8 flex flex-col justify-between transition-all duration-500 hover:bg-white/[0.06] hover:border-white/10 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_-15px_rgba(128,0,32,0.3)] overflow-hidden h-full cursor-pointer text-start"
                 >
                   {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#800020]/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Icon */}
-                  <div className="relative z-10 w-9 h-9 sm:w-11 sm:h-11 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gradient-to-br from-orange-500/20 to-red-500/10 flex items-center justify-center mb-3 md:mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 text-orange-400" />
+                  <div className="relative z-10 w-9 h-9 sm:w-11 sm:h-11 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gradient-to-br from-[#800020]/25 to-[#4A0E17]/10 flex items-center justify-center mb-3 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-7 md:h-7 text-[#E8A5B3]" />
                   </div>
 
                   {/* Image preview (desktop only to prevent mobile scroll bloat) */}
@@ -486,7 +410,7 @@ export default function Home() {
       <section id="projects" className="relative z-10 py-14 md:py-32 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <Reveal className="text-center mb-8 md:mb-16">
-            <p className="text-orange-400 font-semibold mb-2 md:mb-4 tracking-widest text-xs md:text-sm uppercase">
+            <p className="text-[#E8A5B3] font-semibold mb-2 md:mb-4 tracking-widest text-xs md:text-sm uppercase">
               {t.portfolio.badge}
             </p>
             <h2 className="text-3xl md:text-6xl font-bold font-brand">
@@ -494,78 +418,118 @@ export default function Home() {
             </h2>
           </Reveal>
 
-          {/* Category filter tabs */}
-          <div className="flex flex-wrap justify-center items-center gap-1.5 sm:gap-2 mb-8 md:mb-16">
-            {categories.map((catKey) => {
-              const label = categoriesMap[catKey]?.[language] || catKey;
-              const isActive = selectedCategory === catKey;
-              return (
-                <button
-                  key={catKey}
-                  onClick={() => setSelectedCategory(catKey)}
-                  className={`relative px-4 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
-                    isActive
-                      ? "text-white"
-                      : "text-white/50 hover:text-white hover:bg-white/5"
-                  }`}
-                >
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeTabHighlight"
-                      className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-600 rounded-full -z-10 shadow-[0_0_25px_rgba(255,60,0,0.4)]"
-                      transition={{
-                        type: "spring",
-                        stiffness: 380,
-                        damping: 30,
-                      }}
-                    />
-                  )}
-                  {label}
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Projects masonry grid */}
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 md:gap-8">
-            <AnimatePresence mode="popLayout">
-              {filteredProjects.map((project) => {
+          {/* Control Bar: Categories Filter & View Mode Switcher */}
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 mb-8 md:mb-14">
+            {/* Category filter tabs */}
+            <div className="flex flex-wrap justify-center items-center gap-1.5 sm:gap-2">
+              {categories.map((catKey) => {
+                const label = categoriesMap[catKey]?.[language] || catKey;
+                const isActive = selectedCategory === catKey;
                 return (
-                  <motion.div
-                    layout
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.4 }}
-                    key={project.id}
-                    className="break-inside-avoid inline-block w-full mb-8 group relative rounded-3xl overflow-hidden bg-white/[0.03] border border-white/[0.06]"
+                  <button
+                    key={catKey}
+                    onClick={() => setSelectedCategory(catKey)}
+                    className={`relative px-4 py-2 sm:px-6 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer ${
+                      isActive
+                        ? "text-white"
+                        : "text-white/50 hover:text-white hover:bg-white/5"
+                    }`}
                   >
-                    <Link
-                      href={`/projects/${project.id}`}
-                      className="relative block w-full"
-                    >
-                      <ImageWithFallback
-                        src={project.heroImage}
-                        alt={project.title}
-                        width={(project as any).orientation === 'portrait' ? 800 : (project as any).orientation === 'square' ? 1000 : 1200}
-                        height={(project as any).orientation === 'portrait' ? 1200 : (project as any).orientation === 'square' ? 1000 : 800}
-                        className="w-full h-auto block opacity-85 md:opacity-50 group-hover:opacity-95 group-hover:scale-[1.02] transition-all duration-700 ease-out"
+                    {isActive && (
+                      <motion.div
+                        layoutId="activeTabHighlight"
+                        className="absolute inset-0 bg-gradient-to-r from-[#8E162A] to-[#4A0E17] rounded-full -z-10 shadow-[0_0_25px_rgba(142,22,42,0.45)]"
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30,
+                        }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6 md:p-10 translate-y-0 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                        <div className="text-orange-400 font-medium text-xs md:text-sm mb-2">
-                          {project.category}
-                        </div>
-                        <h3 className="text-xl md:text-3xl font-bold flex items-center justify-between text-white font-brand">
-                          {project.title}
-                          <ArrowUpRight className={`w-5 h-5 md:w-6 md:h-6 opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 ${language === "ar" ? "group-hover:-translate-x-0 rotate-180" : "group-hover:translate-x-0"}`} />
-                        </h3>
-                      </div>
-                    </Link>
-                  </motion.div>
+                    )}
+                    {label}
+                  </button>
                 );
               })}
-            </AnimatePresence>
+            </div>
+
+            {/* View Mode Switcher (Grid vs Editorial List) */}
+            <div className="flex items-center bg-white/[0.04] p-1 rounded-full border border-white/10 backdrop-blur-md shrink-0">
+              <button
+                onClick={() => setViewMode("grid")}
+                className={`flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 cursor-pointer ${
+                  viewMode === "grid"
+                    ? "bg-gradient-to-r from-[#8E162A] to-[#4A0E17] text-white shadow-[0_0_15px_rgba(142,22,42,0.35)]"
+                    : "text-white/50 hover:text-white"
+                }`}
+                title={(t.portfolio as any).gridView || "Grid View"}
+              >
+                <LayoutGrid className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">{(t.portfolio as any).gridView || "Grid View"}</span>
+              </button>
+              <button
+                onClick={() => setViewMode("list")}
+                className={`flex items-center gap-1.5 px-3 sm:px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 cursor-pointer ${
+                  viewMode === "list"
+                    ? "bg-gradient-to-r from-[#8E162A] to-[#4A0E17] text-white shadow-[0_0_15px_rgba(142,22,42,0.35)]"
+                    : "text-white/50 hover:text-white"
+                }`}
+                title={(t.portfolio as any).listView || "Editorial List"}
+              >
+                <List className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">{(t.portfolio as any).listView || "Editorial List"}</span>
+              </button>
+            </div>
           </div>
+
+          {/* Dynamic Showcase Container */}
+          {viewMode === "grid" ? (
+            /* 3D Tilt Masonry Grid */
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 md:gap-8">
+              <AnimatePresence mode="popLayout">
+                {filteredProjects.map((project, index) => (
+                  <ProjectCard3D
+                    key={project.id}
+                    project={project}
+                    index={index}
+                    language={language}
+                    onQuickView={(p) => setQuickViewProject(p)}
+                    quickViewLabel={(t.portfolio as any).quickView || "Quick View"}
+                    artboardsLabel={(t.portfolio as any).artboards || "Artboards"}
+                  />
+                ))}
+              </AnimatePresence>
+            </div>
+          ) : (
+            /* Interactive Editorial List View */
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.35 }}
+            >
+              <ProjectListEditorial
+                projects={filteredProjects}
+                language={language}
+                onQuickView={(p) => setQuickViewProject(p)}
+                quickViewLabel={(t.portfolio as any).quickView || "Quick View"}
+                viewCaseLabel={(t.portfolio as any).viewCaseStudy || "Full Case Study"}
+                artboardsLabel={(t.portfolio as any).artboards || "Artboards"}
+              />
+            </motion.div>
+          )}
+
+          {/* Quick View Modal Popup */}
+          <ProjectQuickModal
+            isOpen={!!quickViewProject}
+            project={quickViewProject}
+            onClose={() => setQuickViewProject(null)}
+            language={language}
+            labels={{
+              close: (t.portfolio as any).close || "Close",
+              viewCaseStudy: (t.portfolio as any).viewCaseStudy || "Full Case Study",
+              artboards: (t.portfolio as any).artboards || "Artboards",
+            }}
+          />
         </div>
       </section>
 

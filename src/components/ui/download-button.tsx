@@ -21,7 +21,7 @@ export default function DownloadButton({ href, projectTitle }: DownloadButtonPro
       href={href}
       download
       onClick={handleDownload}
-      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold text-sm hover:shadow-lg hover:shadow-orange-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group"
+      className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-[#8E162A] to-[#500A15] hover:from-[#A31D36] hover:to-[#6B0D1C] text-white font-bold text-sm shadow-md shadow-[#8E162A]/25 hover:shadow-[#8E162A]/45 hover:scale-[1.02] active:scale-[0.98] border border-[#E8A5B3]/20 transition-all duration-300 group"
     >
       <Download className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
       Download PDF Brand Book

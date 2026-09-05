@@ -74,7 +74,7 @@ export default function Navbar() {
     >
       {/* Gradient bottom border when scrolled */}
       {scrolled && (
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500/40 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#8E162A]/50 to-transparent" />
       )}
 
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -106,7 +106,7 @@ export default function Navbar() {
                 {isActive && (
                   <motion.div
                     layoutId="activeNavDot"
-                    className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-gradient-to-r from-orange-500 to-red-600"
+                    className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#8E162A] to-[#500A15]"
                     transition={{ type: "spring", stiffness: 380, damping: 25 }}
                   />
                 )}
@@ -124,10 +124,10 @@ export default function Navbar() {
           {/* Language Switcher Toggle */}
           <button
             onClick={toggleLanguage}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/5 text-xs font-bold text-white hover:bg-white/15 hover:border-orange-500/50 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/5 text-xs font-bold text-white hover:bg-white/15 hover:border-[#8E162A]/60 transition-all duration-300 cursor-pointer"
             title="Switch Language"
           >
-            <Globe className="w-3.5 h-3.5 text-orange-400" />
+            <Globe className="w-3.5 h-3.5 text-[#E8A5B3]" />
             <span>{language === "en" ? "العربية" : "English"}</span>
           </button>
 
@@ -136,7 +136,7 @@ export default function Navbar() {
             <Link
               href="/#contact"
               onClick={() => trackPixelEvent('Contact', { method: 'navbar_desktop_cta' })}
-              className="inline-flex items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white text-sm font-bold hover:shadow-lg hover:shadow-orange-500/30 hover:scale-105 active:scale-95 transition-all duration-300"
+              className="inline-flex items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-[#8E162A] to-[#500A15] hover:from-[#A31D36] hover:to-[#6B0D1C] text-white text-sm font-bold shadow-md shadow-[#8E162A]/20 hover:shadow-lg hover:shadow-[#8E162A]/40 hover:scale-105 active:scale-95 transition-all duration-300"
             >
               {t.nav.letsTalk}
             </Link>
@@ -150,7 +150,7 @@ export default function Navbar() {
             onClick={toggleLanguage}
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/20 bg-white/5 text-xs font-bold text-white"
           >
-            <Globe className="w-3 h-3 text-orange-400" />
+            <Globe className="w-3 h-3 text-[#E8A5B3]" />
             <span>{language === "en" ? "عربي" : "EN"}</span>
           </button>
 
@@ -207,7 +207,7 @@ export default function Navbar() {
                   >
                     {link.label}
                     {activeSection === link.sectionId && (
-                      <span className="ms-3 inline-block w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-red-600 align-middle" />
+                      <span className="ms-3 inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-r from-[#8E162A] to-[#500A15] align-middle" />
                     )}
                   </Link>
                 </motion.div>
@@ -227,7 +227,7 @@ export default function Navbar() {
                     setMenuOpen(false);
                     trackPixelEvent('Contact', { method: 'navbar_mobile_cta' });
                   }}
-                  className="inline-flex items-center px-8 py-3.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 text-white text-lg font-bold hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
+                  className="inline-flex items-center px-8 py-3.5 rounded-full bg-gradient-to-r from-[#8E162A] to-[#500A15] hover:from-[#A31D36] hover:to-[#6B0D1C] text-white text-lg font-bold shadow-lg shadow-[#8E162A]/40 transition-all duration-300"
                 >
                   {t.nav.letsTalk}
                 </Link>

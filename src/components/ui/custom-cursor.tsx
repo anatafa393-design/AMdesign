@@ -122,8 +122,8 @@ export default function CustomCursor() {
             ? {
                 width: 75,
                 height: 75,
-                backgroundColor: "#ff3c00",
-                borderColor: "#ff3c00",
+                backgroundColor: "#800020",
+                borderColor: "#800020",
               }
             : {
                 width: 60,
