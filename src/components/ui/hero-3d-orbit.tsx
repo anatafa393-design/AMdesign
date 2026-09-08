@@ -175,6 +175,7 @@ export default function Hero3DOrbit() {
           src="/profile.png"
           className="h-full w-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.9)] z-10"
           alt="Ahmed Aljamal - Brand Architect"
+          priority
         />
       </div>
 

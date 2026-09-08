@@ -201,8 +201,8 @@ function TickerRow({
               alt={`Portfolio showcase ${i + 1}`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              quality={100}
+              sizes="(max-width: 768px) 180px, 240px"
+              quality={75}
               loading="lazy"
               draggable={false}
             />
