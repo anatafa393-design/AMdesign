@@ -34,6 +34,14 @@ function WhatsAppIcon({ className }: { className?: string }) {
   );
 }
 
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+    </svg>
+  );
+}
+
 interface ContactItem {
   labelEn: string;
   labelAr: string;
@@ -77,6 +85,16 @@ const contacts: ContactItem[] = [
     iconTo: "to-blue-500/10",
   },
   {
+    labelEn: "Facebook",
+    labelAr: "فيسبوك",
+    value: "Koi Studio",
+    href: "https://www.facebook.com/koistudi0/",
+    Icon: FacebookIcon,
+    color: "facebook",
+    iconFrom: "from-[#1877F2]/20",
+    iconTo: "to-[#1877F2]/10",
+  },
+  {
     labelEn: "Instagram",
     labelAr: "إنستغرام",
     value: "@am_designart",
@@ -100,10 +118,11 @@ const contacts: ContactItem[] = [
 
 const colorMap: Record<string, { text: string; border: string; bg: string }> = {
   burgundy: { text: "text-[#E8A5B3]", border: "border-[#8E162A]/40", bg: "bg-[#800020]/30" },
-  blue:   { text: "text-blue-400",   border: "border-blue-500/30",   bg: "bg-blue-500/30" },
-  pink:   { text: "text-pink-400",   border: "border-pink-500/30",   bg: "bg-pink-500/30" },
-  purple: { text: "text-purple-400", border: "border-purple-500/30", bg: "bg-purple-500/30" },
-  green:  { text: "text-green-400",  border: "border-green-500/30",  bg: "bg-green-500/30" },
+  blue:     { text: "text-blue-400",   border: "border-blue-500/30",   bg: "bg-blue-500/30" },
+  facebook: { text: "text-[#1877F2]",  border: "border-[#1877F2]/40",  bg: "bg-[#1877F2]/20" },
+  pink:     { text: "text-pink-400",   border: "border-pink-500/30",   bg: "bg-pink-500/30" },
+  purple:   { text: "text-purple-400", border: "border-purple-500/30", bg: "bg-purple-500/30" },
+  green:    { text: "text-green-400",  border: "border-green-500/30",  bg: "bg-green-500/30" },
 };
 
 export function ContactSection() {
@@ -140,9 +159,10 @@ export function ContactSection() {
             const handleLinkClick = () => {
               const platform = item.color;
               const methodMap: Record<string, string> = {
-                orange: 'email',
+                burgundy: 'email',
                 green: 'whatsapp',
                 blue: 'linkedin',
+                facebook: 'facebook',
                 pink: 'instagram',
                 purple: 'behance'
               };
@@ -151,7 +171,7 @@ export function ContactSection() {
             };
 
             return (
-              <Reveal key={item.value} delay={0.08 * i} className={isWhatsApp ? "col-span-2 md:col-span-1" : ""}>
+              <Reveal key={item.value} delay={0.08 * i}>
                 <motion.a
                   href={item.href}
                   target={item.href.startsWith("http") ? "_blank" : undefined}
