@@ -1,5 +1,45 @@
 [
   {
+    "id": "atyaf-albayad",
+    "title": "Atyaf Al Bayad Contracting Profile",
+    "category": "Company Profile",
+    "heroImage": "/projects/atyaf-albayad/page-1.webp",
+    "overview": "Atyaf Al Bayad General Contracting is an esteemed Saudi contracting establishment based in Riyadh, specializing in turn-key general construction, commercial complexes, and infrastructure execution. We architected a complete, high-authority corporate profile reflecting the firm's compliance with the Saudi Building Code (SBC), robust corporate governance, civil and MEP capabilities, safety protocols, and prime landmark projects across the Kingdom.",
+    "deliverables": [
+      "Corporate Profile & Editorial Architecture",
+      "Executive Vision, Mission & Strategic Core",
+      "Saudi Building Code (SBC) Compliance & Quality Standards",
+      "Organizational Hierarchy & Technical Fleet Showcase",
+      "Prime Contracting Portfolio (Prime Business, Al-Fursan, Al-Mashriqia)",
+      "Official Commercial Registration (CR: 7031019404) & Legal Credentials",
+      "19-Page High-Definition Executive Landscape PDF"
+    ],
+    "pdfUrl": "/projects/atyaf-albayad/atyaf-albayad-company-profile.pdf",
+    "gallery": [
+      { "id": "atyaf-albayad-1", "type": "image", "content": "/projects/atyaf-albayad/page-1.webp" },
+      { "id": "atyaf-albayad-2", "type": "image", "content": "/projects/atyaf-albayad/page-2.webp" },
+      { "id": "atyaf-albayad-3", "type": "image", "content": "/projects/atyaf-albayad/page-3.webp" },
+      { "id": "atyaf-albayad-4", "type": "image", "content": "/projects/atyaf-albayad/page-4.webp" },
+      { "id": "atyaf-albayad-5", "type": "image", "content": "/projects/atyaf-albayad/page-5.webp" },
+      { "id": "atyaf-albayad-6", "type": "image", "content": "/projects/atyaf-albayad/page-6.webp" },
+      { "id": "atyaf-albayad-7", "type": "image", "content": "/projects/atyaf-albayad/page-7.webp" },
+      { "id": "atyaf-albayad-8", "type": "image", "content": "/projects/atyaf-albayad/page-8.webp" },
+      { "id": "atyaf-albayad-9", "type": "image", "content": "/projects/atyaf-albayad/page-9.webp" },
+      { "id": "atyaf-albayad-10", "type": "image", "content": "/projects/atyaf-albayad/page-10.webp" },
+      { "id": "atyaf-albayad-11", "type": "image", "content": "/projects/atyaf-albayad/page-11.webp" },
+      { "id": "atyaf-albayad-12", "type": "image", "content": "/projects/atyaf-albayad/page-12.webp" },
+      { "id": "atyaf-albayad-13", "type": "image", "content": "/projects/atyaf-albayad/page-13.webp" },
+      { "id": "atyaf-albayad-14", "type": "image", "content": "/projects/atyaf-albayad/page-14.webp" },
+      { "id": "atyaf-albayad-15", "type": "image", "content": "/projects/atyaf-albayad/page-15.webp" },
+      { "id": "atyaf-albayad-16", "type": "image", "content": "/projects/atyaf-albayad/page-16.webp" },
+      { "id": "atyaf-albayad-17", "type": "image", "content": "/projects/atyaf-albayad/page-17.webp" },
+      { "id": "atyaf-albayad-18", "type": "image", "content": "/projects/atyaf-albayad/page-18.webp" },
+      { "id": "atyaf-albayad-19", "type": "image", "content": "/projects/atyaf-albayad/page-19.webp" }
+    ],
+    "orientation": "landscape",
+    "layout": "grid"
+  },
+  {
     "id": "nal-aljazeera",
     "title": "Nal Al Jazeera Electromechanical Identity",
     "category": "Visual Identity",

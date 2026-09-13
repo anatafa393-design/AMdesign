@@ -65,6 +65,7 @@ export default function Home() {
   const categoriesMap: Record<string, { en: string; ar: string }> = {
     All: { en: t.portfolio.categories.all, ar: t.portfolio.categories.all },
     "Visual Identity": { en: t.portfolio.categories.visualIdentity, ar: t.portfolio.categories.visualIdentity },
+    "Company Profile": { en: t.portfolio.categories.companyProfile, ar: t.portfolio.categories.companyProfile },
     "Packaging Design": { en: t.portfolio.categories.packagingDesign, ar: t.portfolio.categories.packagingDesign },
     "Social Media Design": { en: t.portfolio.categories.socialMedia, ar: t.portfolio.categories.socialMedia },
     Photoshoots: { en: t.portfolio.categories.photoshoots, ar: t.portfolio.categories.photoshoots },
@@ -74,6 +75,13 @@ export default function Home() {
 
   const getNormalizedCategory = (category: string) => {
     const cat = category.toLowerCase();
+    if (
+      cat.includes("profile") ||
+      cat.includes("بروفايل") ||
+      cat.includes("company")
+    ) {
+      return "Company Profile";
+    }
     if (
       cat.includes("branding") ||
       cat.includes("identity") ||
@@ -348,7 +356,7 @@ export default function Home() {
                 desc: t.services.items.companyProfile.description,
                 image: "/company-profile-design.png",
                 overlayImage: "/company-profile-design.png",
-                targetCategory: "Visual Identity",
+                targetCategory: "Company Profile",
               },
             ].map((service, i) => (
               <Reveal key={i} delay={i * 0.1}>

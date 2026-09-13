@@ -114,6 +114,7 @@ export const translations = {
       categories: {
         all: "All",
         visualIdentity: "Visual Identity",
+        companyProfile: "Company Profile",
         packagingDesign: "Packaging Design",
         socialMedia: "Social Media Design",
         photoshoots: "Photoshoots",
@@ -266,6 +267,7 @@ export const translations = {
       categories: {
         all: "الكل",
         visualIdentity: "الهوية البصرية",
+        companyProfile: "بروفايل الشركات",
         packagingDesign: "تغليف المنتجات",
         socialMedia: "السوشيال ميديا",
         photoshoots: "الجلسات التصويرية",
