@@ -871,14 +871,14 @@
     "title": "Asala Premium Basmati Rice Packaging",
     "category": "Packaging Design",
     "heroImage": "/packaging/2/1-2.png",
-    "overview": "Asala is an elite agricultural and food staples brand recognized for authentic Indian long-grain Basmati rice and premium Latin grain harvests. We developed an authoritative luxury packaging architecture featuring royal metallic foil embellishments, intricate Islamic-inspired arabesque filigree, distinctive color coding across grain varieties (Royal Blue & Imperial Purple), and master dieline technical blueprints for high-speed automated bagging.",
+    "overview": "Asala is an elite agricultural food staples brand recognized for authentic Indian long-grain Basmati rice. We developed an authoritative luxury packaging architecture featuring royal metallic foil embellishments, intricate Islamic-inspired arabesque filigree, distinctive color coding across grain varieties (Royal Blue & Imperial Purple), and master 2D dieline technical blueprints for high-speed automated bagging.",
     "deliverables": [
-      "Luxury Food Packaging Architecture & Shelf Strategy",
+      "Luxury Basmati Rice Packaging Architecture",
       "Bilingual Typography (Arabic Calligraphy & Modern Serif)",
       "Foil Stamping & Metallic Ink Print Specifications",
-      "Photorealistic 3D Standup Pouch & Bag Mockups",
+      "Photorealistic 3D Standup Pouch & Bag Mockups (11 Renders)",
       "Technical 2D Dieline Vector Blueprints (5KG Bags)",
-      "Downloadable Complete Packaging Presentation (PDF)"
+      "Downloadable Packaging Showcase (PDF)"
     ],
     "pdfUrl": "/packaging/2/asala-rice-packaging.pdf",
     "gallery": [
@@ -949,58 +949,16 @@
         "group": "3D Mockups"
       },
       {
-        "id": "asala-mockup-12",
-        "type": "image",
-        "content": "/packaging/2/brazilian-2-page-1.png",
-        "group": "3D Mockups"
-      },
-      {
-        "id": "asala-mockup-13",
-        "type": "image",
-        "content": "/packaging/2/brazilian-2-page-2.png",
-        "group": "3D Mockups"
-      },
-      {
         "id": "asala-dieline-1",
         "type": "image",
         "content": "/packaging/2/indian-rice-blue-bag-5-page-1.png",
-        "group": "2D Dielines & Blueprints"
+        "group": "2D Dieline Designs"
       },
       {
         "id": "asala-dieline-2",
         "type": "image",
         "content": "/packaging/2/indian-rice-purple-bag-5-page-1.png",
-        "group": "2D Dielines & Blueprints"
-      },
-      {
-        "id": "asala-pres-1",
-        "type": "image",
-        "content": "/packaging/2/brazilian-1-page-1.png",
-        "group": "Brand Presentation & Guidelines"
-      },
-      {
-        "id": "asala-pres-2",
-        "type": "image",
-        "content": "/packaging/2/brazilian-1-page-2.png",
-        "group": "Brand Presentation & Guidelines"
-      },
-      {
-        "id": "asala-pres-3",
-        "type": "image",
-        "content": "/packaging/2/brazilian-3-page-1.png",
-        "group": "Brand Presentation & Guidelines"
-      },
-      {
-        "id": "asala-pres-4",
-        "type": "image",
-        "content": "/packaging/2/brazilian-4-page-1.png",
-        "group": "Brand Presentation & Guidelines"
-      },
-      {
-        "id": "asala-pres-5",
-        "type": "image",
-        "content": "/packaging/2/brazilian-4-page-2.png",
-        "group": "Brand Presentation & Guidelines"
+        "group": "2D Dieline Designs"
       }
     ],
     "orientation": "portrait",
