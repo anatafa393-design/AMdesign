@@ -597,6 +597,59 @@
     "orientation": "portrait"
   },
   {
+    "id": "porsche-gt3-campaign",
+    "title": "Porsche GT3 RS — Built For The Obsessed Digital Campaign",
+    "category": "Social Media Design",
+    "heroImage": "/projects/porsche-gt3/cover.webp",
+    "overview": "A high-octane luxury automotive digital campaign engineered for the Porsche 911 GT3 RS under the 'Built For The Obsessed' conceptual umbrella. Featuring dramatic architectural column staging, golden hour volumetric lighting, dark moody contrast, and aggressive kinetic typographic layouts designed to dominate premium social feeds and brand advertising spaces.",
+    "deliverables": [
+      "Luxury Automotive Creative Direction",
+      "High-End Kinetic Brand Typography",
+      "Dramatic Volumetric Lighting & Scene Compositing",
+      "Multi-Format Social Media Ad Suite (7 Formats)",
+      "Instagram Feed & Billboard Visual Architecture"
+    ],
+    "gallery": [
+      {
+        "id": "porsche-1",
+        "type": "image",
+        "content": "/projects/porsche-gt3/porsche-1.webp"
+      },
+      {
+        "id": "porsche-2",
+        "type": "image",
+        "content": "/projects/porsche-gt3/porsche-2.webp"
+      },
+      {
+        "id": "porsche-3",
+        "type": "image",
+        "content": "/projects/porsche-gt3/porsche-3.webp"
+      },
+      {
+        "id": "porsche-4",
+        "type": "image",
+        "content": "/projects/porsche-gt3/porsche-4.webp"
+      },
+      {
+        "id": "porsche-5",
+        "type": "image",
+        "content": "/projects/porsche-gt3/porsche-5.webp"
+      },
+      {
+        "id": "porsche-6",
+        "type": "image",
+        "content": "/projects/porsche-gt3/porsche-6.webp"
+      },
+      {
+        "id": "porsche-7",
+        "type": "image",
+        "content": "/projects/porsche-gt3/porsche-7.webp"
+      }
+    ],
+    "orientation": "portrait",
+    "layout": "grid"
+  },
+  {
     "id": "synthex-branding",
     "title": "Synthex Tech Identity",
     "category": "Full Branding A to Z",
@@ -1298,54 +1351,49 @@
     "layout": "grid"
   },
   {
-    "id": "protein-bar-packaging",
-    "title": "Gourmet Protein Bar Packaging & Visual Identity",
+    "id": "nutrifits-protein-bar",
+    "title": "Nutrifits Gourmet Protein Bar Packaging & Campaign",
     "category": "Packaging Design",
-    "heroImage": "/projects/protein-bar/cover.webp",
-    "overview": "A high-energy functional nutrition packaging architecture and visual campaign created for a premium fitness protein bar line. Featuring bold typographic macro callouts, vibrant flavor-coded color accents, sleek matte foil wrapper finishes, and photorealistic 3D product mockups crafted to command immediate shelf presence in athletic retail and digital fitness feeds.",
+    "heroImage": "/projects/nutrifits-protein-bar/cover.webp",
+    "overview": "Nutrifits is a premium functional fitness nutrition brand celebrating high-protein, zero-added-sugar energy bars. We developed a comprehensive packaging architecture and high-impact digital launch campaign. Featuring dynamic chocolate and nut splash physics, bold 'Drop The Hunger' headline typography, distinct macro nutrient callouts (15% Protein, No Added Sugar, Premium Nuts), and high-conversion e-commerce visuals engineered for retail shelves and digital sales.",
     "deliverables": [
-      "Custom Foil Wrapper Packaging Architecture",
-      "Flavor Variant Hierarchy & Color Coding",
-      "Macro Nutrient Typography & Dietary Callouts",
-      "Photorealistic 3D Wrapper & Product Mockups",
-      "Retail Shelf Ready Display Box Direction",
-      "Performance Social Media Launch Assets"
+      "Gourmet Protein Bar Flow-Wrap Packaging Architecture",
+      "Bold Nutritional Hierarchy & Macro Energy Callouts",
+      "High-Dynamic Splash Physics & 3D Food Compositing",
+      "High-Impact Promotional Social Media Campaign (6 Formats)",
+      "Retail Shelf-Ready Sharing Pack Strategy",
+      "Digital E-Commerce & Retail Display Suite"
     ],
     "gallery": [
       {
-        "id": "pb-1",
+        "id": "nutri-1",
         "type": "image",
-        "content": "/projects/protein-bar/protein-bar-1.webp"
+        "content": "/projects/nutrifits-protein-bar/nutrifits-1.webp"
       },
       {
-        "id": "pb-2",
+        "id": "nutri-2",
         "type": "image",
-        "content": "/projects/protein-bar/protein-bar-2.webp"
+        "content": "/projects/nutrifits-protein-bar/nutrifits-2.webp"
       },
       {
-        "id": "pb-3",
+        "id": "nutri-3",
         "type": "image",
-        "content": "/projects/protein-bar/protein-bar-3.webp"
+        "content": "/projects/nutrifits-protein-bar/nutrifits-3.webp"
       },
       {
-        "id": "pb-4",
+        "id": "nutri-4",
         "type": "image",
-        "content": "/projects/protein-bar/protein-bar-4.webp"
+        "content": "/projects/nutrifits-protein-bar/nutrifits-4.webp"
       },
       {
-        "id": "pb-5",
+        "id": "nutri-5",
         "type": "image",
-        "content": "/projects/protein-bar/protein-bar-5.webp"
+        "content": "/projects/nutrifits-protein-bar/nutrifits-5.webp"
       },
       {
-        "id": "pb-6",
+        "id": "nutri-6",
         "type": "image",
-        "content": "/projects/protein-bar/protein-bar-6.webp"
-      },
-      {
-        "id": "pb-7",
-        "type": "image",
-        "content": "/projects/protein-bar/protein-bar-7.webp"
+        "content": "/projects/nutrifits-protein-bar/nutrifits-6.webp"
       }
     ],
     "orientation": "portrait",
