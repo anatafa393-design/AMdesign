@@ -928,184 +928,143 @@
   },
   {
     "id": "pkg-design-2",
-    "title": "Asala Premium Basmati Rice",
+    "title": "Asala Premium Basmati Rice Packaging",
     "category": "Packaging Design",
     "heroImage": "/packaging/2/1-2.png",
-    "overview": "A high-end product packaging showcase designed to elevate the brand's physical presence and captivate shelf attention.",
+    "overview": "Asala is an elite agricultural and food staples brand recognized for authentic Indian long-grain Basmati rice and premium Latin grain harvests. We developed an authoritative luxury packaging architecture featuring royal metallic foil embellishments, intricate Islamic-inspired arabesque filigree, distinctive color coding across grain varieties (Royal Blue & Imperial Purple), and master dieline technical blueprints for high-speed automated bagging.",
     "deliverables": [
-      "Packaging Design",
-      "Brand Identity",
-      "Print Setup",
-      "3D Mockups"
+      "Luxury Food Packaging Architecture & Shelf Strategy",
+      "Bilingual Typography (Arabic Calligraphy & Modern Serif)",
+      "Foil Stamping & Metallic Ink Print Specifications",
+      "Photorealistic 3D Standup Pouch & Bag Mockups",
+      "Technical 2D Dieline Vector Blueprints (5KG Bags)",
+      "Downloadable Complete Packaging Presentation (PDF)"
     ],
+    "pdfUrl": "/packaging/2/asala-rice-packaging.pdf",
     "gallery": [
       {
-        "id": "pkg-design-2-1",
+        "id": "asala-mockup-1",
         "type": "image",
-        "content": "/packaging/2/1-1-page-1.png"
+        "content": "/packaging/2/1-2.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-2",
+        "id": "asala-mockup-2",
         "type": "image",
-        "content": "/packaging/2/1-1.png"
+        "content": "/packaging/2/1-1.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-3",
+        "id": "asala-mockup-3",
         "type": "image",
-        "content": "/packaging/2/1-1_page_1.png"
+        "content": "/packaging/2/1-3.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-4",
+        "id": "asala-mockup-4",
         "type": "image",
-        "content": "/packaging/2/1-2.png"
+        "content": "/packaging/2/1-4.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-5",
+        "id": "asala-mockup-5",
         "type": "image",
-        "content": "/packaging/2/1-3.png"
+        "content": "/packaging/2/1-5.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-6",
+        "id": "asala-mockup-6",
         "type": "image",
-        "content": "/packaging/2/1-4.png"
+        "content": "/packaging/2/1-6.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-7",
+        "id": "asala-mockup-7",
         "type": "image",
-        "content": "/packaging/2/1-5.png"
+        "content": "/packaging/2/2-1.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-8",
+        "id": "asala-mockup-8",
         "type": "image",
-        "content": "/packaging/2/1-6.png"
+        "content": "/packaging/2/2-2.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-9",
+        "id": "asala-mockup-9",
         "type": "image",
-        "content": "/packaging/2/2-1-page-1.png"
+        "content": "/packaging/2/2-3.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-10",
+        "id": "asala-mockup-10",
         "type": "image",
-        "content": "/packaging/2/2-1.png"
+        "content": "/packaging/2/2-4.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-11",
+        "id": "asala-mockup-11",
         "type": "image",
-        "content": "/packaging/2/2-1_page_1.png"
+        "content": "/packaging/2/2-5.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-12",
+        "id": "asala-mockup-12",
         "type": "image",
-        "content": "/packaging/2/2-2.png"
+        "content": "/packaging/2/brazilian-2-page-1.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-13",
+        "id": "asala-mockup-13",
         "type": "image",
-        "content": "/packaging/2/2-3.png"
+        "content": "/packaging/2/brazilian-2-page-2.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-2-14",
+        "id": "asala-dieline-1",
         "type": "image",
-        "content": "/packaging/2/2-4.png"
+        "content": "/packaging/2/indian-rice-blue-bag-5-page-1.png",
+        "group": "2D Dielines & Blueprints"
       },
       {
-        "id": "pkg-design-2-15",
+        "id": "asala-dieline-2",
         "type": "image",
-        "content": "/packaging/2/2-5.png"
+        "content": "/packaging/2/indian-rice-purple-bag-5-page-1.png",
+        "group": "2D Dielines & Blueprints"
       },
       {
-        "id": "pkg-design-2-16",
+        "id": "asala-pres-1",
         "type": "image",
-        "content": "/packaging/2/brazilian-1-page-1.png"
+        "content": "/packaging/2/brazilian-1-page-1.png",
+        "group": "Brand Presentation & Guidelines"
       },
       {
-        "id": "pkg-design-2-17",
+        "id": "asala-pres-2",
         "type": "image",
-        "content": "/packaging/2/brazilian-1-page-2.png"
+        "content": "/packaging/2/brazilian-1-page-2.png",
+        "group": "Brand Presentation & Guidelines"
       },
       {
-        "id": "pkg-design-2-18",
+        "id": "asala-pres-3",
         "type": "image",
-        "content": "/packaging/2/brazilian-1_page_1.png"
+        "content": "/packaging/2/brazilian-3-page-1.png",
+        "group": "Brand Presentation & Guidelines"
       },
       {
-        "id": "pkg-design-2-19",
+        "id": "asala-pres-4",
         "type": "image",
-        "content": "/packaging/2/brazilian-1_page_2.png"
+        "content": "/packaging/2/brazilian-4-page-1.png",
+        "group": "Brand Presentation & Guidelines"
       },
       {
-        "id": "pkg-design-2-20",
+        "id": "asala-pres-5",
         "type": "image",
-        "content": "/packaging/2/brazilian-2-page-1.png"
-      },
-      {
-        "id": "pkg-design-2-21",
-        "type": "image",
-        "content": "/packaging/2/brazilian-2-page-2.png"
-      },
-      {
-        "id": "pkg-design-2-22",
-        "type": "image",
-        "content": "/packaging/2/brazilian-2_page_1.png"
-      },
-      {
-        "id": "pkg-design-2-23",
-        "type": "image",
-        "content": "/packaging/2/brazilian-2_page_2.png"
-      },
-      {
-        "id": "pkg-design-2-24",
-        "type": "image",
-        "content": "/packaging/2/brazilian-3-page-1.png"
-      },
-      {
-        "id": "pkg-design-2-25",
-        "type": "image",
-        "content": "/packaging/2/brazilian-3_page_1.png"
-      },
-      {
-        "id": "pkg-design-2-26",
-        "type": "image",
-        "content": "/packaging/2/brazilian-4-page-1.png"
-      },
-      {
-        "id": "pkg-design-2-27",
-        "type": "image",
-        "content": "/packaging/2/brazilian-4-page-2.png"
-      },
-      {
-        "id": "pkg-design-2-28",
-        "type": "image",
-        "content": "/packaging/2/brazilian-4_page_1.png"
-      },
-      {
-        "id": "pkg-design-2-29",
-        "type": "image",
-        "content": "/packaging/2/brazilian-4_page_2.png"
-      },
-      {
-        "id": "pkg-design-2-30",
-        "type": "image",
-        "content": "/packaging/2/indian-rice-blue-bag-5-page-1.png"
-      },
-      {
-        "id": "pkg-design-2-31",
-        "type": "image",
-        "content": "/packaging/2/indian-rice-blue-bag-5_page_1.png"
-      },
-      {
-        "id": "pkg-design-2-32",
-        "type": "image",
-        "content": "/packaging/2/indian-rice-purple-bag-5-page-1.png"
-      },
-      {
-        "id": "pkg-design-2-33",
-        "type": "image",
-        "content": "/packaging/2/indian-rice-purple-bag-5_page_1.png"
+        "content": "/packaging/2/brazilian-4-page-2.png",
+        "group": "Brand Presentation & Guidelines"
       }
     ],
-    "orientation": "landscape"
+    "orientation": "portrait",
+    "layout": "grid"
   },
   {
     "id": "sm-design-2",
