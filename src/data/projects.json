@@ -1312,7 +1312,7 @@
     "id": "nutrifits-protein-bar",
     "title": "Nutrifits Gourmet Protein Bar Packaging & Campaign",
     "category": "Packaging Design",
-    "heroImage": "/projects/nutrifits-protein-bar/cover.webp",
+    "heroImage": "/projects/nutrifits-protein-bar/nutrifits-mockup-1.webp",
     "overview": "Nutrifits is a premium functional fitness nutrition brand celebrating high-protein, zero-added-sugar energy bars. We developed a comprehensive packaging architecture and high-impact digital launch campaign. Featuring dynamic chocolate and nut splash physics, bold 'Drop The Hunger' headline typography, distinct macro nutrient callouts (15% Protein, No Added Sugar, Premium Nuts), and high-conversion e-commerce visuals engineered for retail shelves and digital sales.",
     "deliverables": [
       "Gourmet Protein Bar Flow-Wrap Packaging Architecture",
@@ -1324,37 +1324,79 @@
     ],
     "gallery": [
       {
-        "id": "nutri-1",
+        "id": "nutri-2d-1",
         "type": "image",
-        "content": "/projects/nutrifits-protein-bar/nutrifits-1.webp"
+        "content": "/projects/nutrifits-protein-bar/nutrifits-2d-dieline.webp",
+        "group": "2D Dieline Design"
       },
       {
-        "id": "nutri-2",
+        "id": "nutri-3d-1",
         "type": "image",
-        "content": "/projects/nutrifits-protein-bar/nutrifits-2.webp"
+        "content": "/projects/nutrifits-protein-bar/nutrifits-mockup-1.webp",
+        "group": "3D Mockups"
       },
       {
-        "id": "nutri-3",
+        "id": "nutri-3d-2",
         "type": "image",
-        "content": "/projects/nutrifits-protein-bar/nutrifits-3.webp"
+        "content": "/projects/nutrifits-protein-bar/nutrifits-mockup-2.webp",
+        "group": "3D Mockups"
       },
       {
-        "id": "nutri-4",
+        "id": "nutri-3d-3",
         "type": "image",
-        "content": "/projects/nutrifits-protein-bar/nutrifits-4.webp"
+        "content": "/projects/nutrifits-protein-bar/nutrifits-mockup-3.webp",
+        "group": "3D Mockups"
       },
       {
-        "id": "nutri-5",
+        "id": "nutri-3d-4",
         "type": "image",
-        "content": "/projects/nutrifits-protein-bar/nutrifits-5.webp"
+        "content": "/projects/nutrifits-protein-bar/nutrifits-mockup-4.webp",
+        "group": "3D Mockups"
       },
       {
-        "id": "nutri-6",
+        "id": "nutri-3d-5",
         "type": "image",
-        "content": "/projects/nutrifits-protein-bar/nutrifits-6.webp"
+        "content": "/projects/nutrifits-protein-bar/nutrifits-mockup-5.webp",
+        "group": "3D Mockups"
+      },
+      {
+        "id": "nutri-sm-1",
+        "type": "image",
+        "content": "/projects/nutrifits-protein-bar/nutrifits-1.webp",
+        "group": "Social Media Design"
+      },
+      {
+        "id": "nutri-sm-2",
+        "type": "image",
+        "content": "/projects/nutrifits-protein-bar/nutrifits-2.webp",
+        "group": "Social Media Design"
+      },
+      {
+        "id": "nutri-sm-3",
+        "type": "image",
+        "content": "/projects/nutrifits-protein-bar/nutrifits-3.webp",
+        "group": "Social Media Design"
+      },
+      {
+        "id": "nutri-sm-4",
+        "type": "image",
+        "content": "/projects/nutrifits-protein-bar/nutrifits-4.webp",
+        "group": "Social Media Design"
+      },
+      {
+        "id": "nutri-sm-5",
+        "type": "image",
+        "content": "/projects/nutrifits-protein-bar/nutrifits-5.webp",
+        "group": "Social Media Design"
+      },
+      {
+        "id": "nutri-sm-6",
+        "type": "image",
+        "content": "/projects/nutrifits-protein-bar/nutrifits-6.webp",
+        "group": "Social Media Design"
       }
     ],
-    "orientation": "portrait",
-    "layout": "grid"
+    "orientation": "mixed",
+    "layout": "masonry"
   }
 ]
