@@ -1296,5 +1296,59 @@
     ],
     "orientation": "portrait",
     "layout": "grid"
+  },
+  {
+    "id": "protein-bar-packaging",
+    "title": "Gourmet Protein Bar Packaging & Visual Identity",
+    "category": "Packaging Design",
+    "heroImage": "/projects/protein-bar/cover.webp",
+    "overview": "A high-energy functional nutrition packaging architecture and visual campaign created for a premium fitness protein bar line. Featuring bold typographic macro callouts, vibrant flavor-coded color accents, sleek matte foil wrapper finishes, and photorealistic 3D product mockups crafted to command immediate shelf presence in athletic retail and digital fitness feeds.",
+    "deliverables": [
+      "Custom Foil Wrapper Packaging Architecture",
+      "Flavor Variant Hierarchy & Color Coding",
+      "Macro Nutrient Typography & Dietary Callouts",
+      "Photorealistic 3D Wrapper & Product Mockups",
+      "Retail Shelf Ready Display Box Direction",
+      "Performance Social Media Launch Assets"
+    ],
+    "gallery": [
+      {
+        "id": "pb-1",
+        "type": "image",
+        "content": "/projects/protein-bar/protein-bar-1.webp"
+      },
+      {
+        "id": "pb-2",
+        "type": "image",
+        "content": "/projects/protein-bar/protein-bar-2.webp"
+      },
+      {
+        "id": "pb-3",
+        "type": "image",
+        "content": "/projects/protein-bar/protein-bar-3.webp"
+      },
+      {
+        "id": "pb-4",
+        "type": "image",
+        "content": "/projects/protein-bar/protein-bar-4.webp"
+      },
+      {
+        "id": "pb-5",
+        "type": "image",
+        "content": "/projects/protein-bar/protein-bar-5.webp"
+      },
+      {
+        "id": "pb-6",
+        "type": "image",
+        "content": "/projects/protein-bar/protein-bar-6.webp"
+      },
+      {
+        "id": "pb-7",
+        "type": "image",
+        "content": "/projects/protein-bar/protein-bar-7.webp"
+      }
+    ],
+    "orientation": "portrait",
+    "layout": "grid"
   }
 ]
