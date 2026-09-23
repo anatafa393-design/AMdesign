@@ -219,6 +219,18 @@ export default function ProjectQuickModal({
                   </a>
                 )}
 
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-orange-600/20 hover:bg-orange-600/30 border border-orange-500/40 text-orange-200 text-xs font-semibold transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4 text-orange-400" />
+                    <span>{language === "ar" ? "زيارة الموقع الحي (Live Preview)" : "Visit Live Website"}</span>
+                  </a>
+                )}
+
                 <Link
                   href={`/projects/${project.id}`}
                   onClick={onClose}

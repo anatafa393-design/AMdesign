@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2, ExternalLink } from "lucide-react";
 import { getProjects } from "@/lib/getProjects";
 import ProjectGallery from "@/components/ui/project-gallery";
 import ImageWithFallback from "@/components/ui/ImageWithFallback";
@@ -65,6 +65,20 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               <div className="mt-8 pt-6 border-t border-white/10 flex flex-col gap-3">
                 <p className="text-xs text-white/40 font-bold uppercase tracking-widest">Document download</p>
                 <DownloadButton href={project.pdfUrl} projectTitle={project.title} />
+              </div>
+            )}
+            {project.liveUrl && (
+              <div className="mt-6 pt-6 border-t border-white/10 flex flex-col gap-3">
+                <p className="text-xs text-white/40 font-bold uppercase tracking-widest">Live Experience</p>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2.5 w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white font-bold text-sm shadow-xl shadow-orange-600/30 transition-all hover:scale-[1.02] group"
+                >
+                  <span>Visit Live Website</span>
+                  <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
               </div>
             )}
           </div>

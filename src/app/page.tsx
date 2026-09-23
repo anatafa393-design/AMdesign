@@ -66,6 +66,7 @@ export default function Home() {
     All: { en: t.portfolio.categories.all, ar: t.portfolio.categories.all },
     "Visual Identity": { en: t.portfolio.categories.visualIdentity, ar: t.portfolio.categories.visualIdentity },
     "Company Profile": { en: t.portfolio.categories.companyProfile, ar: t.portfolio.categories.companyProfile },
+    "Web Design": { en: t.portfolio.categories.webDesign, ar: t.portfolio.categories.webDesign },
     "Packaging Design": { en: t.portfolio.categories.packagingDesign, ar: t.portfolio.categories.packagingDesign },
     "Social Media Design": { en: t.portfolio.categories.socialMedia, ar: t.portfolio.categories.socialMedia },
   };
@@ -80,6 +81,13 @@ export default function Home() {
       cat.includes("company")
     ) {
       return "Company Profile";
+    }
+    if (
+      cat.includes("web") ||
+      cat.includes("موقع") ||
+      cat.includes("website")
+    ) {
+      return "Web Design";
     }
     if (
       cat.includes("branding") ||
@@ -318,9 +326,9 @@ export default function Home() {
                 icon: Globe,
                 title: t.services.items.websiteBuilding.title,
                 desc: t.services.items.websiteBuilding.description,
-                image: "/website-building-service.png",
-                overlayImage: "/website-building-service.png",
-                targetCategory: "Visual Identity",
+                image: "/projects/atyaf-website/cover.webp",
+                overlayImage: "/projects/atyaf-website/cover.webp",
+                targetCategory: "Web Design",
               },
               {
                 icon: Package,

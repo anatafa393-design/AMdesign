@@ -116,6 +116,75 @@
     "layout": "grid"
   },
   {
+    "id": "atyaf-albayad-website",
+    "title": "Atyaf Al Bayad Contracting Digital Experience",
+    "category": "Web Design",
+    "heroImage": "/projects/atyaf-website/cover.webp",
+    "liveUrl": "https://atyabalbayad.vercel.app/",
+    "overview": "A premier corporate web architecture engineered for Atyaf Al Bayad General Contracting in Riyadh, Saudi Arabia. Designed to position the firm as a tier-one contracting powerhouse, the platform combines an edge-to-edge cinematic video hero, floating pill navigation, dynamic rotating headlines, and comprehensive interactive showcases for contracting sectors, major construction landmarks, Saudi Building Code (SBC) compliance standards, and instant quotation request funnels.",
+    "deliverables": [
+      "Bilingual Corporate UI/UX Architecture",
+      "Edge-to-Edge Cinematic Video Hero & Dynamic Typography",
+      "Floating Pill Interactive Navigation System",
+      "Comprehensive Landmark Projects & Services Showcase",
+      "Saudi Building Code (SBC) Quality & Safety Presentation",
+      "Mobile-First Fluid Responsive Engineering",
+      "Direct Live Production Deployment"
+    ],
+    "gallery": [
+      {
+        "id": "atyaf-web-1",
+        "type": "image",
+        "content": "/projects/atyaf-website/hero-desktop.webp",
+        "group": "Desktop Architecture"
+      },
+      {
+        "id": "atyaf-web-2",
+        "type": "image",
+        "content": "/projects/atyaf-website/projects-overview.webp",
+        "group": "Desktop Architecture"
+      },
+      {
+        "id": "atyaf-web-3",
+        "type": "image",
+        "content": "/projects/atyaf-website/sectors-desktop.webp",
+        "group": "Desktop Architecture"
+      },
+      {
+        "id": "atyaf-web-4",
+        "type": "image",
+        "content": "/projects/atyaf-website/services-page.webp",
+        "group": "Full Page Showcases"
+      },
+      {
+        "id": "atyaf-web-5",
+        "type": "image",
+        "content": "/projects/atyaf-website/projects-page.webp",
+        "group": "Full Page Showcases"
+      },
+      {
+        "id": "atyaf-web-6",
+        "type": "image",
+        "content": "/projects/atyaf-website/about-page.webp",
+        "group": "Full Page Showcases"
+      },
+      {
+        "id": "atyaf-web-7",
+        "type": "image",
+        "content": "/projects/atyaf-website/quality-safety-page.webp",
+        "group": "Full Page Showcases"
+      },
+      {
+        "id": "atyaf-web-8",
+        "type": "image",
+        "content": "/projects/atyaf-website/mobile-home.webp",
+        "group": "Mobile Experience"
+      }
+    ],
+    "orientation": "landscape",
+    "layout": "grid"
+  },
+  {
     "id": "nal-aljazeera",
     "title": "Nal Al Jazeera Electromechanical Identity",
     "category": "Visual Identity",
