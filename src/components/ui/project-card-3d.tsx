@@ -114,20 +114,36 @@ export default function ProjectCard3D({
             )}
           </div>
 
-          {/* Quick View Button */}
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              onQuickView(project);
-            }}
-            title={quickViewLabel}
-            aria-label={quickViewLabel}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-[#8E162A] text-white text-xs font-medium backdrop-blur-md border border-white/15 hover:border-[#8E162A] transition-all duration-300 shadow-md cursor-pointer group/btn"
-          >
-            <Eye className="w-3.5 h-3.5 transition-transform group-hover/btn:scale-110" />
-            <span className="text-[11px] hidden xs:inline">{quickViewLabel}</span>
-          </button>
+          <div className="flex items-center gap-2">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                title={language === "ar" ? "زيارة الموقع الحي مباشرة" : "Visit Live Website"}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black text-xs font-extrabold backdrop-blur-md border border-emerald-400/50 shadow-lg shadow-emerald-500/40 transition-all duration-300 cursor-pointer hover:scale-105"
+              >
+                <span className="w-2 h-2 rounded-full bg-black animate-pulse" />
+                <span className="text-[11px]">{language === "ar" ? "الموقع حي ↗" : "Live Site ↗"}</span>
+              </a>
+            )}
+
+            {/* Quick View Button */}
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                onQuickView(project);
+              }}
+              title={quickViewLabel}
+              aria-label={quickViewLabel}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-[#8E162A] text-white text-xs font-medium backdrop-blur-md border border-white/15 hover:border-[#8E162A] transition-all duration-300 shadow-md cursor-pointer group/btn"
+            >
+              <Eye className="w-3.5 h-3.5 transition-transform group-hover/btn:scale-110" />
+              <span className="text-[11px] hidden xs:inline">{quickViewLabel}</span>
+            </button>
+          </div>
         </div>
 
         {/* Main Card Link & Image */}

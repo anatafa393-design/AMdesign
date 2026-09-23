@@ -36,6 +36,19 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter">
             <TextReveal text={project.title} />
           </h1>
+          {project.liveUrl && (
+            <div className="mt-6 flex items-center gap-3">
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm shadow-xl shadow-emerald-500/40 transition-all hover:scale-105"
+              >
+                <span className="w-2.5 h-2.5 rounded-full bg-black animate-pulse" />
+                <span>زيارة وتصفح الموقع الحي ↗ ({project.liveUrl})</span>
+              </a>
+            </div>
+          )}
         </div>
       </section>
 
@@ -47,6 +60,31 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <p className="text-xl text-white/60 leading-relaxed">
             {project.overview}
           </p>
+
+          {project.liveUrl && (
+            <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-emerald-950/40 to-black border border-emerald-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xl">
+              <div>
+                <div className="text-emerald-400 font-bold text-sm uppercase tracking-wider mb-1 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" /> Live Production Website
+                </div>
+                <p className="text-white/70 text-sm">
+                  الموقع متاح ويعمل مباشرة على الإنترنت بكامل وظائفه وتجاوبه. يمكنك تصفحه مباشرة الآن:
+                </p>
+                <span className="text-emerald-300 font-mono text-xs underline mt-1 block">
+                  {project.liveUrl}
+                </span>
+              </div>
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-sm shadow-lg transition-all hover:scale-105"
+              >
+                <span>دخول الموقع الحي</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+          )}
         </div>
 
         {/* Right Column: Deliverables */}

@@ -102,6 +102,19 @@ export default function ProjectListEditorial({
 
               {/* Right / End: Actions */}
               <div className="flex items-center gap-3 mt-4 md:mt-0 shrink-0 self-end md:self-auto">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black text-xs font-bold transition-all duration-300 cursor-pointer shadow-md hover:scale-105"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-black animate-pulse"></span>
+                    <span>{language === "ar" ? "الموقع حي ↗" : "Live Site ↗"}</span>
+                  </a>
+                )}
+
                 {/* Quick View Button */}
                 <button
                   onClick={(e) => {
