@@ -93,9 +93,9 @@ export const translations = {
           title: "Product Packaging",
           description: "Packaging that reflects premium quality and attracts consumers.",
         },
-        photoshoots: {
-          title: "Photoshoots",
-          description: "Professional photography showcasing your products and services.",
+        brandGuidelines: {
+          title: "Brand Strategy & Guidelines",
+          description: "Rigorous brand books and visual guidelines protecting your market equity.",
         },
         socialMedia: {
           title: "Social Media Designs",
@@ -246,9 +246,9 @@ export const translations = {
           title: "تغليف المنتجات",
           description: "تصاميم تغليف تعكس جودة منتجك الفاخر وتجذب أنظار المستهلكين.",
         },
-        photoshoots: {
-          title: "الجلسات التصويرية",
-          description: "تصوير احترافي يبرز منتجاتك وخدماتك بأجمل صورة بصرياً.",
+        brandGuidelines: {
+          title: "استراتيجية ودليل الهوية",
+          description: "كتيبات إرشادات متكاملة ومعايير دقيقة تحمي قيمة علامتك التجارية في السوق.",
         },
         socialMedia: {
           title: "تصاميم التواصل الاجتماعي",

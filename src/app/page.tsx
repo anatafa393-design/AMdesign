@@ -68,7 +68,6 @@ export default function Home() {
     "Company Profile": { en: t.portfolio.categories.companyProfile, ar: t.portfolio.categories.companyProfile },
     "Packaging Design": { en: t.portfolio.categories.packagingDesign, ar: t.portfolio.categories.packagingDesign },
     "Social Media Design": { en: t.portfolio.categories.socialMedia, ar: t.portfolio.categories.socialMedia },
-    Photoshoots: { en: t.portfolio.categories.photoshoots, ar: t.portfolio.categories.photoshoots },
   };
 
   const categories = Object.keys(categoriesMap);
@@ -95,9 +94,6 @@ export default function Home() {
     }
     if (cat.includes("social")) {
       return "Social Media Design";
-    }
-    if (cat.includes("photoshoot")) {
-      return "Photoshoots";
     }
     return category;
   };
@@ -330,32 +326,32 @@ export default function Home() {
                 icon: Package,
                 title: t.services.items.productPackaging.title,
                 desc: t.services.items.productPackaging.description,
-                image: "/packaging/1/2.jpg",
-                overlayImage: "/packaging/1/2.jpg",
+                image: "/packaging/3/mockup-01.png",
+                overlayImage: "/packaging/3/mockup-01.png",
                 targetCategory: "Packaging Design",
               },
               {
-                icon: Camera,
-                title: t.services.items.photoshoots.title,
-                desc: t.services.items.photoshoots.description,
-                image: "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png",
-                overlayImage: "/photoshoots/1/chatgpt-image-may-24-2026-02-45-42-pm.png",
-                targetCategory: "Photoshoots",
+                icon: Layers,
+                title: t.services.items.brandGuidelines.title,
+                desc: t.services.items.brandGuidelines.description,
+                image: "/projects/rawasi/page-1.webp",
+                overlayImage: "/projects/rawasi/page-1.webp",
+                targetCategory: "Visual Identity",
               },
               {
                 icon: Palette,
                 title: t.services.items.socialMedia.title,
                 desc: t.services.items.socialMedia.description,
-                image: "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png",
-                overlayImage: "/social-media/1/chatgpt-image-may-22-2026-05-29-10-pm.png",
+                image: "/projects/project-8/Artboard 1@2x-100.jpg",
+                overlayImage: "/projects/project-8/Artboard 1@2x-100.jpg",
                 targetCategory: "Social Media Design",
               },
               {
                 icon: BookOpen,
                 title: t.services.items.companyProfile.title,
                 desc: t.services.items.companyProfile.description,
-                image: "/company-profile-design.png",
-                overlayImage: "/company-profile-design.png",
+                image: "/projects/atyaf-albayad/page-1.webp",
+                overlayImage: "/projects/atyaf-albayad/page-1.webp",
                 targetCategory: "Company Profile",
               },
             ].map((service, i) => (
