@@ -16,25 +16,101 @@
     ],
     "pdfUrl": "/projects/atyaf-albayad/atyaf-albayad-company-profile.pdf",
     "gallery": [
-      { "id": "atyaf-albayad-1", "type": "image", "content": "/projects/atyaf-albayad/page-1.webp" },
-      { "id": "atyaf-albayad-2", "type": "image", "content": "/projects/atyaf-albayad/page-2.webp" },
-      { "id": "atyaf-albayad-3", "type": "image", "content": "/projects/atyaf-albayad/page-3.webp" },
-      { "id": "atyaf-albayad-4", "type": "image", "content": "/projects/atyaf-albayad/page-4.webp" },
-      { "id": "atyaf-albayad-5", "type": "image", "content": "/projects/atyaf-albayad/page-5.webp" },
-      { "id": "atyaf-albayad-6", "type": "image", "content": "/projects/atyaf-albayad/page-6.webp" },
-      { "id": "atyaf-albayad-7", "type": "image", "content": "/projects/atyaf-albayad/page-7.webp" },
-      { "id": "atyaf-albayad-8", "type": "image", "content": "/projects/atyaf-albayad/page-8.webp" },
-      { "id": "atyaf-albayad-9", "type": "image", "content": "/projects/atyaf-albayad/page-9.webp" },
-      { "id": "atyaf-albayad-10", "type": "image", "content": "/projects/atyaf-albayad/page-10.webp" },
-      { "id": "atyaf-albayad-11", "type": "image", "content": "/projects/atyaf-albayad/page-11.webp" },
-      { "id": "atyaf-albayad-12", "type": "image", "content": "/projects/atyaf-albayad/page-12.webp" },
-      { "id": "atyaf-albayad-13", "type": "image", "content": "/projects/atyaf-albayad/page-13.webp" },
-      { "id": "atyaf-albayad-14", "type": "image", "content": "/projects/atyaf-albayad/page-14.webp" },
-      { "id": "atyaf-albayad-15", "type": "image", "content": "/projects/atyaf-albayad/page-15.webp" },
-      { "id": "atyaf-albayad-16", "type": "image", "content": "/projects/atyaf-albayad/page-16.webp" },
-      { "id": "atyaf-albayad-17", "type": "image", "content": "/projects/atyaf-albayad/page-17.webp" },
-      { "id": "atyaf-albayad-18", "type": "image", "content": "/projects/atyaf-albayad/page-18.webp" },
-      { "id": "atyaf-albayad-19", "type": "image", "content": "/projects/atyaf-albayad/page-19.webp" }
+      {
+        "id": "atyaf-albayad-1",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-1.webp"
+      },
+      {
+        "id": "atyaf-albayad-2",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-2.webp"
+      },
+      {
+        "id": "atyaf-albayad-3",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-3.webp"
+      },
+      {
+        "id": "atyaf-albayad-4",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-4.webp"
+      },
+      {
+        "id": "atyaf-albayad-5",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-5.webp"
+      },
+      {
+        "id": "atyaf-albayad-6",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-6.webp"
+      },
+      {
+        "id": "atyaf-albayad-7",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-7.webp"
+      },
+      {
+        "id": "atyaf-albayad-8",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-8.webp"
+      },
+      {
+        "id": "atyaf-albayad-9",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-9.webp"
+      },
+      {
+        "id": "atyaf-albayad-10",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-10.webp"
+      },
+      {
+        "id": "atyaf-albayad-11",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-11.webp"
+      },
+      {
+        "id": "atyaf-albayad-12",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-12.webp"
+      },
+      {
+        "id": "atyaf-albayad-13",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-13.webp"
+      },
+      {
+        "id": "atyaf-albayad-14",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-14.webp"
+      },
+      {
+        "id": "atyaf-albayad-15",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-15.webp"
+      },
+      {
+        "id": "atyaf-albayad-16",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-16.webp"
+      },
+      {
+        "id": "atyaf-albayad-17",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-17.webp"
+      },
+      {
+        "id": "atyaf-albayad-18",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-18.webp"
+      },
+      {
+        "id": "atyaf-albayad-19",
+        "type": "image",
+        "content": "/projects/atyaf-albayad/page-19.webp"
+      }
     ],
     "orientation": "landscape",
     "layout": "grid"
@@ -1130,519 +1206,347 @@
   },
   {
     "id": "pkg-design-3",
-    "title": "Revo Bakery Menu & Packaging",
+    "title": "Revo Bakery Packaging & Editorial Menu",
     "category": "Packaging Design",
-    "heroImage": "/packaging/3/revo-menu-final-page-1.png",
-    "overview": "A high-end product packaging showcase designed to elevate the brand's physical presence and captivate shelf attention.",
+    "heroImage": "/packaging/3/mockup-01.png",
+    "overview": "Revo Bakery is an artisan bakery and culinary concept celebrating handcrafted sourdough, Viennoiserie, and specialty coffee. We architected a complete packaging identity and culinary editorial system. This includes precision 2D dieline layouts across 14 bespoke bag formats, photorealistic 3D product mockups for retail shelf presence, and a comprehensive 29-page editorial restaurant menu engineered for both print perfection and digital showcase.",
     "deliverables": [
-      "Packaging Design",
-      "Brand Identity",
-      "Print Setup",
-      "3D Mockups"
+      "Custom Kraft & Paper Bag Formats (14 Product Lines)",
+      "Technical 2D Dieline Vector Blueprints",
+      "Photorealistic 3D Packaging Mockups",
+      "29-Page High-End Editorial Restaurant Menu",
+      "Bilingual Typography Hierarchy & Print Specifications",
+      "Downloadable High-Definition Menu Catalog (PDF)"
     ],
+    "pdfUrl": "/packaging/3/revo-bakery-menu.pdf",
     "gallery": [
       {
-        "id": "pkg-design-3-1",
+        "id": "revo-mockup-1",
         "type": "image",
-        "content": "/packaging/3/chatgpt-image-may-15-2026-10-45-41-pm.png"
+        "content": "/packaging/3/mockup-01.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-3-2",
+        "id": "revo-mockup-2",
         "type": "image",
-        "content": "/packaging/3/cupcake-landscape-original.png"
+        "content": "/packaging/3/mockup-02.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-3-3",
+        "id": "revo-mockup-3",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-1.png"
+        "content": "/packaging/3/mockup-03.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-3-4",
+        "id": "revo-mockup-4",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-10.png"
+        "content": "/packaging/3/mockup-03-1.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-3-5",
+        "id": "revo-mockup-5",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-11.png"
+        "content": "/packaging/3/mockup-03-2.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-3-6",
+        "id": "revo-mockup-6",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-12.png"
+        "content": "/packaging/3/mockup-04.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-3-7",
+        "id": "revo-mockup-7",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-13.png"
+        "content": "/packaging/3/mockup-05.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-3-8",
+        "id": "revo-mockup-8",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-14.png"
+        "content": "/packaging/3/mockup-07.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-3-9",
+        "id": "revo-mockup-9",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-2.png"
+        "content": "/packaging/3/mockup-08.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-3-10",
+        "id": "revo-mockup-10",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-3.png"
+        "content": "/packaging/3/mockup-10.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-3-11",
+        "id": "revo-mockup-11",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-4.png"
+        "content": "/packaging/3/mockup-14.png",
+        "group": "3D Mockups"
       },
       {
-        "id": "pkg-design-3-12",
+        "id": "revo-bag-1",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-5.png"
+        "content": "/packaging/3/final-bag-page-1.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-13",
+        "id": "revo-bag-2",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-6.png"
+        "content": "/packaging/3/final-bag-page-2.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-14",
+        "id": "revo-bag-3",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-7.png"
+        "content": "/packaging/3/final-bag-page-3.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-15",
+        "id": "revo-bag-4",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-8.png"
+        "content": "/packaging/3/final-bag-page-4.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-16",
+        "id": "revo-bag-5",
         "type": "image",
-        "content": "/packaging/3/final-bag-page-9.png"
+        "content": "/packaging/3/final-bag-page-5.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-17",
+        "id": "revo-bag-6",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_1.png"
+        "content": "/packaging/3/final-bag-page-6.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-18",
+        "id": "revo-bag-7",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_10.png"
+        "content": "/packaging/3/final-bag-page-7.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-19",
+        "id": "revo-bag-8",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_11.png"
+        "content": "/packaging/3/final-bag-page-8.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-20",
+        "id": "revo-bag-9",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_12.png"
+        "content": "/packaging/3/final-bag-page-9.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-21",
+        "id": "revo-bag-10",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_13.png"
+        "content": "/packaging/3/final-bag-page-10.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-22",
+        "id": "revo-bag-11",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_14.png"
+        "content": "/packaging/3/final-bag-page-11.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-23",
+        "id": "revo-bag-12",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_2.png"
+        "content": "/packaging/3/final-bag-page-12.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-24",
+        "id": "revo-bag-13",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_3.png"
+        "content": "/packaging/3/final-bag-page-13.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-25",
+        "id": "revo-bag-14",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_4.png"
+        "content": "/packaging/3/final-bag-page-14.png",
+        "group": "2D Bag Dielines"
       },
       {
-        "id": "pkg-design-3-26",
+        "id": "revo-menu-1",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_5.png"
+        "content": "/packaging/3/revo-menu-final-page-1.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-27",
+        "id": "revo-menu-2",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_6.png"
+        "content": "/packaging/3/revo-menu-final-page-2.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-28",
+        "id": "revo-menu-3",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_7.png"
+        "content": "/packaging/3/revo-menu-final-page-3.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-29",
+        "id": "revo-menu-4",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_8.png"
+        "content": "/packaging/3/revo-menu-final-page-4.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-30",
+        "id": "revo-menu-5",
         "type": "image",
-        "content": "/packaging/3/final-bag_page_9.png"
+        "content": "/packaging/3/revo-menu-final-page-5.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-31",
+        "id": "revo-menu-6",
         "type": "image",
-        "content": "/packaging/3/gemini-3-1-flash-image-preview-nano-banana-2-web-search-a.png"
+        "content": "/packaging/3/revo-menu-final-page-6.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-32",
+        "id": "revo-menu-7",
         "type": "image",
-        "content": "/packaging/3/mockup-01.png"
+        "content": "/packaging/3/revo-menu-final-page-7.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-33",
+        "id": "revo-menu-8",
         "type": "image",
-        "content": "/packaging/3/mockup-02.png"
+        "content": "/packaging/3/revo-menu-final-page-8.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-34",
+        "id": "revo-menu-9",
         "type": "image",
-        "content": "/packaging/3/mockup-03-1.png"
+        "content": "/packaging/3/revo-menu-final-page-9.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-35",
+        "id": "revo-menu-10",
         "type": "image",
-        "content": "/packaging/3/mockup-03-2.png"
+        "content": "/packaging/3/revo-menu-final-page-10.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-36",
+        "id": "revo-menu-11",
         "type": "image",
-        "content": "/packaging/3/mockup-03.png"
+        "content": "/packaging/3/revo-menu-final-page-11.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-37",
+        "id": "revo-menu-12",
         "type": "image",
-        "content": "/packaging/3/mockup-04.png"
+        "content": "/packaging/3/revo-menu-final-page-12.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-38",
+        "id": "revo-menu-13",
         "type": "image",
-        "content": "/packaging/3/mockup-05.png"
+        "content": "/packaging/3/revo-menu-final-page-13.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-39",
+        "id": "revo-menu-14",
         "type": "image",
-        "content": "/packaging/3/mockup-07.png"
+        "content": "/packaging/3/revo-menu-final-page-14.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-40",
+        "id": "revo-menu-15",
         "type": "image",
-        "content": "/packaging/3/mockup-08.png"
+        "content": "/packaging/3/revo-menu-final-page-15.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-41",
+        "id": "revo-menu-16",
         "type": "image",
-        "content": "/packaging/3/mockup-10.png"
+        "content": "/packaging/3/revo-menu-final-page-16.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-42",
+        "id": "revo-menu-17",
         "type": "image",
-        "content": "/packaging/3/mockup-14.png"
+        "content": "/packaging/3/revo-menu-final-page-17.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-43",
+        "id": "revo-menu-18",
         "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-1.png"
+        "content": "/packaging/3/revo-menu-final-page-18.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-44",
+        "id": "revo-menu-19",
         "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-10.png"
+        "content": "/packaging/3/revo-menu-final-page-19.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-45",
+        "id": "revo-menu-20",
         "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-11.png"
+        "content": "/packaging/3/revo-menu-final-page-20.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-46",
+        "id": "revo-menu-21",
         "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-12.png"
+        "content": "/packaging/3/revo-menu-final-page-21.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-47",
+        "id": "revo-menu-22",
         "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-13.png"
+        "content": "/packaging/3/revo-menu-final-page-22.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-48",
+        "id": "revo-menu-23",
         "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-14.png"
+        "content": "/packaging/3/revo-menu-final-page-23.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-49",
+        "id": "revo-menu-24",
         "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-15.png"
+        "content": "/packaging/3/revo-menu-final-page-24.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-50",
+        "id": "revo-menu-25",
         "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-16.png"
+        "content": "/packaging/3/revo-menu-final-page-25.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-51",
+        "id": "revo-menu-26",
         "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-17.png"
+        "content": "/packaging/3/revo-menu-final-page-26.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-52",
+        "id": "revo-menu-27",
         "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-18.png"
+        "content": "/packaging/3/revo-menu-final-page-27.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-53",
+        "id": "revo-menu-28",
         "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-19.png"
+        "content": "/packaging/3/revo-menu-final-page-28.png",
+        "group": "Full Editorial Menu"
       },
       {
-        "id": "pkg-design-3-54",
+        "id": "revo-menu-29",
         "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-2.png"
-      },
-      {
-        "id": "pkg-design-3-55",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-20.png"
-      },
-      {
-        "id": "pkg-design-3-56",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-21.png"
-      },
-      {
-        "id": "pkg-design-3-57",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-22.png"
-      },
-      {
-        "id": "pkg-design-3-58",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-23.png"
-      },
-      {
-        "id": "pkg-design-3-59",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-24.png"
-      },
-      {
-        "id": "pkg-design-3-60",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-25.png"
-      },
-      {
-        "id": "pkg-design-3-61",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-26.png"
-      },
-      {
-        "id": "pkg-design-3-62",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-27.png"
-      },
-      {
-        "id": "pkg-design-3-63",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-28.png"
-      },
-      {
-        "id": "pkg-design-3-64",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-29.png"
-      },
-      {
-        "id": "pkg-design-3-65",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-3.png"
-      },
-      {
-        "id": "pkg-design-3-66",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-4.png"
-      },
-      {
-        "id": "pkg-design-3-67",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-5.png"
-      },
-      {
-        "id": "pkg-design-3-68",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-6.png"
-      },
-      {
-        "id": "pkg-design-3-69",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-7.png"
-      },
-      {
-        "id": "pkg-design-3-70",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-8.png"
-      },
-      {
-        "id": "pkg-design-3-71",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final-page-9.png"
-      },
-      {
-        "id": "pkg-design-3-72",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_1.png"
-      },
-      {
-        "id": "pkg-design-3-73",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_10.png"
-      },
-      {
-        "id": "pkg-design-3-74",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_11.png"
-      },
-      {
-        "id": "pkg-design-3-75",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_12.png"
-      },
-      {
-        "id": "pkg-design-3-76",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_13.png"
-      },
-      {
-        "id": "pkg-design-3-77",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_14.png"
-      },
-      {
-        "id": "pkg-design-3-78",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_15.png"
-      },
-      {
-        "id": "pkg-design-3-79",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_16.png"
-      },
-      {
-        "id": "pkg-design-3-80",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_17.png"
-      },
-      {
-        "id": "pkg-design-3-81",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_18.png"
-      },
-      {
-        "id": "pkg-design-3-82",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_19.png"
-      },
-      {
-        "id": "pkg-design-3-83",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_2.png"
-      },
-      {
-        "id": "pkg-design-3-84",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_20.png"
-      },
-      {
-        "id": "pkg-design-3-85",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_21.png"
-      },
-      {
-        "id": "pkg-design-3-86",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_22.png"
-      },
-      {
-        "id": "pkg-design-3-87",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_23.png"
-      },
-      {
-        "id": "pkg-design-3-88",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_24.png"
-      },
-      {
-        "id": "pkg-design-3-89",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_25.png"
-      },
-      {
-        "id": "pkg-design-3-90",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_26.png"
-      },
-      {
-        "id": "pkg-design-3-91",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_27.png"
-      },
-      {
-        "id": "pkg-design-3-92",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_28.png"
-      },
-      {
-        "id": "pkg-design-3-93",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_29.png"
-      },
-      {
-        "id": "pkg-design-3-94",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_3.png"
-      },
-      {
-        "id": "pkg-design-3-95",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_4.png"
-      },
-      {
-        "id": "pkg-design-3-96",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_5.png"
-      },
-      {
-        "id": "pkg-design-3-97",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_6.png"
-      },
-      {
-        "id": "pkg-design-3-98",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_7.png"
-      },
-      {
-        "id": "pkg-design-3-99",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_8.png"
-      },
-      {
-        "id": "pkg-design-3-100",
-        "type": "image",
-        "content": "/packaging/3/revo-menu-final_page_9.png"
+        "content": "/packaging/3/revo-menu-final-page-29.png",
+        "group": "Full Editorial Menu"
       }
     ],
-    "orientation": "square"
+    "orientation": "portrait",
+    "layout": "grid"
   },
   {
     "id": "sm-design-3",

@@ -9,6 +9,7 @@ interface GalleryItem {
   id: string;
   type: string;
   content: string;
+  group?: string;
 }
 
 interface ProjectGalleryProps {
@@ -18,6 +19,16 @@ interface ProjectGalleryProps {
 
 export default function ProjectGallery({ gallery, layout = "masonry" }: ProjectGalleryProps) {
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
+  const [selectedGroup, setSelectedGroup] = useState<string>("All");
+
+  const groups = Array.from(
+    new Set(gallery.map((item) => item.group).filter(Boolean))
+  ) as string[];
+
+  const activeGallery =
+    selectedGroup === "All"
+      ? gallery
+      : gallery.filter((item) => item.group === selectedGroup);
 
   const openLightbox = (idx: number) => {
     setActiveIdx(idx);
@@ -30,14 +41,14 @@ export default function ProjectGallery({ gallery, layout = "masonry" }: ProjectG
   const nextImage = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (activeIdx !== null) {
-      setActiveIdx((activeIdx + 1) % gallery.length);
+      setActiveIdx((activeIdx + 1) % activeGallery.length);
     }
   };
 
   const prevImage = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (activeIdx !== null) {
-      setActiveIdx((activeIdx - 1 + gallery.length) % gallery.length);
+      setActiveIdx((activeIdx - 1 + activeGallery.length) % activeGallery.length);
     }
   };
 
@@ -45,10 +56,47 @@ export default function ProjectGallery({ gallery, layout = "masonry" }: ProjectG
 
   return (
     <div className="w-full" dir="ltr" style={{ direction: "ltr" }}>
+      {/* Category / Group Tabs (If project has grouped items) */}
+      {groups.length > 1 && (
+        <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-12">
+          {["All", ...groups].map((g) => {
+            const isSelected = selectedGroup === g;
+            const count =
+              g === "All"
+                ? gallery.length
+                : gallery.filter((item) => item.group === g).length;
+            return (
+              <button
+                key={g}
+                onClick={() => {
+                  setSelectedGroup(g);
+                  setActiveIdx(null);
+                }}
+                className={`px-4 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2 cursor-pointer ${
+                  isSelected
+                    ? "bg-[#8E162A] text-white shadow-lg shadow-[#8E162A]/40 ring-1 ring-white/20 scale-105"
+                    : "bg-white/5 text-white/70 hover:text-white hover:bg-white/10 border border-white/10"
+                }`}
+              >
+                <span>{g}</span>
+                <span
+                  className={`text-[11px] px-2 py-0.5 rounded-full font-mono ${
+                    isSelected
+                      ? "bg-white/20 text-white"
+                      : "bg-white/10 text-white/50"
+                  }`}
+                >
+                  {count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      )}
       {isGrid ? (
         /* Uniform Grid Layout (Keeps page order sequential left-to-right) */
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {gallery.map((item, i) => (
+          {activeGallery.map((item, i) => (
             <div
               key={item.id || i}
               onClick={() => item.type === "image" && openLightbox(i)}
@@ -93,7 +141,7 @@ export default function ProjectGallery({ gallery, layout = "masonry" }: ProjectG
       ) : (
         /* Masonry Grid Layout (Best for mixed dimensions) */
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 [column-fill:_balance]">
-          {gallery.map((item, i) => (
+          {activeGallery.map((item, i) => (
             <div
               key={item.id || i}
               onClick={() => item.type === "image" && openLightbox(i)}
@@ -139,7 +187,7 @@ export default function ProjectGallery({ gallery, layout = "masonry" }: ProjectG
 
       {/* Premium Lightbox Modal */}
       <AnimatePresence>
-        {activeIdx !== null && (
+        {activeIdx !== null && activeGallery[activeIdx] && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -157,7 +205,7 @@ export default function ProjectGallery({ gallery, layout = "masonry" }: ProjectG
 
             {/* Pagination Indicator */}
             <div className="absolute top-6 left-6 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/60 text-sm z-50 select-none">
-              {activeIdx + 1} / {gallery.length}
+              {activeIdx + 1} / {activeGallery.length}
             </div>
 
             {/* Navigation Buttons */}
@@ -185,7 +233,7 @@ export default function ProjectGallery({ gallery, layout = "masonry" }: ProjectG
               onClick={(e) => e.stopPropagation()}
             >
               <Image
-                src={gallery[activeIdx].content}
+                src={activeGallery[activeIdx].content}
                 alt={`Showcase full artboard ${activeIdx + 1}`}
                 className="max-w-full max-h-[85vh] w-auto h-auto object-contain rounded-lg shadow-2xl border border-white/5 cursor-default select-none"
                 width={1920}
