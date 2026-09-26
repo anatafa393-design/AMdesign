@@ -358,8 +358,8 @@ export default function Home() {
                 icon: BookOpen,
                 title: t.services.items.companyProfile.title,
                 desc: t.services.items.companyProfile.description,
-                image: "/projects/atyaf-albayad/page-1.webp",
-                overlayImage: "/projects/atyaf-albayad/page-1.webp",
+                image: "/projects/atyaf-albayad/cover.webp",
+                overlayImage: "/projects/atyaf-albayad/cover.webp",
                 targetCategory: "Company Profile",
               },
             ].map((service, i) => (
