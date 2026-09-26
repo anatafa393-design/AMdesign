@@ -215,7 +215,11 @@ export default function ProjectQuickModal({
                     className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-white text-xs font-semibold transition-colors"
                   >
                     <Download className="w-4 h-4 text-[#E8A5B3]" />
-                    <span>{language === "ar" ? "تحميل العرض التقديمي (PDF)" : "Download Brand Presentation (PDF)"}</span>
+                    <span>
+                      {language === "ar"
+                        ? (project.category === "Company Profile" ? "تحميل البروفايل التعريفي (PDF)" : "تحميل العرض التقديمي (PDF)")
+                        : (project.category === "Company Profile" ? "Download Company Profile (PDF)" : "Download Brand Presentation (PDF)")}
+                    </span>
                   </a>
                 )}
 

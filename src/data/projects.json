@@ -116,6 +116,96 @@
     "layout": "grid"
   },
   {
+    "id": "core-business-profile",
+    "title": "Core Business Contracting & Facilities Profile",
+    "category": "Company Profile",
+    "heroImage": "/projects/core-business-profile/cover.webp",
+    "overview": "Core Business Co. Ltd. (CBCO) is a prominent Saudi national contracting, maintenance, and facilities management enterprise operating across the Kingdom. We conceptualized and executed a high-authority, executive corporate company profile (2026–2027) crafted to communicate the firm's multi-tier technical expertise. The editorial architecture encompasses turn-key general contracting, residential, commercial, and industrial construction, specialized MEP maintenance, precision civil works, heavy equipment fleet management, and sustainable facility operations adhering to the highest international quality standards and Saudi Vision 2030.",
+    "deliverables": [
+      "Executive Corporate Profile & Editorial Art Direction",
+      "Visual Identity & Color Strategy (Navy & Vibrant Industrial Orange)",
+      "General Contracting, Civil Engineering & Infrastructure Scope",
+      "Advanced Maintenance (MEP), HVAC & Electrical Systems Hierarchy",
+      "Integrated Facilities Management (FM) & Operational Framework",
+      "Fleet & Heavy Machinery Technical Showcases",
+      "Saudi Vision 2030 Strategic Alignment & Sustainable Standards",
+      "Official Direct Communication & Executive Contact Architecture",
+      "10-Page Ultra High-Definition Master Vector PDF & Print Blueprint",
+      "Photorealistic 3D Executive Desk & Brochure Presentation Mockup"
+    ],
+    "pdfUrl": "/projects/core-business-profile/core-business-profile.pdf",
+    "gallery": [
+      {
+        "id": "core-mockup-1",
+        "type": "image",
+        "content": "/projects/core-business-profile/cover.webp",
+        "group": "3D Mockups"
+      },
+      {
+        "id": "core-page-1",
+        "type": "image",
+        "content": "/projects/core-business-profile/page-1.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "core-page-2",
+        "type": "image",
+        "content": "/projects/core-business-profile/page-2.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "core-page-3",
+        "type": "image",
+        "content": "/projects/core-business-profile/page-3.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "core-page-4",
+        "type": "image",
+        "content": "/projects/core-business-profile/page-4.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "core-page-5",
+        "type": "image",
+        "content": "/projects/core-business-profile/page-5.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "core-page-6",
+        "type": "image",
+        "content": "/projects/core-business-profile/page-6.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "core-page-7",
+        "type": "image",
+        "content": "/projects/core-business-profile/page-7.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "core-page-8",
+        "type": "image",
+        "content": "/projects/core-business-profile/page-8.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "core-page-9",
+        "type": "image",
+        "content": "/projects/core-business-profile/page-9.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "core-page-10",
+        "type": "image",
+        "content": "/projects/core-business-profile/page-10.webp",
+        "group": "Profile Pages"
+      }
+    ],
+    "orientation": "landscape",
+    "layout": "masonry"
+  },
+  {
     "id": "atyaf-albayad-website",
     "title": "Atyaf Al Bayad Contracting Digital Experience",
     "category": "Web Design",

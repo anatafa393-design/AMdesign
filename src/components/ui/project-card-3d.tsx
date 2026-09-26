@@ -21,6 +21,8 @@ const defaultPalettes: Record<string, string[]> = {
   "trendana": ["#EC4899", "#8B5CF6", "#1E1B4B"],
   "suroor": ["#D97706", "#78350F", "#FEF3C7"],
   "al-nakhla": ["#10B981", "#064E3B", "#D1FAE5"],
+  "core-business-profile": ["#0F2439", "#FF5722", "#FFFFFF"],
+  "atyaf-albayad": ["#C5A880", "#1C1C1E", "#F5F5F7"],
 };
 
 export default function ProjectCard3D({
