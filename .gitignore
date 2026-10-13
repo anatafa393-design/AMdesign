@@ -53,4 +53,12 @@ next-env.d.ts
 !public/projects/core-business-profile/core-business-profile.pdf
 !public/packaging/3/revo-bakery-menu.pdf
 !public/packaging/2/asala-rice-packaging.pdf
+!public/projects/alboshra/alboshra-company-profile.pdf
+
+# facebook temporary posts folder
+facebook_ready_posts/
+Corporate_brochures_on_wooden_desk_*.jpg
+prepare_facebook_posts.py
+publish_to_facebook.py
+
 

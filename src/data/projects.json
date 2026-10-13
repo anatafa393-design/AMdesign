@@ -1,5 +1,152 @@
 [
   {
+    "id": "alboshra-profile",
+    "title": "Al-Boshra Marble, Stone & Porcelain Profile",
+    "category": "Company Profile",
+    "heroImage": "/projects/alboshra/cover.webp",
+    "overview": "Al-Boshra (أعمال البشرى) is a premier Saudi specialist in the supply and precision installation of natural stone, travertine, large-format porcelain (120×60 & 60×60), custom sculpted marble vanities, and solid marble staircases. Operating across all regions of the Kingdom and fully compliant with the Saudi Building Code (SBC 100 / 201), we engineered an authoritative 20-page executive corporate profile reflecting the firm's craftsmanship, CNC precision stone fabrication, mechanical cladding systems, and landmark luxury residential and commercial installations.",
+    "deliverables": [
+      "Corporate Profile & Editorial Art Direction",
+      "Saudi Building Code (SBC 100/201) Technical Compliance",
+      "Natural Stone & Travertine Facade Cladding Engineering",
+      "Large-Format Porcelain Installation & Specialized Adhesives (C2TE S1/S2)",
+      "Custom Sculpted Marble Vanities & Solid Floating Staircases",
+      "ASTM C97 Material Quality & Compression Specification Hierarchy",
+      "20-Page High-Definition Executive Landscape PDF"
+    ],
+    "pdfUrl": "/projects/alboshra/alboshra-company-profile.pdf",
+    "gallery": [
+      {
+        "id": "alboshra-mockup-1",
+        "type": "image",
+        "content": "/projects/alboshra/cover.webp",
+        "group": "3D Mockups"
+      },
+      {
+        "id": "alboshra-1",
+        "type": "image",
+        "content": "/projects/alboshra/page-1.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-2",
+        "type": "image",
+        "content": "/projects/alboshra/page-2.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-3",
+        "type": "image",
+        "content": "/projects/alboshra/page-3.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-4",
+        "type": "image",
+        "content": "/projects/alboshra/page-4.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-5",
+        "type": "image",
+        "content": "/projects/alboshra/page-5.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-6",
+        "type": "image",
+        "content": "/projects/alboshra/page-6.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-7",
+        "type": "image",
+        "content": "/projects/alboshra/page-7.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-8",
+        "type": "image",
+        "content": "/projects/alboshra/page-8.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-9",
+        "type": "image",
+        "content": "/projects/alboshra/page-9.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-10",
+        "type": "image",
+        "content": "/projects/alboshra/page-10.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-11",
+        "type": "image",
+        "content": "/projects/alboshra/page-11.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-12",
+        "type": "image",
+        "content": "/projects/alboshra/page-12.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-13",
+        "type": "image",
+        "content": "/projects/alboshra/page-13.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-14",
+        "type": "image",
+        "content": "/projects/alboshra/page-14.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-15",
+        "type": "image",
+        "content": "/projects/alboshra/page-15.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-16",
+        "type": "image",
+        "content": "/projects/alboshra/page-16.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-17",
+        "type": "image",
+        "content": "/projects/alboshra/page-17.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-18",
+        "type": "image",
+        "content": "/projects/alboshra/page-18.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-19",
+        "type": "image",
+        "content": "/projects/alboshra/page-19.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "alboshra-20",
+        "type": "image",
+        "content": "/projects/alboshra/page-20.webp",
+        "group": "Profile Pages"
+      }
+    ],
+    "orientation": "landscape",
+    "layout": "masonry"
+  },
+  {
     "id": "atyaf-albayad",
     "title": "Atyaf Al Bayad Contracting Profile",
     "category": "Company Profile",
