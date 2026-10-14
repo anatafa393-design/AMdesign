@@ -1,5 +1,176 @@
 [
   {
+    "id": "tamkeen-profile",
+    "title": "Tamkeen Cooperative Consulting & Training Profile",
+    "category": "Company Profile",
+    "heroImage": "/projects/tamkeen/cover.webp",
+    "overview": "Tamkeen Cooperative for Consulting and Training (تعاونية تمكين للاستشارات والتدريب) is a distinguished Saudi cooperative enterprise headquartered in Jubail Industrial City, operating under Ministry of Human Resources and Social Development License No. 10009. We architected a comprehensive 20-page executive corporate profile reflecting the cooperative's mission to empower businesses and human capital across nine core disciplines: strategic planning, specialized studies, professional training, project governance, engineering solutions, operations & maintenance, supply chain logistics, facility management, and digital transformation in direct alignment with Saudi Vision 2030.",
+    "deliverables": [
+      "Executive Corporate Profile & Editorial Art Direction",
+      "Cooperative Governance & Saudi Ministry Licensing (License: 10009)",
+      "Nine Strategic Service Portfolios Architecture",
+      "Saudi Vision 2030 Strategic Alignment & Sustainability Matrix",
+      "Human Capital Training, Project Governance & Engineering Frameworks",
+      "Photorealistic 3D Multi-Scene Executive Desk & Office Mockups (5 Renders)",
+      "20-Page High-Definition Executive Portrait PDF"
+    ],
+    "pdfUrl": "/projects/tamkeen/tamkeen-cooperative-company-profile.pdf",
+    "gallery": [
+      {
+        "id": "tamkeen-mockup-1",
+        "type": "image",
+        "content": "/projects/tamkeen/mockup-1.webp",
+        "group": "3D Mockups"
+      },
+      {
+        "id": "tamkeen-mockup-2",
+        "type": "image",
+        "content": "/projects/tamkeen/mockup-2.webp",
+        "group": "3D Mockups"
+      },
+      {
+        "id": "tamkeen-mockup-3",
+        "type": "image",
+        "content": "/projects/tamkeen/mockup-3.webp",
+        "group": "3D Mockups"
+      },
+      {
+        "id": "tamkeen-mockup-4",
+        "type": "image",
+        "content": "/projects/tamkeen/mockup-4.webp",
+        "group": "3D Mockups"
+      },
+      {
+        "id": "tamkeen-mockup-5",
+        "type": "image",
+        "content": "/projects/tamkeen/mockup-5.webp",
+        "group": "3D Mockups"
+      },
+      {
+        "id": "tamkeen-page-1",
+        "type": "image",
+        "content": "/projects/tamkeen/page-1.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-2",
+        "type": "image",
+        "content": "/projects/tamkeen/page-2.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-3",
+        "type": "image",
+        "content": "/projects/tamkeen/page-3.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-4",
+        "type": "image",
+        "content": "/projects/tamkeen/page-4.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-5",
+        "type": "image",
+        "content": "/projects/tamkeen/page-5.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-6",
+        "type": "image",
+        "content": "/projects/tamkeen/page-6.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-7",
+        "type": "image",
+        "content": "/projects/tamkeen/page-7.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-8",
+        "type": "image",
+        "content": "/projects/tamkeen/page-8.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-9",
+        "type": "image",
+        "content": "/projects/tamkeen/page-9.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-10",
+        "type": "image",
+        "content": "/projects/tamkeen/page-10.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-11",
+        "type": "image",
+        "content": "/projects/tamkeen/page-11.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-12",
+        "type": "image",
+        "content": "/projects/tamkeen/page-12.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-13",
+        "type": "image",
+        "content": "/projects/tamkeen/page-13.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-14",
+        "type": "image",
+        "content": "/projects/tamkeen/page-14.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-15",
+        "type": "image",
+        "content": "/projects/tamkeen/page-15.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-16",
+        "type": "image",
+        "content": "/projects/tamkeen/page-16.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-17",
+        "type": "image",
+        "content": "/projects/tamkeen/page-17.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-18",
+        "type": "image",
+        "content": "/projects/tamkeen/page-18.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-19",
+        "type": "image",
+        "content": "/projects/tamkeen/page-19.webp",
+        "group": "Profile Pages"
+      },
+      {
+        "id": "tamkeen-page-20",
+        "type": "image",
+        "content": "/projects/tamkeen/page-20.webp",
+        "group": "Profile Pages"
+      }
+    ],
+    "orientation": "portrait",
+    "layout": "masonry"
+  },
+  {
     "id": "alboshra-profile",
     "title": "Al-Boshra Marble, Stone & Porcelain Profile",
     "category": "Company Profile",

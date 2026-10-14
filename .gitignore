@@ -45,6 +45,8 @@ next-env.d.ts
 /project 2/
 /logo tikr/
 /profile-pics/
+/public/البشرى/
+/public/تمكين/
 *.pdf
 !public/projects/rawasi/Rawasi-Brand-Guidelines-Optimized.pdf
 !public/projects/trendana/trendana-case-study.pdf
@@ -54,11 +56,13 @@ next-env.d.ts
 !public/packaging/3/revo-bakery-menu.pdf
 !public/packaging/2/asala-rice-packaging.pdf
 !public/projects/alboshra/alboshra-company-profile.pdf
+!public/projects/tamkeen/tamkeen-cooperative-company-profile.pdf
 
 # facebook temporary posts folder
 facebook_ready_posts/
 Corporate_brochures_on_wooden_desk_*.jpg
 prepare_facebook_posts.py
 publish_to_facebook.py
+
 
 
